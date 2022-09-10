@@ -93,6 +93,15 @@ flutter:
     - family: DancingScript
       fonts:
         - asset: assets/fonts/DancingScript-Regular.ttf
+    - family: PressStart2P
+      fonts:
+        - asset: assets/fonts/PressStart2P-Regular.ttf
+    - family: DS-Digital
+      fonts:
+        - asset: assets/fonts/DS-DIGI.TTF
+        - asset: assets/fonts/DS-DIGIB.TTF
+        - asset: assets/fonts/DS-DIGII.TTF
+        - asset: assets/fonts/DS-DIGIT.TTF
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

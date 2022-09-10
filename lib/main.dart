@@ -1,3 +1,4 @@
+import 'package:azkark/Widgets/Zekr.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'Widgets/ChoicePage.dart';
@@ -33,6 +34,8 @@ class Azkar extends StatelessWidget {
                 Shadow(
                     blurRadius: 40, color: Colors.yellow, offset: Offset(20, 5))
               ]),
+              bodySmall: TextStyle(
+                  fontSize: 25, color: Colors.black, fontFamily: 'Amiri'),
               bodyMedium: TextStyle(
                   fontSize: 30,
                   color: Colors.white,
@@ -63,13 +66,19 @@ class _MainPageState extends State<MainPage> {
     setState(() {
       decider = choice;
     });
-    print(decider);
+  }
+
+  void decrementCounter(int counter) {
+    setState(() {
+      if (counter != 0) counter--;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     List<Widget> AzkarList = [
       ChoicePage(decider: decider, deciderSetter: deciderSetter),
+      // Zekr(counter: 3, zekr: "الله اكبر", decrementCounter: decrementCounter),
       AzkarElSabah(),
       AzkarElMasa2(),
       AzkarB3dElSalah(),
