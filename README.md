@@ -26,7 +26,7 @@
 * <img src="./assets/imgs/AzkarElSabah.png" alt="Main Page" width="200" height ="420"/>
  -------
  ### **أذكار المساء**
-* <img src="./assets/imgs/ElMasa2.png" alt="Main Page" width="200" height ="420"/>
+* <img src="./assets/imgs/Elmasa2.png" alt="Main Page" width="200" height ="420"/>
  -------
  ### **أذكار بعد الصلاة**
 * <img src="./assets/imgs/B3dElSalah.png" alt="Main Page" width="200" height ="420"/>
