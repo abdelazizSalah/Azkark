@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'Zekr.dart';
+import 'AzkarContainer.dart';
 
-class AzkarElMasa2 extends StatefulWidget {
-  @override
-  State<AzkarElMasa2> createState() => _AzkarElMasa2State();
-}
-
-class _AzkarElMasa2State extends State<AzkarElMasa2> {
+class AzkarElMasa2 extends StatelessWidget {
   List<Map<String, Object>> azkary = [
     {
       'zekr':
@@ -191,30 +187,6 @@ class _AzkarElMasa2State extends State<AzkarElMasa2> {
 
   @override
   Widget build(BuildContext context) {
-    int couter = 0;
-    return Container(
-        color: Colors.green[300],
-        child: Card(
-            child: ListView.builder(
-          itemBuilder: (context, index) {
-            return Zekr(
-              counter: azkary[index]['counter'],
-              zekr: azkary[index]['zekr'],
-              decrementCounter: () {
-                setState(() {
-                  if (azkary[index]['counter'] != 0)
-                    azkary[index]['counter'] =
-                        (azkary[index]['counter'] as int) - 1;
-                });
-              },
-              resetCounter: () {
-                setState(() {
-                  azkary[index]['counter'] = azkary[index]['initial'] as int;
-                });
-              },
-            );
-          },
-          itemCount: azkary.length,
-        )));
+    return AzkarContainer(azkary: azkary);
   }
 }
