@@ -1,7 +1,5 @@
-import 'package:azkark/Widgets/Zekr.dart';
 import 'package:azkark/controllers/scheduler.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'Widgets/ChoicePage.dart';
 import 'Widgets/AzkarB3dElSalah.dart';
 import 'Widgets/AzkarElAzan.dart';
@@ -13,9 +11,6 @@ import 'Widgets/AzkarElSabah.dart';
 import 'Widgets/AzkarElSalah.dart';
 import 'Widgets/AzkarElWodo2.dart';
 import 'Widgets/AzkarMotafareka.dart';
-import 'package:cron/cron.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
-import 'package:flutter/scheduler.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,17 +26,20 @@ class Azkar extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          accentColor: Colors.amber,
+          accentColor: Color.fromARGB(255, 220, 171, 27),
           splashColor: Color.fromARGB(255, 17, 133, 66),
-          buttonTheme: ButtonThemeData(buttonColor: Colors.amber),
+          buttonTheme:
+              ButtonThemeData(buttonColor: Color.fromARGB(255, 220, 171, 27)),
           fontFamily: 'Gulzar',
           textTheme: TextTheme(
               titleLarge: TextStyle(fontSize: 40, shadows: [
                 Shadow(
-                    blurRadius: 60, color: Colors.yellow, offset: Offset(20, 5))
+                    blurRadius: 60,
+                    color: Color.fromARGB(255, 220, 171, 27),
+                    offset: Offset(20, 5))
               ]),
               bodySmall: TextStyle(
-                  fontSize: 25, color: Colors.black, fontFamily: 'Amiri'),
+                  fontSize: 25, color: Colors.black, fontFamily: 'DS-DIGI'),
               bodyMedium: TextStyle(
                   fontSize: 30,
                   color: Colors.white,

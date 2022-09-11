@@ -22,6 +22,8 @@ class _AzkarContainerState extends State<AzkarContainer> {
             return Zekr(
               counter: azkary[index]['counter'],
               zekr: azkary[index]['zekr'],
+              title: azkary[index]['title'],
+              fayda: azkary[index]['fadl'],
               decrementCounter: () {
                 setState(() {
                   if (azkary[index]['counter'] != 0)
