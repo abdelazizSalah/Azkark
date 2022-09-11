@@ -12,8 +12,41 @@ import 'Widgets/AzkarElSabah.dart';
 import 'Widgets/AzkarElSalah.dart';
 import 'Widgets/AzkarElWodo2.dart';
 import 'Widgets/AzkarMotafareka.dart';
-
+import 'package:cron/cron.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  List<String> zekr=["سبحان الله","الله اكبر","صلوا علي النبي","الحمدلله علي كل النعم التي لا تٌعد"];
+  AwesomeNotifications().initialize(
+      null, // icon for your app notification
+      [
+        NotificationChannel(
+            channelKey: 'key1',
+            channelName: 'Proto Coders Point',
+            channelDescription: "Notification example",
+            defaultColor: Color(0XFF9050DD),
+            ledColor: Colors.white,
+            playSound: true,
+            enableLights:true,
+            enableVibration: true
+        )
+      ]
+  );
+  final cron=Cron();
+  int i=0;
+  cron.schedule(Schedule.parse('*/5 * * * * *'), () async => {
+
+    print('Every hour'),
+    await AwesomeNotifications().createNotification(
+        content: NotificationContent(
+        id: 1,
+        channelKey: 'key1',
+        title:'الذكر',
+        body: zekr[i]
+        )
+    ),
+    i=(i+1)%4
+  });
   runApp(const Azkar());
 }
 
