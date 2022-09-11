@@ -6,7 +6,13 @@ import 'package:cron/cron.dart';
 List<String> Dailyzekr=["سبحان الله","الله اكبر","صلوا علي النبي","الحمدلله علي كل النعم التي لا تٌعد"];
 List<String> fridayzekr=["سبحان الله","الله اكبر","صلوا علي النبي","لا تنسوا الدعاء"];
 final cron=Cron();
+int frequncy=1;
 
+void changeFrequency(int choice){
+  if(choice==3) frequncy=5;
+  else frequncy=choice;
+
+}
 void fridayZekrActivate(){
   AwesomeNotifications().initialize(
       null, // icon for your app notification
@@ -24,7 +30,7 @@ void fridayZekrActivate(){
       ]
   );
   int i=0;
-  cron.schedule(Schedule.parse('* * */1 * * *'), () async => {
+  cron.schedule(Schedule.parse('* 0 */1 * * 7'), () async => {
 
     //Every hour on friday;
     await AwesomeNotifications().createNotification(
@@ -57,7 +63,8 @@ void DailyZekrActivate(){
       ]
   );
   int i=0;
-  cron.schedule(Schedule.parse('* * */1 * * *'), () async => {
+  String freq=frequncy.toString();
+  cron.schedule(Schedule.parse("0 */$freq * * *"), () async => {
 
     //Every hour on friday;
     await AwesomeNotifications().createNotification(
