@@ -18,6 +18,7 @@
 
 </ul>
 <h2>سيذكرك هذا البرنامج كل ساعة بذكر الله من خلال تنبيه</h2>
+
 ## ScreenShots 
  ### **Main Page**
 * <img src="./assets/imgs/MainPage.png" alt="Main Page" width="200" height ="420"/>
