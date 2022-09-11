@@ -99,9 +99,6 @@ class _MainPageState extends State<MainPage> {
 
     return Scaffold(
       drawer:Drawer(
-    // Add a ListView to the drawer. This ensures the user can scroll
-    // through the options in the drawer if there isn't enough vertical
-    // space to fit everything.
     child: ListView(
     // Important: Remove any padding from the ListView.
     padding: EdgeInsets.zero,
@@ -110,7 +107,9 @@ class _MainPageState extends State<MainPage> {
           decoration: BoxDecoration(
             color: Color.fromARGB(255, 12, 189, 86),
           ),
-          child: Text('اذكارك',style: TextStyle(color:Colors.white  ,fontSize: 40 ),),
+          child: Center(
+            child:Text('اذكارك',style: TextStyle(color:Colors.white  ,fontSize: 40 ),) ,
+          ) ,
         ),
         ListTile(
           title: const Text('اذكار',style: TextStyle(fontSize: 30)),
@@ -127,6 +126,7 @@ class _MainPageState extends State<MainPage> {
             // Update the state of the app
             // ...
             // Then close the drawer
+
             Navigator.pop(context);
           },
         ),
