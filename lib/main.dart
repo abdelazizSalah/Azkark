@@ -16,6 +16,7 @@ import 'Widgets/AzkarMotafareka.dart';
 import 'package:cron/cron.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/scheduler.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   fridayZekrActivate();
@@ -31,14 +32,13 @@ class Azkar extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
           accentColor: Colors.amber,
-          splashColor: Color.fromARGB(255, 12, 189, 86),
-          // textTheme: GoogleFonts.latoTextTheme(Theme.of(context).textTheme),
+          splashColor: Color.fromARGB(255, 17, 133, 66),
           buttonTheme: ButtonThemeData(buttonColor: Colors.amber),
           fontFamily: 'Gulzar',
           textTheme: TextTheme(
               titleLarge: TextStyle(fontSize: 40, shadows: [
                 Shadow(
-                    blurRadius: 40, color: Colors.yellow, offset: Offset(20, 5))
+                    blurRadius: 60, color: Colors.yellow, offset: Offset(20, 5))
               ]),
               bodySmall: TextStyle(
                   fontSize: 25, color: Colors.black, fontFamily: 'Amiri'),
@@ -98,51 +98,70 @@ class _MainPageState extends State<MainPage> {
     ];
 
     return Scaffold(
-      drawer:Drawer(
-    child: ListView(
-    // Important: Remove any padding from the ListView.
-    padding: EdgeInsets.zero,
-      children: [
-        const DrawerHeader(
-          decoration: BoxDecoration(
-            color: Color.fromARGB(255, 12, 189, 86),
+        drawer: Drawer(
+          child: ListView(
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: [
+              Container(
+                height: 170,
+                child: DrawerHeader(
+                  decoration:
+                      BoxDecoration(color: Theme.of(context).splashColor),
+                  child: Center(
+                    child: Text(
+                      'أذكارك',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 40,
+                          shadows: [
+                            Shadow(
+                                blurRadius: 40,
+                                color: Theme.of(context).accentColor,
+                                offset: Offset(20, 10))
+                          ]),
+                    ),
+                  ),
+                ),
+              ),
+              ListTile(
+                title: Text(
+                  'أذكار',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text(
+                  'تسبيح',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title:
+                    Text('أدعية', style: Theme.of(context).textTheme.bodySmall),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+            ],
           ),
-          child: Center(
-            child:Text('اذكارك',style: TextStyle(color:Colors.white  ,fontSize: 40 ),) ,
-          ) ,
         ),
-        ListTile(
-          title: const Text('اذكار',style: TextStyle(fontSize: 30)),
-          onTap: () {
-            // Update the state of the app
-            // ...
-            // Then close the drawer
-            Navigator.pop(context);
-          },
-        ),
-        ListTile(
-          title:  const Text('تسبيح',style: TextStyle(fontSize: 30),),
-          onTap: () {
-            // Update the state of the app
-            // ...
-            // Then close the drawer
-
-            Navigator.pop(context);
-          },
-        ),
-        ListTile(
-          title: const Text('ادعية',style: TextStyle(fontSize: 30)),
-          onTap: () {
-            // Update the state of the app
-            // ...
-            // Then close the drawer
-            Navigator.pop(context);
-          },
-        ),
-      ],
-    ),
-    ),
-
         appBar: AppBar(
           actions: [
             FloatingActionButton(
@@ -154,7 +173,7 @@ class _MainPageState extends State<MainPage> {
                 });
               },
               child: Icon(
-                Icons.backspace_rounded,
+                Icons.keyboard_return_sharp,
                 color: Theme.of(context).accentColor,
               ),
             ),
@@ -169,6 +188,5 @@ class _MainPageState extends State<MainPage> {
           centerTitle: true,
         ),
         body: AzkarList[decider]);
-
   }
 }

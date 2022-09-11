@@ -42,7 +42,7 @@ class Zekr extends StatelessWidget {
                   style: ButtonStyle(
                       backgroundColor: MaterialStatePropertyAll(counter == 0
                           ? Theme.of(context).splashColor
-                          : Colors.blue)),
+                          : Color.fromARGB(255, 29, 124, 201))),
                   onPressed: decrementCounter,
                   child: Text(
                     counter.toString(),

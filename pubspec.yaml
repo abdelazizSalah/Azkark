@@ -31,7 +31,7 @@ environment:
 dependencies:
   google_fonts: ^2.1.0
   cron: ^0.5.0
-  awesome_notifications:
+  awesome_notifications: ^0.6.21
   flutter:
     sdk: flutter
 
