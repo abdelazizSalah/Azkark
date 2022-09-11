@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import '../AzkarContainer.dart';
 
-class EveningAzkar extends StatelessWidget {
+class MorningAzkar extends StatelessWidget {
   List<Map<String, Object>> azkary = [
     {
       'zekr':
-      ' ‘We have reached the evening and at this very time unto Allah belongs all sovereignty, and allpraise is for Allah. None has the right to be worshipped except Allah, alone, without partner, toHim belongs all sovereignty and praise and He is over all things omnipotent. My Lord, I ask You for the good of this night and the good of what follows it and I take refuge in You from the evil of this night and the evil of what follows it. My Lord, I take refuge in You from laziness and senility.My Lord, I take refuge in You from torment in the Fire and punishment in the grave.’ ',
+      ' ‘We have reached the morning and at this very time unto Allah belongs all sovereignty, and allpraise is for Allah. None has the right to be worshipped except Allah, alone, without partner, toHim belongs all sovereignty and praise and He is over all things omnipotent. My Lord, I ask You for the good of this night and the good of what follows it and I take refuge in You from the evil of this night and the evil of what follows it. My Lord, I take refuge in You from laziness and senility.My Lord, I take refuge in You from torment in the Fire and punishment in the grave.’ ',
       'counter': 1,
       'initial': 1,
       'title': '',
@@ -13,7 +13,7 @@ class EveningAzkar extends StatelessWidget {
     },
     {
       'zekr':
-      '‘O Allah, by Your leave we have reached the evening and by Your leave we have reached the morning, by Your leave we live and die and unto You is our return.’ ',
+      '‘O Allah, by your leave we have reached the morning and by Your leave we have reached the evening, by Your leave we live and die and unto You is our resurrection.’',
       'counter': 1,
       'initial': 1,
       'title': '',
@@ -28,7 +28,7 @@ class EveningAzkar extends StatelessWidget {
       'fadl': '',
     },
     {
-      'zekr': '‘O Allah, verily I have reached the evening and call on You, the bearers of Your throne, Your angles, and all of Your creation to witness that You are Allah, none has the right to be worshipped except You, alone, without partner and that Muhammad is Your Servant and Messenger.’',
+      'zekr': '‘O Allah, verily I have reached the morning and call on You, the bearers of Your throne, Your angles, and all of Your creation to witness that You are Allah, none has the right to be worshipped except You, alone, without partner and that Muhammad is Your Servant and Messenger.’',
       'counter': 4,
       'initial': 4,
       'title': '',
@@ -124,7 +124,7 @@ class EveningAzkar extends StatelessWidget {
       'fadl': '',
     },
     {
-      'zekr': '‘We have reached the evening and at this very time all sovereignty belongs to Allah, Lord of the worlds. O Allah, I ask You for the good of tonight, its triumphs and its victories, its light and its blessings and its guidance, and I take refuge in You from the evil of tonight and the evil that follows it.’',
+      'zekr': '‘We have reached the morning and at this very time all sovereignty belongs to Allah, Lord of the worlds. O Allah, I ask You for the good of this day, its triumphs and its victories, its light and its blessings and its guidance, and I take refuge in You from the evil of this day and the evil that follows it.’',
       'counter': 1,
       'initial': 1,
       'title': '',
@@ -142,7 +142,7 @@ class EveningAzkar extends StatelessWidget {
       'counter': 1,
       'initial': 1,
       'title': '',
-      'fadl': '',
+      'fadl': 'fitrah: the religion of Islam, the way of Ibraheem',
     },
     {
       'zekr': '‘Read Surah Al-Ikhlas’',

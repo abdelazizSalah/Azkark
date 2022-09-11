@@ -176,6 +176,20 @@ class _MainPageState extends State<MainPage> {
                     Navigator.pop(context);
                   },
                 ),
+                ListTile(
+                  title: Text('الاعدادات',
+                      style: Theme.of(context).textTheme.bodySmall),
+                  onTap: () {
+                    // Update the state of the app
+                    // ...
+                    // Then close the drawer
+                    // setState(() {
+                    //   decider = 11;
+                    // });
+
+                    Navigator.pop(context);
+                  },
+                ),
               ],
             ),
           ),
