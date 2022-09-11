@@ -6,7 +6,7 @@ class tasabeeh extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Card(child: Text("empty")),
+      child: Card(color: Theme.of(context).splashColor, child: Text("empty")),
     );
   }
 }

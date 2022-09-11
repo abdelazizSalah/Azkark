@@ -1,3 +1,5 @@
+import 'package:azkark/Widgets/ad3ya.dart';
+import 'package:azkark/Widgets/tasabeeh.dart';
 import 'package:azkark/controllers/scheduler.dart';
 import 'package:flutter/material.dart';
 import 'Widgets/ChoicePage.dart';
@@ -92,75 +94,94 @@ class _MainPageState extends State<MainPage> {
       AzkarElWodo2(),
       AzkarElAzan(),
       AzkarElMasjed(),
-      AzkarMotafareka()
+      AzkarMotafareka(),
+      ad3ya(),
+      tasabeeh(),
     ];
 
     return Scaffold(
-        drawer: Drawer(
-          child: ListView(
-            // Important: Remove any padding from the ListView.
-            padding: EdgeInsets.zero,
-            children: [
-              Container(
-                height: 170,
-                child: DrawerHeader(
-                  decoration:
-                      BoxDecoration(color: Theme.of(context).splashColor),
-                  child: Center(
-                    child: Text(
-                      'أذكارك',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 40,
-                          shadows: [
-                            Shadow(
-                                blurRadius: 40,
-                                color: Theme.of(context).accentColor,
-                                offset: Offset(20, 10))
-                          ]),
+        drawer: Directionality(
+          textDirection: TextDirection.rtl,
+          child: Drawer(
+            child: ListView(
+              // Important: Remove any padding from the ListView.
+              padding: EdgeInsets.zero,
+              children: [
+                Container(
+                  height: 170,
+                  child: DrawerHeader(
+                    decoration: BoxDecoration(boxShadow: [
+                      BoxShadow(
+                          blurRadius: 10,
+                          offset: Offset(0, 5),
+                          color: Theme.of(context).splashColor)
+                    ], color: Theme.of(context).splashColor),
+                    child: Center(
+                      child: Text(
+                        'أذكارك',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            shadows: [
+                              Shadow(
+                                  blurRadius: 40,
+                                  color: Theme.of(context).accentColor,
+                                  offset: Offset(20, 10))
+                            ]),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              ListTile(
-                title: Text(
-                  'أذكار',
-                  style: Theme.of(context).textTheme.bodySmall,
+                ListTile(
+                  title: Text(
+                    'أذكار',
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                  onTap: () {
+                    // Update the state of the app
+                    setState(() {
+                      decider = 0;
+                    });
+                    // Then close the drawer
+                    Navigator.pop(context);
+                  },
                 ),
-                onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                title: Text(
-                  'تسبيح',
-                  style: Theme.of(context).textTheme.bodySmall,
-                ),
-                onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
+                ListTile(
+                  title: Text(
+                    'تسبيح',
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                  onTap: () {
+                    // Update the state of the app
+                    // ...
+                    // Then close the drawer
+                    setState(() {
+                      decider = 12;
+                    });
 
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                title:
-                    Text('أدعية', style: Theme.of(context).textTheme.bodySmall),
-                onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
-              ),
-            ],
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  title: Text('أدعية',
+                      style: Theme.of(context).textTheme.bodySmall),
+                  onTap: () {
+                    // Update the state of the app
+                    // ...
+                    // Then close the drawer
+                    setState(() {
+                      decider = 11;
+                    });
+
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            ),
           ),
         ),
         appBar: AppBar(
+          elevation: 10,
           actions: [
             FloatingActionButton(
               backgroundColor: Theme.of(context).splashColor,
@@ -178,9 +199,9 @@ class _MainPageState extends State<MainPage> {
           ],
           backgroundColor: Theme.of(context).splashColor,
           title: Padding(
-            padding: const EdgeInsets.only(top: 20.0),
+            padding: const EdgeInsets.only(top: 35.0),
             child: Text(
-              'اذكار',
+              'أذكارك',
             ),
           ),
           centerTitle: true,
