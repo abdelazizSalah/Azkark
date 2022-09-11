@@ -17,6 +17,7 @@
 <li>flutter_native_splash</li>
 
 </ul>
+<h2>سيذكرك هذا البرنامج كل ساعة بذكر الله من خلال تنبيه</h2>
 
 ## ScreenShots 
  ### **Main Page**
@@ -49,4 +50,22 @@
 
  ### **أذكار متفرقة**
 * <img src="./assets/imgs/Motafareka.png" alt="Main Page" width="200" height ="420"/>
+
+<h2>Contributors: </h2>
+<table>
+  <tbody>
+    <tr>
+    <td align="center">
+  <img src="https://user-images.githubusercontent.com/76037906/132257122-e9ea49d8-a912-4d19-8425-08d3847c96a6.jpg" alt="Ahmed Lotfy" width="150px">
+      <br>
+      <a href="https://github.com/AhmedLotfy02">Ahmed Lotfy</a>
+  </td>
+  <td align="center">
+  <img src="https://avatars.githubusercontent.com/u/71516308?v=4" alt="Abdekaziz Salah" width="150px">
+      <br>
+      <a href="https://github.com/abdelazizSalah">Abdekaziz Salah</a>
+  </td>
+    </tr>
+  </tbody>
+</table>
 
