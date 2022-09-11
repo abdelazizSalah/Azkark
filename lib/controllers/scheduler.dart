@@ -24,7 +24,7 @@ void fridayZekrActivate(){
       ]
   );
   int i=0;
-  cron.schedule(Schedule.parse('* * */1 * * FRI'), () async => {
+  cron.schedule(Schedule.parse('* * */1 * * *'), () async => {
 
     //Every hour on friday;
     await AwesomeNotifications().createNotification(
