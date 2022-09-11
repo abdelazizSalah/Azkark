@@ -1,5 +1,8 @@
 # Azkark/اذكارك
 <img src="assets/sp.png" width="600">
+
+## ما هو هذا البرنامج
+> __تطبيق جوال يحتوي علي بعض أذكار المسلم__
 <h2>ماذا استخدمنا في هذا المشروع</h2>
 <ul>
 <li>لغة دارت </li>
@@ -16,4 +19,3 @@
 </ul>
 
 
- Mobile application which contains some mulim's Azkars.
