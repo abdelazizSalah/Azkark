@@ -1,5 +1,6 @@
 import 'package:azkark/Screens/HomePage.dart';
 import 'package:azkark/Widgets/ArabicAzkar/tasabeeh.dart';
+import 'package:azkark/Widgets/EnglishAzkar/WhenWakingup.dart';
 import 'package:azkark/controllers/scheduler.dart';
 import 'package:flutter/material.dart';
 import 'Widgets/ChoicePage.dart';
@@ -108,7 +109,7 @@ class _MainPageState extends State<MainPage> {
       EveningAzkar(),
       Uponenteringthehome(),
       WhenLeavingHome(),
-      WhenWakingup()
+      WhenWakingup(),
     ];
 
     return Scaffold(
