@@ -1,4 +1,4 @@
-import 'package:azkark/Widgets/AzkarContainer.dart';
+import '../AzkarContainer.dart';
 import 'package:flutter/material.dart';
 
 class AzkarElEstykaz extends StatelessWidget {

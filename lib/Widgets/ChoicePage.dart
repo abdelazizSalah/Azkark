@@ -4,7 +4,7 @@ class ChoicePage extends StatelessWidget {
   final decider;
   final deciderSetter;
   ChoicePage({required this.decider, required this.deciderSetter});
-  List<Map<String, Object>> choices = [
+  List<Map<String, Object>> arabicChoices = [
     {
       'zekr': 'أذكار الصباح',
       'number': 1,
@@ -47,6 +47,8 @@ class ChoicePage extends StatelessWidget {
     },
   ];
 
+  List<Map<String, Object>> englishChoices = [{}];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -59,7 +61,7 @@ class ChoicePage extends StatelessWidget {
             Column(
                 // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: choices.map((myMap) {
+                children: arabicChoices.map((myMap) {
                   return Container(
                     margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                     child: ElevatedButton(

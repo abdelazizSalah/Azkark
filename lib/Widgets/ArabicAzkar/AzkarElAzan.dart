@@ -1,5 +1,4 @@
-import '/Widgets/Zekr.dart';
-import './AzkarContainer.dart';
+import '../AzkarContainer.dart';
 import 'package:flutter/material.dart';
 
 class AzkarElAzan extends StatelessWidget {

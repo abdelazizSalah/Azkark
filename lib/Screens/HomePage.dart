@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
           accentColor: Color.fromARGB(255, 220, 171, 27),
           splashColor: Color.fromARGB(255, 17, 133, 66),
           buttonTheme:
-          ButtonThemeData(buttonColor: Color.fromARGB(255, 220, 171, 27)),
+              ButtonThemeData(buttonColor: Color.fromARGB(255, 220, 171, 27)),
           fontFamily: 'Gulzar',
           textTheme: TextTheme(
               titleLarge: TextStyle(fontSize: 40, shadows: [
@@ -44,36 +44,32 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
-     appBar: PreferredSize(
-       preferredSize: Size.fromHeight(70.0),
-       child: AppBar(
-         elevation: 10,
-         backgroundColor: Theme.of(context).splashColor,
-
-         title:  Padding(
-           padding: const EdgeInsets.only(top: 35.0),
-           child: Text(
-             'أذكارك',
-           ),
-         ),
-           centerTitle: true,
-       ),
-     ),
-     body:GridView(
-       padding: EdgeInsets.all(10),
-       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-         maxCrossAxisExtent: 200,
-         childAspectRatio: 7/8,
-         mainAxisSpacing: 10,
-         crossAxisSpacing: 10,
-       ),
-       children: choices_dataAr.map(
-               (ch) => choice_item_screen(ch.image,ch.word,ch.choice)
-
-       ).toList()
-
-     ) ,
-   );
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(70.0),
+        child: AppBar(
+          elevation: 10,
+          backgroundColor: Theme.of(context).splashColor,
+          title: Padding(
+            padding: const EdgeInsets.only(top: 35.0),
+            child: Text(
+              'أذكارك',
+            ),
+          ),
+          centerTitle: true,
+        ),
+      ),
+      body: GridView(
+          padding: EdgeInsets.all(10),
+          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 200,
+            childAspectRatio: 7 / 8,
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+          ),
+          children: choices_dataAr
+              .map((ch) => choiceItemScreen(ch.image, ch.word, ch.choice))
+              .toList()),
+    );
   }
 }
