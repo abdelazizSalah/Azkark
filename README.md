@@ -26,6 +26,9 @@
   ### **Splash Screen**
 * <img src="./assets/imgs/splashscreen.png" alt="Main Page" width="200" height ="420"/>
  -------
+  ### **Icon**
+* <img src="./assets/imgs/icon.png" alt="icon Page" width="200" height ="420"/>
+ -------
  ### **Azkar Page**
 * <img src="./assets/imgs/MainPage.png" alt="Main Page" width="200" height ="420"/>
  -------
