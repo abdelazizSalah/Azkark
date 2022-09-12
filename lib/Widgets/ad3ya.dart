@@ -6,17 +6,28 @@ class ad3ya extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
+
+      body:  ListView.builder(
           itemCount: (this.ad3yas.isEmpty ) ? 0 : this.ad3yas.length,
           itemBuilder: (context, position) {
 
               return Card(
                 color: Colors.white,
-                elevation: 2.0,
-                child: ListTile(
-                    title: Text("hgihg"),
+                elevation: 7,
+               shape:  RoundedRectangleBorder(
+                 borderRadius: BorderRadius.circular(15)
+               ),
+                margin: EdgeInsets.all(10),
+                child:
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child:
+                    Text(
+                      ad3yas[position],style:TextStyle(color:Colors.black),
+                    )
+                    ,
+                  )
 
-                ),
               );
             }
 
