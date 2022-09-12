@@ -1,3 +1,4 @@
+import 'package:azkark/Screens/HomePage.dart';
 import 'package:azkark/Widgets/ad3ya.dart';
 import 'package:azkark/Widgets/tasabeeh.dart';
 import 'package:azkark/controllers/scheduler.dart';
@@ -53,7 +54,7 @@ class Azkar extends StatelessWidget {
                         offset: Offset(20, 6))
                   ]))),
       debugShowCheckedModeBanner: false,
-      home: MainPage(),
+      home: HomePage(),
     );
   }
 }
