@@ -1,30 +1,36 @@
 import 'package:azkark/Screens/HomePage.dart';
-import 'package:azkark/Widgets/ad3ya.dart';
-import 'package:azkark/Widgets/tasabeeh.dart';
+import 'package:azkark/Widgets/ArabicAzkar/tasabeeh.dart';
 import 'package:azkark/controllers/scheduler.dart';
 import 'package:flutter/material.dart';
 import 'Widgets/ChoicePage.dart';
-import 'Widgets/AzkarB3dElSalah.dart';
-import 'Widgets/AzkarElAzan.dart';
-import 'Widgets/AzkarElEstykaz.dart';
-import 'Widgets/AzkarElMasa2.dart';
-import 'Widgets/AzkarElMasjed.dart';
-import 'Widgets/AzkarElNom.dart';
-import 'Widgets/AzkarElSabah.dart';
-import 'Widgets/AzkarElSalah.dart';
-import 'Widgets/AzkarElWodo2.dart';
-import 'Widgets/AzkarMotafareka.dart';
+import 'Widgets/ArabicAzkar/AzkarB3dElSalah.dart';
+import 'Widgets/ArabicAzkar/AzkarElAzan.dart';
+import 'Widgets/ArabicAzkar/AzkarElEstykaz.dart';
+import 'Widgets/ArabicAzkar/AzkarElMasa2.dart';
+import 'Widgets/ArabicAzkar/AzkarElMasjed.dart';
+import 'Widgets/ArabicAzkar/AzkarElNom.dart';
+import 'Widgets/ArabicAzkar/AzkarElSabah.dart';
+import 'Widgets/ArabicAzkar/AzkarElSalah.dart';
+import 'Widgets/ArabicAzkar/AzkarElWodo2.dart';
+import 'Widgets/ArabicAzkar/AzkarMotafareka.dart';
+import 'Widgets/ArabicAzkar/ad3ya.dart';
+import 'Widgets/EnglishAzkar/EveningAzkar.dart';
+import 'Widgets/EnglishAzkar/MorningAzkar.dart';
+import 'Widgets/EnglishAzkar/Uponenteringthehome.dart';
+import 'Widgets/EnglishAzkar/WhenLeavingHome.dart';
+import 'Widgets/EnglishAzkar/WhenWakingUp.dart';
 
 void main() {
+  /// this is the widget which makes the program waits at the beginning.
   WidgetsFlutterBinding.ensureInitialized();
+
+  /// calling the activators
   fridayZekrActivate();
   DailyZekrActivate();
-  runApp(const Azkar());
+  runApp(Azkar());
 }
 
 class Azkar extends StatelessWidget {
-  const Azkar({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -98,6 +104,11 @@ class _MainPageState extends State<MainPage> {
       AzkarMotafareka(),
       ad3ya(),
       tasabeeh(),
+      MorningAzkar(),
+      EveningAzkar(),
+      Uponenteringthehome(),
+      WhenLeavingHome(),
+      WhenWakingup()
     ];
 
     return Scaffold(
@@ -187,7 +198,6 @@ class _MainPageState extends State<MainPage> {
                     // setState(() {
                     //   decider = 11;
                     // });
-
                     Navigator.pop(context);
                   },
                 ),

@@ -1,4 +1,4 @@
-import 'package:azkark/Widgets/AzkarContainer.dart';
+import '../AzkarContainer.dart';
 import 'package:flutter/material.dart';
 
 /// TODO: lazm n7ot el titles bta3t el azkar w fadl el azkar
