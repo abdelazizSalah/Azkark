@@ -20,7 +20,13 @@
 <h2>سيذكرك هذا البرنامج كل ساعة بذكر الله من خلال تنبيه</h2>
 
 ## ScreenShots 
- ### **Main Page**
+ ### **Home page**
+* <img src="./assets/imgs/Homepage.png" alt="Main Page" width="200" height ="420"/>
+ -------
+  ### **Splash Screen**
+* <img src="./assets/imgs/splashscreen.png" alt="Main Page" width="200" height ="420"/>
+ -------
+ ### **Azkar Page**
 * <img src="./assets/imgs/MainPage.png" alt="Main Page" width="200" height ="420"/>
  -------
  ### **أذكار الصباح**
