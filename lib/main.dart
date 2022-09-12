@@ -27,7 +27,7 @@ void main() {
   /// calling the activators
   fridayZekrActivate();
   DailyZekrActivate();
-  runApp(const Azkar());
+  runApp(Azkar());
 }
 
 class Azkar extends StatelessWidget {
