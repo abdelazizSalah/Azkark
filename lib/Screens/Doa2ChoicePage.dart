@@ -27,7 +27,7 @@ class Doa2ChoicePage extends StatelessWidget {
           padding: EdgeInsets.all(10),
           gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 200,
-            childAspectRatio: 7 / 8,
+            childAspectRatio: 7/13,
             mainAxisSpacing: 10,
             crossAxisSpacing: 10,
           ),

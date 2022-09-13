@@ -12,9 +12,9 @@ class choice_doa2Widget extends StatelessWidget {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(15),
-          child: Image.network(
+          child: Image.asset(
             image,
-            height: 250,
+            height: 450,
             fit: BoxFit.cover,
           ),
         ),

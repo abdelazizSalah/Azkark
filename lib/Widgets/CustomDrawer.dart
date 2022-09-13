@@ -47,7 +47,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
               onTap: () {
                 // Update the state of the app
                 setState(() {
-                  chooseOptioninHomePage(context, 0);
+
+                  chooseOptioninHomePage(context, 0,1);
                 });
                 // Then close the drawer
               },
@@ -62,7 +63,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 // ...
                 // Then close the drawer
                 setState(() {
-                  chooseOptioninHomePage(context, 2);
+                  chooseOptioninHomePage(context, 2,1);
                 });
               },
             ),
@@ -74,7 +75,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 // ...
                 // Then close the drawer
                 setState(() {
-                  chooseOptioninHomePage(context, 1);
+                  chooseOptioninHomePage(context, 1,1);
                 });
               },
             ),
