@@ -1,4 +1,3 @@
-import 'package:azkark/Screens/Settings.dart';
 import 'package:azkark/Widgets/ArabicAzkar/AzkarElSabah.dart';
 import '../Widgets/ArabicAzkar/AzkarElAzan.dart';
 import '../Widgets/ArabicAzkar/AzkarB3dElSalah.dart';
