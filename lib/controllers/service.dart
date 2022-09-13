@@ -1,3 +1,4 @@
+import 'package:azkark/Screens/Settings.dart';
 import 'package:azkark/Widgets/ArabicAzkar/AzkarElSabah.dart';
 import '../Widgets/ArabicAzkar/AzkarElAzan.dart';
 import '../Widgets/ArabicAzkar/AzkarB3dElSalah.dart';
@@ -35,7 +36,7 @@ void chooseOptioninHomePage(BuildContext c, num choice,num where) {
       Navigator.pushReplacement(c, MaterialPageRoute(builder: (c) => tasabeeh()));
   } else if (choice == 3) {
     /// Todo add the setting widget
-    Navigator.push(c, MaterialPageRoute(builder: (c) => ChoicePage()));
+    Navigator.push(c, MaterialPageRoute(builder: (c) => Settings()));
   }
 }
 
@@ -78,4 +79,11 @@ void chooseOptioninDoa2Page(BuildContext c, num choice) {
   //change choice in decider of doaa pages
   print("from option doaa2");
   print(choice);
+}
+
+void changeMode(){
+  //flip boolean to change colors;
+}
+void changeLanguage(){
+  //flip boolean to change language;
 }
