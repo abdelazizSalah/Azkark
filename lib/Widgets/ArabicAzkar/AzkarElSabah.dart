@@ -260,13 +260,21 @@ class AzkarElSabah extends StatelessWidget {
       'title': '',
     },
   ];
+  final darkMode;
+
+  final darkModeSetter;
+
+  AzkarElSabah({required this.darkMode, required this.darkModeSetter});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      drawer: CustomDrawer(),
-      body: AzkarContainer(azkary: azkary),
+      drawer: CustomDrawer(
+        darkMode: darkMode,
+        darkModeSetter: darkModeSetter,
+      ),
+      body: AzkarContainer(darkMood: darkMode, azkary: azkary),
     );
   }
 }

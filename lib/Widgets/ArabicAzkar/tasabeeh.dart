@@ -4,13 +4,7 @@ import 'package:flutter/material.dart';
 import '../CustomAppBar.dart';
 import '../CustomDrawer.dart';
 
-class tasabeeh extends StatefulWidget {
-  @override
-  State<tasabeeh> createState() => _tasabeehState();
-}
-
-class _tasabeehState extends State<tasabeeh> {
-  int decider = 0;
+class tasabeeh extends StatelessWidget {
   List<Map> azkary = [
     {
       'zekr': '''سُبْحَانَ اللَّهِ''',
@@ -146,12 +140,23 @@ class _tasabeehState extends State<tasabeeh> {
       'title': '',
     },
   ];
+
+  final darkMode;
+
+  final darkModeSetter;
+
+  tasabeeh({required this.darkMode, required this.darkModeSetter});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      drawer: CustomDrawer(),
+      drawer: CustomDrawer(
+        darkMode: darkMode,
+        darkModeSetter: darkModeSetter,
+      ),
       body: AzkarContainer(
+        darkMood: darkMode,
         azkary: azkary,
       ),
     );

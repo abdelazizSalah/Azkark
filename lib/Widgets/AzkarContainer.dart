@@ -1,9 +1,12 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'Zekr.dart';
 
 class AzkarContainer extends StatefulWidget {
   final azkary;
-  const AzkarContainer({required this.azkary});
+  final darkMood;
+  const AzkarContainer({required this.azkary, required this.darkMood});
 
   @override
   State<AzkarContainer> createState() => _AzkarContainerState();
@@ -15,11 +18,13 @@ class _AzkarContainerState extends State<AzkarContainer> {
     final azkary = widget.azkary;
 
     return Container(
-        color: Colors.green[300],
+        // color: Colors.green[300],
+        color: Theme.of(context).primaryColor,
         child: Card(
             child: ListView.builder(
           itemBuilder: (context, index) {
             return Zekr(
+              darkMood: widget.darkMood,
               counter: azkary[index]['counter'],
               zekr: azkary[index]['zekr'],
               title: azkary[index]['title'],

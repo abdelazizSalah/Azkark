@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
-
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -12,6 +10,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         padding: const EdgeInsets.only(top: 30.0),
         child: Text(
           'أذكارك',
+          style: Theme.of(context).textTheme.titleLarge,
         ),
       ),
       centerTitle: true,

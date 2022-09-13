@@ -36,9 +36,12 @@ class WhenWakingup extends StatelessWidget {
     },
   ];
 
+  final darkMode;
+  WhenWakingup({required this.darkMode});
   @override
   Widget build(BuildContext context) {
     return AzkarContainer(
+      darkMood: darkMode,
       azkary: azkary,
     );
   }

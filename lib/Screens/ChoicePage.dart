@@ -48,13 +48,18 @@ class ChoicePage extends StatelessWidget {
   ];
 
   final List<Map<String, Object>> englishChoices = [{}];
-
+  final darkMode;
+  final darkModeSetter;
+  ChoicePage({required this.darkMode, required this.darkModeSetter});
   @override
   Widget build(BuildContext context) {
     return Scrollable(viewportBuilder: (context, position) {
       return Scaffold(
         appBar: CustomAppBar(),
-        drawer: CustomDrawer(),
+        drawer: CustomDrawer(
+          darkMode: darkMode,
+          darkModeSetter: darkModeSetter,
+        ),
         body: ListView(
           children: [
             Column(
@@ -73,7 +78,8 @@ class ChoicePage extends StatelessWidget {
                         style: Theme.of(context).textTheme.bodyMedium,
                       ),
                       onPressed: () {
-                        chooseOptionInAzkar(context, myMap['number'] as int);
+                        chooseOptionInAzkar(context, myMap['number'] as int,
+                            darkMode, darkModeSetter);
                       },
                     ),
                   );

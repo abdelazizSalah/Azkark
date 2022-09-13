@@ -13,9 +13,12 @@ class Uponenteringthehome extends StatelessWidget {
     },
   ];
 
+  final darkMode;
+  Uponenteringthehome({required this.darkMode});
   @override
   Widget build(BuildContext context) {
     return AzkarContainer(
+      darkMood: darkMode,
       azkary: azkary,
     );
   }

@@ -20,10 +20,12 @@ class WhenLeavingHome extends StatelessWidget {
       'fadl': 'The Prophet  said : ‘Whoever awakes at night and then says:',
     },
   ];
-
+  final darkMode;
+  WhenLeavingHome({required this.darkMode});
   @override
   Widget build(BuildContext context) {
     return AzkarContainer(
+      darkMood: darkMode,
       azkary: azkary,
     );
   }

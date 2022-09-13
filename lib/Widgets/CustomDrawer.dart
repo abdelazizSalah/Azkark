@@ -2,6 +2,9 @@ import '../controllers/service.dart';
 import 'package:flutter/material.dart';
 
 class CustomDrawer extends StatefulWidget {
+  final bool darkMode;
+  final darkModeSetter;
+  CustomDrawer({required this.darkMode, required this.darkModeSetter});
   @override
   State<CustomDrawer> createState() => _CustomDrawerState();
 }
@@ -47,8 +50,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
               onTap: () {
                 // Update the state of the app
                 setState(() {
-
-                  chooseOptioninHomePage(context, 0,1);
+                  chooseOptioninHomePage(
+                      context, 0, 0, widget.darkMode, widget.darkModeSetter);
                 });
                 // Then close the drawer
               },
@@ -63,7 +66,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 // ...
                 // Then close the drawer
                 setState(() {
-                  chooseOptioninHomePage(context, 2,1);
+                  chooseOptioninHomePage(
+                      context, 2, 1, widget.darkMode, widget.darkModeSetter);
                 });
               },
             ),
@@ -75,7 +79,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 // ...
                 // Then close the drawer
                 setState(() {
-                  chooseOptioninHomePage(context, 1,1);
+                  chooseOptioninHomePage(
+                      context, 1, 1, widget.darkMode, widget.darkModeSetter);
                 });
               },
             ),
@@ -83,12 +88,10 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title: Text('الاعدادات',
                   style: Theme.of(context).textTheme.bodySmall),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                // setState(() {
-                //   decider = 11;
-                // });
+                setState(() {
+                  chooseOptioninHomePage(
+                      context, 3, 0, widget.darkMode, widget.darkModeSetter);
+                });
               },
             ),
           ],

@@ -186,9 +186,12 @@ class MorningAzkar extends StatelessWidget {
     },
   ];
 
+  final darkMode;
+  MorningAzkar({required this.darkMode});
   @override
   Widget build(BuildContext context) {
     return AzkarContainer(
+      darkMood: darkMode,
       azkary: azkary,
     );
   }

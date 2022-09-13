@@ -4,12 +4,12 @@ import '../CustomAppBar.dart';
 import '../CustomDrawer.dart';
 import '../AzkarContainer.dart';
 
-class ad3ya extends StatefulWidget {
-  @override
-  State<ad3ya> createState() => _ad3yaState();
-}
+class ad3ya extends StatelessWidget {
+  final darkMode;
+  final darkModeSetter;
 
-class _ad3yaState extends State<ad3ya> {
+  ad3ya({required this.darkMode, required this.darkModeSetter});
+
   List<Map<String, Object>> ad3yas = [
     /// TODO: add all ad3ya here in this blueprint
     {
@@ -37,12 +37,17 @@ class _ad3yaState extends State<ad3ya> {
       'title': ''
     },
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      drawer: CustomDrawer(),
+      drawer: CustomDrawer(
+        darkMode: darkMode,
+        darkModeSetter: darkModeSetter,
+      ),
       body: AzkarContainer(
+        darkMood: darkMode,
         azkary: ad3yas,
       ),
     );

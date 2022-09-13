@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class Zekr extends StatelessWidget {
+  final darkMood;
   final zekr;
   final title;
   final fayda;
@@ -11,6 +12,7 @@ class Zekr extends StatelessWidget {
   final resetCounter;
   const Zekr({
     required this.zekr,
+    required this.darkMood,
     required this.title,
     required this.fayda,
     required this.counter,
@@ -24,18 +26,18 @@ class Zekr extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Container(
         // color: Colors.grey,
-        color: Colors.green[500],
+        color: Theme.of(context).hintColor,
 
         // color: Theme.of(context).splashColor,
         child: Card(
           // color: Theme.of(context).splashColor,
-          color: Colors.green[300],
+          color: Theme.of(context).primaryColor,
 
           // color: Colors.grey,
           elevation: 100,
           child: Container(
             decoration: BoxDecoration(
-                color: Color.fromARGB(255, 232, 230, 230),
+                color: Theme.of(context).errorColor,
                 border:
                     Border.all(width: 3, color: Theme.of(context).accentColor),
                 borderRadius: BorderRadius.circular(50)),
@@ -47,12 +49,15 @@ class Zekr extends StatelessWidget {
                   child: Text(
                     title,
                     style: TextStyle(
-                        color: Theme.of(context).accentColor, fontSize: 24),
+                        color: darkMood == false
+                            ? Theme.of(context).accentColor
+                            : Theme.of(context).splashColor,
+                        fontSize: 24),
                   ),
                 ),
                 Container(
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 246, 231, 186),
+                      color: Theme.of(context).focusColor,
                       border: Border.all(
                           width: 1.0, color: Theme.of(context).accentColor)),
                   margin: EdgeInsets.symmetric(horizontal: 30),
@@ -86,11 +91,10 @@ class Zekr extends StatelessWidget {
                     margin: EdgeInsets.symmetric(horizontal: 30, vertical: 12),
                     child: ElevatedButton(
                       style: ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(
-                        counter != 0
-                            ? Theme.of(context).splashColor
-                            : Color.fromARGB(255, 103, 162, 105),
-                      )),
+                        backgroundColor: MaterialStatePropertyAll(counter == 0
+                            ? Theme.of(context).hoverColor
+                            : Theme.of(context).splashColor),
+                      ),
                       onPressed: decrementCounter,
                       child: Text(
                         counter.toString(),

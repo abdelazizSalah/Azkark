@@ -15,15 +15,23 @@ import 'package:azkark/Screens/Doa2ChoicePage.dart';
 import '../Widgets/Settings.dart';
 
 num currentContextNumberInChoicePage = -1;
-void chooseOptioninHomePage(BuildContext c, num choice, num where) {
+void chooseOptioninHomePage(
+    BuildContext c, num choice, num where, bool dark, darkModeSetter) {
   if (choice == currentContextNumberInChoicePage && where == 1) return;
   currentContextNumberInChoicePage = choice;
   if (choice == 0) {
     if (where == 0)
-      Navigator.push(c, MaterialPageRoute(builder: (c) => ChoicePage()));
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) =>
+                  ChoicePage(darkMode: dark, darkModeSetter: darkModeSetter)));
     else
       Navigator.pushReplacement(
-          c, MaterialPageRoute(builder: (c) => ChoicePage()));
+          c,
+          MaterialPageRoute(
+              builder: (c) =>
+                  ChoicePage(darkMode: dark, darkModeSetter: darkModeSetter)));
   } else if (choice == 1) {
     if (where == 0)
       Navigator.push(c, MaterialPageRoute(builder: (c) => Doa2ChoicePage()));
@@ -32,46 +40,99 @@ void chooseOptioninHomePage(BuildContext c, num choice, num where) {
           c, MaterialPageRoute(builder: (c) => Doa2ChoicePage()));
   } else if (choice == 2) {
     if (where == 0)
-      Navigator.push(c, MaterialPageRoute(builder: (c) => tasabeeh()));
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) =>
+                  tasabeeh(darkMode: dark, darkModeSetter: darkModeSetter)));
     else
       Navigator.pushReplacement(
-          c, MaterialPageRoute(builder: (c) => tasabeeh()));
+          c,
+          MaterialPageRoute(
+              builder: (c) =>
+                  tasabeeh(darkMode: dark, darkModeSetter: darkModeSetter)));
   } else if (choice == 3) {
-    Navigator.push(c, MaterialPageRoute(builder: (c) => Settings()));
+    Navigator.push(
+        c,
+        MaterialPageRoute(
+            builder: (c) =>
+                Settings(darkMode: dark, darkModeSetter: darkModeSetter)));
   }
 }
 
-void chooseOptionInAzkar(BuildContext c, num choice) {
+void chooseOptionInAzkar(
+    BuildContext c, num choice, bool dark, darkModeSetter) {
   switch (choice) {
-    case 0 + 1:
-      Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElSabah()));
+    case 1:
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) => AzkarElSabah(
+                  darkMode: dark, darkModeSetter: darkModeSetter)));
       break;
-    case 1 + 1:
-      Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElMasa2()));
+    case 2:
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) => AzkarElMasa2(
+                  darkMode: dark, darkModeSetter: darkModeSetter)));
       break;
-    case 2 + 1:
-      Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarB3dElSalah()));
+    case 3:
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) => AzkarB3dElSalah(
+                  darkMode: dark, darkModeSetter: darkModeSetter)));
       break;
-    case 3 + 1:
-      Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElNom()));
+    case 4:
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) =>
+                  AzkarElNom(darkMode: dark, darkModeSetter: darkModeSetter)));
       break;
-    case 4 + 1:
-      Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElEstykaz()));
+    case 5:
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) => AzkarElEstykaz(
+                  darkMode: dark, darkModeSetter: darkModeSetter)));
       break;
-    case 5 + 1:
-      Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElSalah()));
+    case 6:
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) => AzkarElSalah(
+                  darkMode: dark, darkModeSetter: darkModeSetter)));
       break;
-    case 6 + 1:
-      Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElWodo2()));
+    case 7:
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) => AzkarElWodo2(
+                  darkMode: dark, darkModeSetter: darkModeSetter)));
       break;
-    case 7 + 1:
-      Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElAzan()));
+    case 8:
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) =>
+                  AzkarElAzan(darkMode: dark, darkModeSetter: darkModeSetter)));
       break;
-    case 8 + 1:
-      Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElMasjed()));
+    case 9:
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) => AzkarElMasjed(
+                  darkMode: dark, darkModeSetter: darkModeSetter)));
+      print(dark);
       break;
-    case 9 + 1:
-      Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarMotafareka()));
+    case 10:
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) => AzkarMotafareka(
+                  darkMode: dark, darkModeSetter: darkModeSetter)));
       break;
   }
 }

@@ -1,23 +1,34 @@
 import 'package:azkark/Widgets/CustomAppBar.dart';
-import 'package:azkark/Widgets/SwitchButtonCard.dart';
 import 'package:flutter/material.dart';
 
 class Settings extends StatefulWidget {
-  const Settings({super.key});
+  bool darkMode;
+  final darkModeSetter;
+  Settings({required this.darkMode, required this.darkModeSetter});
 
   @override
-  State<Settings> createState() => _SettingsState();
+  State<Settings> createState() => _SettingsState(dkMode: darkMode);
 }
 
 class _SettingsState extends State<Settings> {
-  bool value = true;
+  bool dkMode;
+  _SettingsState({required this.dkMode});
+  void toggel() {
+    widget.darkModeSetter();
+    setState(() {
+      var temp = !dkMode;
+      dkMode = temp;
+      print("dkMode is $dkMode ");
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
       body: Container(
         width: double.infinity,
-        color: Color.fromARGB(255, 106, 163, 108),
+        color: Theme.of(context).primaryColor,
         child:
             Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           Container(
@@ -33,12 +44,15 @@ class _SettingsState extends State<Settings> {
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
                     Transform.scale(
-                      scale: 1.4,
-                      child: Switch.adaptive(
-                          value: value,
-                          onChanged: ((val) =>
-                              setState(() => this.value = val))),
-                    )
+                        scale: 1.4,
+                        child: Switch.adaptive(
+                          onChanged: ((_) {
+                            toggel();
+                            // setState(toggel);
+                            // widget.darkMode = !widget.darkMode;
+                          }),
+                          value: dkMode,
+                        ))
                   ],
                 )),
           ),

@@ -185,10 +185,12 @@ class EveningAzkar extends StatelessWidget {
       'fadl': '',
     },
   ];
-
+  final darkMode;
+  EveningAzkar({required this.darkMode});
   @override
   Widget build(BuildContext context) {
     return AzkarContainer(
+      darkMood: darkMode,
       azkary: azkary,
     );
   }
