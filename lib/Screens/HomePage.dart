@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
   static bool darkMode = false;
+  static int freq = 1;
   @override
   State<HomePage> createState() => _HomePageState();
 }

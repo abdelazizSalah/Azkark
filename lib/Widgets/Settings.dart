@@ -55,8 +55,6 @@ class _SettingsState extends State<Settings> {
                         child: Switch.adaptive(
                           onChanged: ((_) {
                             toggel();
-                            // setState(toggel);
-                            // widget.darkMode = !widget.darkMode;
                           }),
                           value: HomePage.darkMode,
                         ))
@@ -74,7 +72,9 @@ class _SettingsState extends State<Settings> {
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      HomePage.freq = 1;
+                    },
                     child: Text(
                       "High",
                       style: Theme.of(context).textTheme.displayMedium,
@@ -84,7 +84,9 @@ class _SettingsState extends State<Settings> {
                             Theme.of(context).accentColor)),
                   ),
                   ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        HomePage.freq = 3;
+                      },
                       child: Text(
                         "Medium",
                         style: Theme.of(context).textTheme.displayMedium,
@@ -93,7 +95,9 @@ class _SettingsState extends State<Settings> {
                           backgroundColor: MaterialStatePropertyAll(
                               Theme.of(context).accentColor))),
                   ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        HomePage.freq = 5;
+                      },
                       child: Text(
                         "Low",
                         style: Theme.of(context).textTheme.displayMedium,
