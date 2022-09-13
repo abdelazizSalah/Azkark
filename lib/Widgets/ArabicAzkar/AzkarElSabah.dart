@@ -1,4 +1,7 @@
-import '../AzkarContainer.dart';
+import 'package:azkark/Widgets/CustomAppBar.dart';
+import 'package:azkark/Widgets/CustomDrawer.dart';
+
+import '../utilityWidgets/AzkarContainer.dart';
 import 'package:flutter/material.dart';
 
 class AzkarElSabah extends StatelessWidget {
@@ -241,7 +244,7 @@ class AzkarElSabah extends StatelessWidget {
       'title': '',
     },
     {
-      'zekr': 'سُبْحـا,نَ اللهِ وَبِحَمْـدِهِ.',
+      'zekr': 'سُبْحـانَ اللهِ وَبِحَمْـدِهِ.',
       'counter': 100,
       'initial': 100,
       'fadl':
@@ -260,6 +263,10 @@ class AzkarElSabah extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AzkarContainer(azkary: azkary);
+    return Scaffold(
+      appBar: CustomAppBar(),
+      drawer: CustomDrawer(),
+      body: AzkarContainer(azkary: azkary),
+    );
   }
 }

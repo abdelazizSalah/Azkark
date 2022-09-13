@@ -1,5 +1,8 @@
-import '../AzkarContainer.dart';
+import '../utilityWidgets/AzkarContainer.dart';
 import 'package:flutter/material.dart';
+
+import '../CustomAppBar.dart';
+import '../CustomDrawer.dart';
 
 class AzkarElWodo2 extends StatelessWidget {
   List<Map> azkary = [
@@ -40,6 +43,12 @@ class AzkarElWodo2 extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return AzkarContainer(azkary: azkary);
+    return Scaffold(
+      appBar: CustomAppBar(),
+      drawer: CustomDrawer(),
+      body: AzkarContainer(
+        azkary: azkary,
+      ),
+    );
   }
 }

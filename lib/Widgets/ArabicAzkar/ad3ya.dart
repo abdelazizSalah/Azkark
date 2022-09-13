@@ -1,37 +1,50 @@
 import 'package:flutter/material.dart';
 
-class ad3ya extends StatelessWidget {
+import '../CustomAppBar.dart';
+import '../CustomDrawer.dart';
+import '../utilityWidgets/AzkarContainer.dart';
 
-  List<String> ad3yas=["sdfsdf","sdfsdfsdf","sdfsdfsdfsdf"];
+class ad3ya extends StatefulWidget {
+  @override
+  State<ad3ya> createState() => _ad3yaState();
+}
+
+class _ad3yaState extends State<ad3ya> {
+  List<Map<String, Object>> ad3yas = [
+    /// TODO: add all ad3ya here in this blueprint
+    {
+      'zekr':
+          '  َالحَمْـدُ لِلّهِ الّذي أَحْـيانا بَعْـدَ ما أَماتَـنا وَإليه النُّـشور. ',
+      'counter': 1,
+      'initial': 1,
+      'fadl': '',
+      'title': ''
+    },
+    {
+      'zekr':
+          'الحمدُ للهِ الذي عافاني في جَسَدي وَرَدّ عَليّ روحي وَأَذِنَ لي بِذِكْرِه . ',
+      'counter': 1,
+      'initial': 1,
+      'fadl': '',
+      'title': ''
+    },
+    {
+      'zekr':
+          'لا إلهَ إلاّ اللّهُ وَحْـدَهُ لا شَـريكَ له، لهُ المُلـكُ ولهُ الحَمـد، وهوَ على كلّ شيءٍ قدير، سُـبْحانَ اللهِ، والحمْـدُ لله ، ولا إلهَ إلاّ اللهُ واللهُ أكبَر، وَلا حَولَ وَلا قوّة إلاّ باللّهِ العليّ العظيم. رَبِّ اغْفرْ لي  .',
+      'counter': 1,
+      'initial': 1,
+      'fadl': '',
+      'title': ''
+    },
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      body:  ListView.builder(
-          itemCount: (this.ad3yas.isEmpty ) ? 0 : this.ad3yas.length,
-          itemBuilder: (context, position) {
-
-              return Card(
-                color: Colors.white,
-                elevation: 7,
-               shape:  RoundedRectangleBorder(
-                 borderRadius: BorderRadius.circular(15)
-               ),
-                margin: EdgeInsets.all(10),
-                child:
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(15),
-                    child:
-                    Text(
-                      ad3yas[position],style:TextStyle(color:Colors.black),
-                    )
-                    ,
-                  )
-
-              );
-            }
-
-            ),
+      appBar: CustomAppBar(),
+      drawer: CustomDrawer(),
+      body: AzkarContainer(
+        azkary: ad3yas,
+      ),
     );
   }
 }

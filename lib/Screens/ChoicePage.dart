@@ -1,9 +1,9 @@
+import '/Widgets/CustomAppBar.dart';
+import '/Widgets/CustomDrawer.dart';
+import '/controllers/service.dart';
 import 'package:flutter/material.dart';
 
 class ChoicePage extends StatelessWidget {
-  final decider;
-  final deciderSetter;
-  ChoicePage({required this.decider, required this.deciderSetter});
   List<Map<String, Object>> arabicChoices = [
     {
       'zekr': 'أذكار الصباح',
@@ -47,12 +47,14 @@ class ChoicePage extends StatelessWidget {
     },
   ];
 
-  List<Map<String, Object>> englishChoices = [{}];
+  final List<Map<String, Object>> englishChoices = [{}];
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Card(
+    return Scaffold(
+      appBar: CustomAppBar(),
+      drawer: CustomDrawer(),
+      body: Card(
         /// I am using listview not the builder constructor
         /// because here this list is fixed and not dynamicly increasing
         /// so there is no need for the complexity of the builder constructor
@@ -74,7 +76,7 @@ class ChoicePage extends StatelessWidget {
                         style: Theme.of(context).textTheme.bodyMedium,
                       ),
                       onPressed: () {
-                        deciderSetter(myMap['number'] as int);
+                        chooseOptionInAzkar(context, myMap['number'] as int);
                       },
                     ),
                   );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../AzkarContainer.dart';
+import '../utilityWidgets/AzkarContainer.dart';
 
 class WhenLeavingHome extends StatelessWidget {
   List<Map<String, Object>> azkary = [

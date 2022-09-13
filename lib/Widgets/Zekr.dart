@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class Zekr extends StatelessWidget {
@@ -38,6 +40,7 @@ class Zekr extends StatelessWidget {
                     Border.all(width: 3, color: Theme.of(context).accentColor),
                 borderRadius: BorderRadius.circular(50)),
             child: Column(
+              // mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -49,15 +52,14 @@ class Zekr extends StatelessWidget {
                 ),
                 Container(
                   decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 246, 231, 186),
                       border: Border.all(
                           width: 1.0, color: Theme.of(context).accentColor)),
-                  margin: EdgeInsets.only(left: 30, right: 30),
-                  child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 9, vertical: 8),
-                    child: Text(
-                      "$zekr",
-                      style: Theme.of(context).textTheme.bodySmall,
-                    ),
+                  margin: EdgeInsets.symmetric(horizontal: 30),
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  child: Text(
+                    "$zekr",
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                 ),
                 SizedBox(
@@ -85,7 +87,7 @@ class Zekr extends StatelessWidget {
                     child: ElevatedButton(
                       style: ButtonStyle(
                           backgroundColor: MaterialStatePropertyAll(
-                        counter == 0
+                        counter != 0
                             ? Theme.of(context).splashColor
                             : Color.fromARGB(255, 103, 162, 105),
                       )),
