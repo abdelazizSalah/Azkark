@@ -19,8 +19,7 @@ import 'Widgets/EnglishAzkar/EveningAzkar.dart';
 import 'Widgets/EnglishAzkar/MorningAzkar.dart';
 import 'Widgets/EnglishAzkar/Uponenteringthehome.dart';
 import 'Widgets/EnglishAzkar/WhenLeavingHome.dart';
-import 'Widgets/EnglishAzkar/WhenWakingUp.dart';
-
+import 'Widgets/EnglishAzkar/WhenWakingup.dart';
 void main() {
   /// this is the widget which makes the program waits at the beginning.
   WidgetsFlutterBinding.ensureInitialized();
