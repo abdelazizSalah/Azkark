@@ -18,3 +18,22 @@ List<Choice_item> choices_dataAr = [
       "اعدادات",
       3),
 ];
+
+List<Choice_item> choices_Doa2Ar = [
+  Choice_item(
+      "https://media.gemini.media/img/large/2021/10/17/2021_10_17_1_7_36_676.jpg",
+      "ادعية نبوية",
+      0),
+  Choice_item(
+      "https://mediaaws.almasryalyoum.com/news/large/2021/07/16/1582769_0.jpg",
+      "ادعية يوم عرفة",
+      1),
+  Choice_item(
+      "https://cdn.alweb.com/thumbs/mostajaab/article/fit710x532/%D8%AF%D8%B9%D8%A7%D8%A1-%D9%84%D9%84%D8%A3%D8%B7%D8%A8%D8%A7%D8%A1.jpg",
+      "ادعية ختم القرأن",
+      2),
+  Choice_item(
+      "https://cdn.alweb.com/thumbs/mostajaab/article/fit710x532/%D8%AF%D8%B9%D8%A7%D8%A1-%D9%84%D9%84%D9%85%D8%AA%D8%A8%D8%B1%D8%B9.jpg",
+      "جوامع الدعاء",
+      3),
+];
