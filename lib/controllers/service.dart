@@ -12,6 +12,7 @@ import 'package:flutter/material.dart';
 import '../Screens/ChoicePage.dart';
 import '../Widgets/ArabicAzkar/tasabeeh.dart';
 import 'package:azkark/Screens/Doa2ChoicePage.dart';
+import '../Widgets/Settings.dart';
 
 void chooseOptioninHomePage(BuildContext c, num choice) {
   if (choice == 0) {
@@ -21,41 +22,40 @@ void chooseOptioninHomePage(BuildContext c, num choice) {
   } else if (choice == 2) {
     Navigator.push(c, MaterialPageRoute(builder: (c) => tasabeeh()));
   } else if (choice == 3) {
-    /// Todo add the setting widget
-    Navigator.push(c, MaterialPageRoute(builder: (c) => ChoicePage()));
+    Navigator.push(c, MaterialPageRoute(builder: (c) => Settings()));
   }
 }
 
 void chooseOptionInAzkar(BuildContext c, num choice) {
   switch (choice) {
-    case 0:
+    case 0 + 1:
       Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElSabah()));
       break;
-    case 1:
+    case 1 + 1:
       Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElMasa2()));
       break;
-    case 2:
+    case 2 + 1:
       Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarB3dElSalah()));
       break;
-    case 3:
+    case 3 + 1:
       Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElNom()));
       break;
-    case 4:
+    case 4 + 1:
       Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElEstykaz()));
       break;
-    case 5:
+    case 5 + 1:
       Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElSalah()));
       break;
-    case 6:
+    case 6 + 1:
       Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElWodo2()));
       break;
-    case 7:
+    case 7 + 1:
       Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElAzan()));
       break;
-    case 8:
+    case 8 + 1:
       Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarElMasjed()));
       break;
-    case 9:
+    case 9 + 1:
       Navigator.push(c, MaterialPageRoute(builder: (c) => AzkarMotafareka()));
       break;
   }

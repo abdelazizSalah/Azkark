@@ -33,6 +33,11 @@ class myApp extends StatelessWidget {
                         color: Color.fromARGB(255, 220, 171, 27),
                         offset: Offset(20, 5))
                   ]),
+              displayMedium: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'DS-DIGI'),
               bodySmall: TextStyle(
                   fontSize: 25, color: Colors.black, fontFamily: 'DS-DIGI'),
               bodyMedium: TextStyle(

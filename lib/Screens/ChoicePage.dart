@@ -51,14 +51,11 @@ class ChoicePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppBar(),
-      drawer: CustomDrawer(),
-      body: Card(
-        /// I am using listview not the builder constructor
-        /// because here this list is fixed and not dynamicly increasing
-        /// so there is no need for the complexity of the builder constructor
-        child: ListView(
+    return Scrollable(viewportBuilder: (context, position) {
+      return Scaffold(
+        appBar: CustomAppBar(),
+        drawer: CustomDrawer(),
+        body: ListView(
           children: [
             Column(
                 // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -83,7 +80,9 @@ class ChoicePage extends StatelessWidget {
                 }).toList()),
           ],
         ),
-      ),
-    );
+      );
+    }
+        // child:
+        );
   }
 }
