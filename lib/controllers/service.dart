@@ -13,13 +13,26 @@ import '../Screens/ChoicePage.dart';
 import '../Widgets/ArabicAzkar/tasabeeh.dart';
 import 'package:azkark/Screens/Doa2ChoicePage.dart';
 
-void chooseOptioninHomePage(BuildContext c, num choice) {
+num currentContextNumberInChoicePage=-1;
+void chooseOptioninHomePage(BuildContext c, num choice,num where) {
+
+  if(choice==currentContextNumberInChoicePage&&where==1)return;
+  currentContextNumberInChoicePage=choice;
   if (choice == 0) {
-    Navigator.push(c, MaterialPageRoute(builder: (c) => ChoicePage()));
+    if(where==0)
+      Navigator.push(c, MaterialPageRoute(builder: (c) => ChoicePage()));
+    else
+      Navigator.pushReplacement(c, MaterialPageRoute(builder: (c) => ChoicePage()));
   } else if (choice == 1) {
-    Navigator.push(c, MaterialPageRoute(builder: (c) => Doa2ChoicePage()));
+    if(where==0)
+      Navigator.push(c, MaterialPageRoute(builder: (c) => Doa2ChoicePage()));
+    else
+      Navigator.pushReplacement(c, MaterialPageRoute(builder: (c) => Doa2ChoicePage()));
   } else if (choice == 2) {
-    Navigator.push(c, MaterialPageRoute(builder: (c) => tasabeeh()));
+    if(where==0)
+      Navigator.push(c, MaterialPageRoute(builder: (c) => tasabeeh()));
+    else
+      Navigator.pushReplacement(c, MaterialPageRoute(builder: (c) => tasabeeh()));
   } else if (choice == 3) {
     /// Todo add the setting widget
     Navigator.push(c, MaterialPageRoute(builder: (c) => ChoicePage()));

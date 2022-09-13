@@ -20,7 +20,7 @@ class choiceItemScreen extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            chooseOptioninHomePage(context, choice);
+            chooseOptioninHomePage(context, choice,0);
           },
           child: Container(
             padding: EdgeInsets.all(10),

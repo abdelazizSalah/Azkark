@@ -22,7 +22,7 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      drawer: CustomDrawer(),
+   
       body: GridView(
           padding: EdgeInsets.all(10),
           gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
