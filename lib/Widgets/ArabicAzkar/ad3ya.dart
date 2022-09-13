@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../CustomAppBar.dart';
 import '../CustomDrawer.dart';
-import '../utilityWidgets/AzkarContainer.dart';
+import '../AzkarContainer.dart';
 
 class ad3ya extends StatefulWidget {
   @override

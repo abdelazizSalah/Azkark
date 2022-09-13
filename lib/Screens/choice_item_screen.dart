@@ -12,7 +12,7 @@ class choiceItemScreen extends StatelessWidget {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(15),
-          child: Image.network(
+          child: Image.asset(
             image,
             height: 250,
             fit: BoxFit.cover,

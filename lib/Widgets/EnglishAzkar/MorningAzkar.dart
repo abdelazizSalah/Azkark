@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../utilityWidgets/AzkarContainer.dart';
+import '../AzkarContainer.dart';
 
 class MorningAzkar extends StatelessWidget {
   List<Map<String, Object>> azkary = [

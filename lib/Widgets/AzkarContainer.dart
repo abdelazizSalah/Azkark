@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Zekr.dart';
+import 'Zekr.dart';
 
 class AzkarContainer extends StatefulWidget {
   final azkary;

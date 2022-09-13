@@ -50,7 +50,6 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   chooseOptioninHomePage(context, 0);
                 });
                 // Then close the drawer
-                Navigator.pop(context);
               },
             ),
             ListTile(
@@ -63,10 +62,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 // ...
                 // Then close the drawer
                 setState(() {
-                  chooseOptioninHomePage(context, 3);
+                  chooseOptioninHomePage(context, 2);
                 });
-
-                Navigator.pop(context);
               },
             ),
             ListTile(
@@ -77,10 +74,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 // ...
                 // Then close the drawer
                 setState(() {
-                  chooseOptioninHomePage(context, 2);
+                  chooseOptioninHomePage(context, 1);
                 });
-
-                Navigator.pop(context);
               },
             ),
             ListTile(
@@ -93,7 +88,6 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 // setState(() {
                 //   decider = 11;
                 // });
-                Navigator.pop(context);
               },
             ),
           ],

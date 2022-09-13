@@ -1,4 +1,4 @@
-import 'package:azkark/Widgets/utilityWidgets/AzkarContainer.dart';
+import 'package:azkark/Widgets/AzkarContainer.dart';
 import 'package:flutter/material.dart';
 
 import '../CustomAppBar.dart';

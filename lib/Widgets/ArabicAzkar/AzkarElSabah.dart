@@ -1,7 +1,7 @@
 import 'package:azkark/Widgets/CustomAppBar.dart';
 import 'package:azkark/Widgets/CustomDrawer.dart';
 
-import '../utilityWidgets/AzkarContainer.dart';
+import '../AzkarContainer.dart';
 import 'package:flutter/material.dart';
 
 class AzkarElSabah extends StatelessWidget {
