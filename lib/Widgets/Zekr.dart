@@ -46,14 +46,8 @@ class Zekr extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    title,
-                    style: TextStyle(
-                        color: darkMood == false
-                            ? Theme.of(context).accentColor
-                            : Theme.of(context).splashColor,
-                        fontSize: 24),
-                  ),
+                  child: Text(title,
+                      style: Theme.of(context).textTheme.titleSmall),
                 ),
                 Container(
                   decoration: BoxDecoration(

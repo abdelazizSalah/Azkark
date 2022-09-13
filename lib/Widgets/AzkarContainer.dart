@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import '../Screens/HomePage.dart';
 import 'Zekr.dart';
 
 class AzkarContainer extends StatefulWidget {
@@ -24,7 +25,7 @@ class _AzkarContainerState extends State<AzkarContainer> {
             child: ListView.builder(
           itemBuilder: (context, index) {
             return Zekr(
-              darkMood: widget.darkMood,
+              darkMood: HomePage.darkMode,
               counter: azkary[index]['counter'],
               zekr: azkary[index]['zekr'],
               title: azkary[index]['title'],

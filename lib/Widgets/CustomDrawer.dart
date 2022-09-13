@@ -1,3 +1,5 @@
+import 'package:azkark/Screens/HomePage.dart';
+
 import '../controllers/service.dart';
 import 'package:flutter/material.dart';
 
@@ -29,16 +31,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       color: Theme.of(context).splashColor)
                 ], color: Theme.of(context).splashColor),
                 child: Center(
-                  child: Text(
-                    'أذكارك',
-                    style:
-                        TextStyle(color: Colors.white, fontSize: 40, shadows: [
-                      Shadow(
-                          blurRadius: 40,
-                          color: Theme.of(context).accentColor,
-                          offset: Offset(20, 10))
-                    ]),
-                  ),
+                  child: Text('أذكارك',
+                      style: Theme.of(context).textTheme.titleLarge),
                 ),
               ),
             ),
@@ -51,7 +45,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 // Update the state of the app
                 setState(() {
                   chooseOptioninHomePage(
-                      context, 0, 0, widget.darkMode, widget.darkModeSetter);
+                      context, 0, 0, HomePage.darkMode, widget.darkModeSetter);
                 });
                 // Then close the drawer
               },
@@ -67,7 +61,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 // Then close the drawer
                 setState(() {
                   chooseOptioninHomePage(
-                      context, 2, 1, widget.darkMode, widget.darkModeSetter);
+                      context, 2, 1, HomePage.darkMode, widget.darkModeSetter);
                 });
               },
             ),
@@ -80,7 +74,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 // Then close the drawer
                 setState(() {
                   chooseOptioninHomePage(
-                      context, 1, 1, widget.darkMode, widget.darkModeSetter);
+                      context, 1, 1, HomePage.darkMode, widget.darkModeSetter);
                 });
               },
             ),
@@ -90,7 +84,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
               onTap: () {
                 setState(() {
                   chooseOptioninHomePage(
-                      context, 3, 0, widget.darkMode, widget.darkModeSetter);
+                      context, 3, 0, HomePage.darkMode, widget.darkModeSetter);
                 });
               },
             ),

@@ -1,6 +1,8 @@
 import 'package:azkark/Widgets/CustomAppBar.dart';
 import 'package:flutter/material.dart';
 
+import '../Screens/HomePage.dart';
+
 class Settings extends StatefulWidget {
   bool darkMode;
   final darkModeSetter;
@@ -16,9 +18,14 @@ class _SettingsState extends State<Settings> {
   void toggel() {
     widget.darkModeSetter();
     setState(() {
-      var temp = !dkMode;
-      dkMode = temp;
-      print("dkMode is $dkMode ");
+      // var temp = !dkMode;
+      // dkMode = temp;
+      // print("dkMode is $dkMode ");
+
+      var temp = HomePage.darkMode;
+      // HomePage.darkMode = !temp;
+      print(temp);
+      print(HomePage.darkMode);
     });
   }
 
@@ -51,7 +58,7 @@ class _SettingsState extends State<Settings> {
                             // setState(toggel);
                             // widget.darkMode = !widget.darkMode;
                           }),
-                          value: dkMode,
+                          value: HomePage.darkMode,
                         ))
                   ],
                 )),

@@ -4,7 +4,7 @@ import 'package:azkark/Widgets/CustomAppBar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  bool darkMode = false;
+  static bool darkMode = false;
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -12,49 +12,53 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   void toggleButton() {
     setState(() {
-      print("Enter");
-      var temp = !widget.darkMode;
-      print(temp);
-      print(widget.darkMode);
-      widget.darkMode = temp;
-      print(widget.darkMode);
+      var temp = HomePage.darkMode;
+      HomePage.darkMode = !temp;
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    bool dkWidget = HomePage.darkMode;
+
     // return Scaffold(
-    //   body: MainPage(darkMode: widget.darkMode),
+    //   body: MainPage(darkMode: dkWidget),
     // );
     return MaterialApp(
         theme: ThemeData(
-            hoverColor: widget.darkMode == false
+            splashColor: dkWidget == false
+                ? Color.fromARGB(255, 17, 133, 66)
+                : Color.fromARGB(255, 52, 83, 132),
+            dividerColor: dkWidget == false
+                ? Theme.of(context).accentColor
+                : Theme.of(context).accentColor,
+            hoverColor: dkWidget == false
                 ? Color.fromARGB(255, 118, 164, 120)
                 : Color.fromARGB(255, 104, 151, 192),
-            focusColor: widget.darkMode == false
+            focusColor: dkWidget == false
                 ? Color.fromARGB(255, 251, 233, 173)
                 : Color.fromARGB(255, 237, 206, 113),
             primaryColor:
-                widget.darkMode == false ? Colors.green[300] : Colors.blue[900],
-            hintColor: widget.darkMode == false
+                dkWidget == false ? Colors.green[300] : Colors.blue[900],
+            hintColor: dkWidget == false
                 ? Colors.green[500]
                 : Color.fromARGB(255, 106, 142, 179),
             accentColor: Color.fromARGB(255, 220, 171, 27),
-            splashColor: widget.darkMode == false
-                ? Color.fromARGB(255, 17, 133, 66)
-                : Color.fromARGB(255, 52, 83, 132),
-            errorColor: widget.darkMode == false
+            errorColor: dkWidget == false
                 ? Colors.white
                 : Color.fromARGB(255, 251, 217, 167),
             buttonTheme:
                 ButtonThemeData(buttonColor: Color.fromARGB(255, 220, 171, 27)),
             fontFamily: 'Gulzar',
             textTheme: TextTheme(
+                titleSmall: TextStyle(
+                    fontSize: 24,
+                    fontFamily: 'Amiri',
+                    color: dkWidget == false ? Colors.amber : Colors.blue),
                 titleLarge: TextStyle(
                     letterSpacing: 1.2,
                     fontSize: 38,
-                    color:
-                        widget.darkMode == false ? Colors.white : Colors.amber,
+                    color: dkWidget == false ? Colors.white : Colors.amber,
                     shadows: [
                       Shadow(
                           blurRadius: 40,
@@ -80,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                     ]))),
         debugShowCheckedModeBanner: false,
         home: MainPage(
-          darkMode: widget.darkMode,
+          darkMode: dkWidget,
           darkModeSetter: toggleButton,
         ));
   }
