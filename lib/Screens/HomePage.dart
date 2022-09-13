@@ -22,12 +22,12 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-   
+
       body: GridView(
           padding: EdgeInsets.all(10),
           gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 200,
-            childAspectRatio: 7 / 8,
+            childAspectRatio: 7/13,
             mainAxisSpacing: 10,
             crossAxisSpacing: 10,
           ),

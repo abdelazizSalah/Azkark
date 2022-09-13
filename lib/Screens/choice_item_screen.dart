@@ -14,7 +14,8 @@ class choiceItemScreen extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           child: Image.asset(
             image,
-            height: 250,
+            height: 450,
+
             fit: BoxFit.cover,
           ),
         ),
@@ -23,6 +24,7 @@ class choiceItemScreen extends StatelessWidget {
             chooseOptioninHomePage(context, choice,0);
           },
           child: Container(
+
             padding: EdgeInsets.all(10),
             alignment: Alignment.center,
             child: Text(
