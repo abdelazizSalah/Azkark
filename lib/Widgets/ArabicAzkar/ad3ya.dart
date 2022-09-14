@@ -1,4 +1,5 @@
 import 'package:azkark/Models/ad3ya_data.dart';
+import 'package:azkark/Widgets/Zekr.dart';
 import 'package:flutter/material.dart';
 
 import '../CustomAppBar.dart';
@@ -11,7 +12,7 @@ class ad3ya extends StatelessWidget {
   final num choice;
   final bool languageSelected;
   ad3ya({required this.darkMode, required this.darkModeSetter,required this.choice,required this.languageSelected});
-
+  //List<String>duas=[];
   List<Map<String, Object>> ad3yas = [
     /// TODO: add all ad3ya here in this blueprint
     {
@@ -44,22 +45,59 @@ class ad3ya extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      drawer: CustomDrawer(
-        darkMode: darkMode,
-        darkModeSetter: darkModeSetter,
-      ),
+      // drawer: CustomDrawer(
+      //   darkMode: darkMode,
+      //   darkModeSetter: darkModeSetter,
+      // ),
       body:
 
-
-      AzkarContainer(
-        darkMood: darkMode,
-        azkary:
           languageSelected==false?
-              choice==0? ad3yaNabawya:choice==1?ad3yaYoum3rafa:choice==2?ad3ya5tmElQuran:ad3yaGowm3ElDoa2
-              :
-          ad3yas
+          (Directionality(
+          textDirection: TextDirection.rtl,
+          child: Column(
 
-      ),
+            children: [
+              Expanded(
+
+                child: ListView.builder(
+                    scrollDirection: Axis.vertical,
+                    shrinkWrap: true,
+                    itemCount: choice==0?ad3yaNabawya.length:choice==1?ad3yaYoum3rafa.length:choice==2?ad3ya5tmElQuran.length:ad3yaGowm3ElDoa2.length,
+                    itemBuilder: (context,position){
+                     return Stack(
+
+                        children: [
+
+                          Padding(
+
+                            child: Container(
+
+                              padding: EdgeInsets.all(10),
+                              alignment: Alignment.center,
+                              child: Text(
+
+                                choice==0?ad3yaNabawya[position]:choice==1?ad3yaYoum3rafa[position]:choice==2?ad3ya5tmElQuran[position]:ad3yaGowm3ElDoa2[position],
+                                style: TextStyle(fontSize: 30, color: Colors.white),
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Colors.black.withOpacity(0.4),
+                                  borderRadius: BorderRadius.circular(15)),
+                            ),
+                            padding: EdgeInsets.all(15),
+                          )
+                        ],
+                      );
+
+                }
+                ),
+              )
+            ],
+          ),
+        ))
+              :
+          ( Text("asdasd"))
+
+
     );
   }
 }
