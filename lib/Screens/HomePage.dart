@@ -119,40 +119,43 @@ class MainPage extends StatelessWidget {
     //print(languageChoice);
     return Scaffold(
       appBar: CustomAppBar(),
-      body: Container(
-        color: Theme.of(context).canvasColor,
-        child: GridView(
-            padding: EdgeInsets.all(10),
-            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 200,
-              childAspectRatio: 7 / 12,
-              mainAxisSpacing: 10,
-              crossAxisSpacing: 10,
-            ),
-            children:
+      body: Directionality(
+        textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
+        child: Container(
+          color: Theme.of(context).canvasColor,
+          child: GridView(
+              padding: EdgeInsets.all(10),
+              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 200,
+                childAspectRatio: 7 / 13,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+              ),
+              children:
 
-            HomePage.languageChoice==false?
-            ( choices_dataAr
-                .map((ch) => choiceItemScreen(
-                    darkModeSetter: darkModeSetter,
-                    image: ch.image,
-                    word: ch.word,
-                    choice: ch.choice,
-                    darkMode: darkMode,
-            ))
-                .toList()):
-            (
-          choices_dataEn
-          .map((ch) => choiceItemScreen(
-        darkModeSetter: darkModeSetter,
-        image: ch.image,
-        word: ch.word,
-        choice: ch.choice,
-        darkMode: darkMode))
-        .toList())
-        )
+              HomePage.languageChoice==false?
+              ( choices_dataAr
+                  .map((ch) => choiceItemScreen(
+                      darkModeSetter: darkModeSetter,
+                      image: ch.image,
+                      word: ch.word,
+                      choice: ch.choice,
+                      darkMode: darkMode,
+              ))
+                  .toList()):
+              (
+            choices_dataEn
+            .map((ch) => choiceItemScreen(
+          darkModeSetter: darkModeSetter,
+          image: ch.image,
+          word: ch.word,
+          choice: ch.choice,
+          darkMode: darkMode))
+          .toList())
+          )
 
-        ,
+          ,
+        ),
       ),
     );
   }

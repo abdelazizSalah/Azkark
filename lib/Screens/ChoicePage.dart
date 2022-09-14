@@ -1,3 +1,5 @@
+import 'package:azkark/Screens/HomePage.dart';
+
 import '/Widgets/CustomAppBar.dart';
 import '/Widgets/CustomDrawer.dart';
 import '/controllers/service.dart';
@@ -87,7 +89,9 @@ class ChoicePage extends StatelessWidget {
             Column(
                 // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: arabicChoices.map((myMap) {
+                children:
+                HomePage.languageChoice==false?
+                (arabicChoices.map((myMap) {
                   return Container(
                     margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                     child: ElevatedButton(
@@ -105,7 +109,29 @@ class ChoicePage extends StatelessWidget {
                       },
                     ),
                   );
-                }).toList()),
+                }).toList()):
+            (
+          englishChoices.map((myMap) {
+        return Container(
+          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+          child: ElevatedButton(
+            style: ButtonStyle(
+                elevation: MaterialStateProperty.all(10),
+                backgroundColor: MaterialStateProperty.all(
+                    Theme.of(context).splashColor)),
+            child: Text(
+              myMap['zekr'] as String,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+            onPressed: () {
+              chooseOptionInAzkar(context, myMap['number'] as int,
+                  darkMode, darkModeSetter);
+            },
+          ),
+        );
+      }).toList())
+            )
+            ,
           ],
         ),
       );

@@ -31,7 +31,7 @@ class _Doa2ChoicePageState extends State<Doa2ChoicePage> {
           padding: EdgeInsets.all(10),
           gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 200,
-            childAspectRatio: 7 / 12,
+            childAspectRatio: 7 / 13,
             mainAxisSpacing: 10,
             crossAxisSpacing: 10,
           ),

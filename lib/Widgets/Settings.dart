@@ -118,7 +118,7 @@ class _SettingsState extends State<Settings> {
 
                       },
                       child: Text(
-                        "Arabic",
+                        "اللغة العريبة",
                         style: Theme.of(context).textTheme.displayMedium,
                       ),
                       style: ButtonStyle(

@@ -36,7 +36,7 @@ class choiceItemScreen extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               word,
-              style: TextStyle(fontSize: 30, color: Colors.white),
+              style: TextStyle(fontSize: 27, color: Colors.white),
             ),
             decoration: BoxDecoration(
                 color: Colors.black.withOpacity(0.4),

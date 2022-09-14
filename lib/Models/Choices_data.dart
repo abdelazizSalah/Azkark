@@ -25,7 +25,7 @@ List<Choice_item> choices_dataEn = [
       1),
   Choice_item(
       "assets/imgs/tasbeehchoice.jpg",
-      "praise",
+      "Praise",
       2),
   Choice_item(
       "assets/imgs/setting.png",

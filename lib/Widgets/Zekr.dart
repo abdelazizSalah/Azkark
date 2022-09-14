@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:azkark/Screens/HomePage.dart';
 import 'package:flutter/material.dart';
 
 class Zekr extends StatelessWidget {
@@ -23,7 +24,7 @@ class Zekr extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection: TextDirection.rtl,
+      textDirection: HomePage.languageChoice==false ?TextDirection.rtl:TextDirection.ltr,
       child: Container(
         color: Theme.of(context).hintColor,
         child: Card(

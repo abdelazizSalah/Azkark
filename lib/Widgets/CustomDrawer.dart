@@ -15,7 +15,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection: TextDirection.rtl,
+      textDirection:HomePage.languageChoice==false ?TextDirection.rtl:TextDirection.ltr,
       child: Drawer(
         child: ListView(
           // Important: Remove any padding from the ListView.
@@ -36,11 +36,12 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 ),
               ),
             ),
-            ListTile(
-              title: Text(
+
+           ListTile(
+              title: HomePage.languageChoice==false? Text(
                 'أذكار',
                 style: Theme.of(context).textTheme.bodySmall,
-              ),
+              ):Text("Remembrance", style: Theme.of(context).textTheme.bodySmall,),
               onTap: () {
                 // Update the state of the app
                 setState(() {
@@ -51,10 +52,14 @@ class _CustomDrawerState extends State<CustomDrawer> {
               },
             ),
             ListTile(
-              title: Text(
+              title: HomePage.languageChoice==false? Text(
                 'تسبيح',
                 style: Theme.of(context).textTheme.bodySmall,
-              ),
+              ):Text(
+                'Praise',
+                style: Theme.of(context).textTheme.bodySmall,
+              )
+              ,
               onTap: () {
                 setState(() {
                   chooseOptioninHomePage(
@@ -63,8 +68,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               },
             ),
             ListTile(
-              title:
-                  Text('أدعية', style: Theme.of(context).textTheme.bodySmall),
+              title: HomePage.languageChoice==false?
+                  Text('أدعية', style: Theme.of(context).textTheme.bodySmall):
+              Text('Supplications', style: Theme.of(context).textTheme.bodySmall)
+
+              ,
               onTap: () {
                 setState(() {
                   chooseOptioninHomePage(
@@ -73,7 +81,9 @@ class _CustomDrawerState extends State<CustomDrawer> {
               },
             ),
             ListTile(
-              title: Text('الاعدادات',
+              title: HomePage.languageChoice==false? Text('الاعدادات',
+                  style: Theme.of(context).textTheme.bodySmall):
+              Text('Settings',
                   style: Theme.of(context).textTheme.bodySmall),
               onTap: () {
                 setState(() {
@@ -81,7 +91,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       context, 3, 0, HomePage.darkMode, widget.darkModeSetter);
                 });
               },
-            ),
+            )
+
           ],
         ),
       ),
