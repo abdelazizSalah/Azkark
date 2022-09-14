@@ -14,7 +14,9 @@ class Settings extends StatefulWidget {
 
 class _SettingsState extends State<Settings> {
   bool dkMode;
+
   _SettingsState({required this.dkMode});
+
   void toggel() {
     widget.darkModeSetter();
     setState(() {
@@ -118,7 +120,12 @@ class _SettingsState extends State<Settings> {
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
                   ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          HomePage.languageChoice=false;
+                        });
+
+                      },
                       child: Text(
                         "Arabic",
                         style: Theme.of(context).textTheme.displayMedium,
@@ -127,7 +134,13 @@ class _SettingsState extends State<Settings> {
                           backgroundColor: MaterialStatePropertyAll(
                               Theme.of(context).accentColor))),
                   ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          HomePage.languageChoice=true;
+                        });
+                        print(HomePage.languageChoice);
+
+                      },
                       child: Text(
                         "English",
                         style: Theme.of(context).textTheme.displayMedium,

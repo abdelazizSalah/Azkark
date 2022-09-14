@@ -1,4 +1,6 @@
+import 'package:azkark/Screens/HomePage.dart';
 import 'package:azkark/Widgets/ArabicAzkar/AzkarElSabah.dart';
+import 'package:azkark/Widgets/ArabicAzkar/ad3ya.dart';
 import '../Widgets/ArabicAzkar/AzkarElAzan.dart';
 import '../Widgets/ArabicAzkar/AzkarB3dElSalah.dart';
 import '../Widgets/ArabicAzkar/AzkarElEstykaz.dart';
@@ -137,8 +139,16 @@ void chooseOptionInAzkar(
   }
 }
 
-void chooseOptioninDoa2Page(BuildContext c, num choice) {
+void chooseOptioninDoa2Page(BuildContext c, num choice,bool dark, darkModeSetter) {
   //change choice in decider of doaa pages
+  if(choice==0){
+    Navigator.push(
+        c,
+        MaterialPageRoute(
+            builder: (c) =>
+              ad3ya(darkMode: HomePage.darkMode, darkModeSetter:darkModeSetter , choice: choice, languageSelected: HomePage.languageChoice)));
+  }
+
   print("from option doaa2");
   print(choice);
 }

@@ -45,7 +45,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 // Update the state of the app
                 setState(() {
                   chooseOptioninHomePage(
-                      context, 0, 0, HomePage.darkMode, widget.darkModeSetter);
+                      context, 0, 1, HomePage.darkMode, widget.darkModeSetter);
                 });
                 // Then close the drawer
               },

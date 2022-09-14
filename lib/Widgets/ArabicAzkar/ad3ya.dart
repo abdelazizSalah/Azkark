@@ -1,3 +1,4 @@
+import 'package:azkark/Models/ad3ya_data.dart';
 import 'package:flutter/material.dart';
 
 import '../CustomAppBar.dart';
@@ -7,8 +8,9 @@ import '../AzkarContainer.dart';
 class ad3ya extends StatelessWidget {
   final darkMode;
   final darkModeSetter;
-
-  ad3ya({required this.darkMode, required this.darkModeSetter});
+  final num choice;
+  final bool languageSelected;
+  ad3ya({required this.darkMode, required this.darkModeSetter,required this.choice,required this.languageSelected});
 
   List<Map<String, Object>> ad3yas = [
     /// TODO: add all ad3ya here in this blueprint
@@ -46,9 +48,17 @@ class ad3ya extends StatelessWidget {
         darkMode: darkMode,
         darkModeSetter: darkModeSetter,
       ),
-      body: AzkarContainer(
+      body:
+
+
+      AzkarContainer(
         darkMood: darkMode,
-        azkary: ad3yas,
+        azkary:
+          languageSelected==false?
+              choice==0? ad3yaNabawya:choice==1?ad3yaYoum3rafa:choice==2?ad3ya5tmElQuran:ad3yaGowm3ElDoa2
+              :
+          ad3yas
+
       ),
     );
   }

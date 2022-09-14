@@ -5,7 +5,9 @@ class choice_doa2Widget extends StatelessWidget {
   final String word;
   final String image;
   final num choice;
-  choice_doa2Widget(this.image, this.word, this.choice);
+  final bool darkMode;
+  final darkModeSetter;
+  choice_doa2Widget(this.image, this.word, this.choice,this.darkMode,this.darkModeSetter);
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -20,7 +22,7 @@ class choice_doa2Widget extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            chooseOptioninDoa2Page(context, choice);
+            chooseOptioninDoa2Page(context, choice,darkMode,darkModeSetter);
           },
           child: Container(
             padding: EdgeInsets.all(10),

@@ -6,22 +6,31 @@ import 'package:flutter/material.dart';
 class HomePage extends StatefulWidget {
   static bool darkMode = false;
   static int freq = 1;
+  static bool languageChoice=false;
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  void toggleButton() {
+  void  toggleButton() {
     setState(() {
       var temp = HomePage.darkMode;
       HomePage.darkMode = !temp;
+
     });
   }
+  void toogleLanguage(bool c){
+    setState(() {
+     HomePage.languageChoice=c;
+
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
     bool dkWidget = HomePage.darkMode;
-
+   // bool languageC=HomePage.languageChoice;
     // return Scaffold(
     //   body: MainPage(darkMode: dkWidget),
     // );
@@ -87,6 +96,7 @@ class _HomePageState extends State<HomePage> {
         home: MainPage(
           darkMode: dkWidget,
           darkModeSetter: toggleButton,
+        //  languageChoice:languageChoice,
         ));
   }
 }
@@ -94,9 +104,11 @@ class _HomePageState extends State<HomePage> {
 class MainPage extends StatelessWidget {
   final bool darkMode;
   final darkModeSetter;
+  //final bool languageChoice;
   MainPage({required this.darkMode, required this.darkModeSetter});
   @override
   Widget build(BuildContext context) {
+    //print(languageChoice);
     return Scaffold(
       appBar: CustomAppBar(),
       body: Container(
@@ -111,14 +123,30 @@ class MainPage extends StatelessWidget {
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
             ),
-            children: choices_dataAr
+            children:
+
+            HomePage.languageChoice==false?
+            ( choices_dataAr
                 .map((ch) => choiceItemScreen(
                     darkModeSetter: darkModeSetter,
                     image: ch.image,
                     word: ch.word,
                     choice: ch.choice,
-                    darkMode: darkMode))
-                .toList()),
+                    darkMode: darkMode,
+            ))
+                .toList()):
+            (
+          choices_dataEn
+          .map((ch) => choiceItemScreen(
+        darkModeSetter: darkModeSetter,
+        image: ch.image,
+        word: ch.word,
+        choice: ch.choice,
+        darkMode: darkMode))
+        .toList())
+        )
+
+        ,
       ),
     );
   }

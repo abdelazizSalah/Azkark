@@ -12,7 +12,8 @@ class choiceItemScreen extends StatelessWidget {
       required this.word,
       required this.darkModeSetter,
       required this.choice,
-      required this.darkMode});
+      required this.darkMode,
+      });
   @override
   Widget build(BuildContext context) {
     return Stack(

@@ -19,10 +19,12 @@ final cron = Cron();
 int frequncy = HomePage.freq;
 
 void changeFrequency(int choice) {
+
   if (choice == 3)
     frequncy = 5;
   else
     frequncy = choice;
+
 }
 
 void fridayZekrActivate() {

@@ -47,7 +47,29 @@ class ChoicePage extends StatelessWidget {
     },
   ];
 
-  final List<Map<String, Object>> englishChoices = [{}];
+  final List<Map<String, Object>> englishChoices = [
+    {
+      'zekr': 'Morning Remembrance',
+      'number': 1,
+    },
+    {
+      'zekr': 'Evening Remembrance',
+      'number': 2,
+    },
+    {
+      'zekr': 'When Leaving Home Remembrance',
+      'number': 3,
+    },
+    {
+      'zekr': 'When Waking Up Remembrance',
+      'number': 4,
+    },
+    {
+      'zekr': 'Upon Entering Home Remembrance',
+      'number': 5,
+    },
+
+  ];
   final darkMode;
   final darkModeSetter;
   ChoicePage({required this.darkMode, required this.darkModeSetter});
