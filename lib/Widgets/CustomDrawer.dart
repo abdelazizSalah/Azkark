@@ -22,7 +22,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
           padding: EdgeInsets.zero,
           children: [
             Container(
-              height: 170,
+              height: MediaQuery.of(context).size.height * 0.24,
               child: DrawerHeader(
                 decoration: BoxDecoration(boxShadow: [
                   BoxShadow(
@@ -56,9 +56,6 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 style: Theme.of(context).textTheme.bodySmall,
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
                 setState(() {
                   chooseOptioninHomePage(
                       context, 2, 1, HomePage.darkMode, widget.darkModeSetter);
@@ -69,9 +66,6 @@ class _CustomDrawerState extends State<CustomDrawer> {
               title:
                   Text('أدعية', style: Theme.of(context).textTheme.bodySmall),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
                 setState(() {
                   chooseOptioninHomePage(
                       context, 1, 1, HomePage.darkMode, widget.darkModeSetter);

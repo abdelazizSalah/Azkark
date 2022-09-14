@@ -109,8 +109,6 @@ class ChoicePage extends StatelessWidget {
           ],
         ),
       );
-    }
-        // child:
-        );
+    });
   }
 }
