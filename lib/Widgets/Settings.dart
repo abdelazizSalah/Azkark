@@ -26,6 +26,7 @@ class _SettingsState extends State<Settings> {
     return Scaffold(
       appBar: CustomAppBar(),
       body: Container(
+        padding: EdgeInsets.all(10),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         color: Theme.of(context).canvasColor,
@@ -55,50 +56,113 @@ class _SettingsState extends State<Settings> {
                 )),
           ),
           Container(
-            height: MediaQuery.of(context).size.height * 0.13,
+            height: MediaQuery.of(context).size.height * 0.15,
             child: Card(
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                  Text(
-                    "Freq",
-                    style: Theme.of(context).textTheme.bodySmall,
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      HomePage.freq = 1;
-                    },
-                    child: Text(
-                      "High",
-                      style: Theme.of(context).textTheme.displayMedium,
+                child:
+                HomePage.languageChoice==false?
+                (Column(
+                  children: [
+                    Padding(padding: EdgeInsets.all(10),
+                    child:   Text(
+                      "تكرار  التنبيهات",
+                      style: Theme.of(context).textTheme.bodySmall,
                     ),
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll(
-                            Theme.of(context).accentColor)),
-                  ),
-                  ElevatedButton(
-                      onPressed: () {
-                        HomePage.freq = 3;
-                      },
-                      child: Text(
-                        "Medium",
-                        style: Theme.of(context).textTheme.displayMedium,
+                    )
+,
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+
+                      ElevatedButton(
+                        onPressed: () {
+                          HomePage.freq = 1;
+                        },
+                        child: Text(
+                          "باستمرار",
+                          style: Theme.of(context).textTheme.displayMedium,
+                        ),
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                                Theme.of(context).accentColor)),
                       ),
-                      style: ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(
-                              Theme.of(context).accentColor))),
-                  ElevatedButton(
-                      onPressed: () {
-                        HomePage.freq = 5;
-                      },
+                      ElevatedButton(
+                          onPressed: () {
+                            HomePage.freq = 3;
+                          },
+                          child: Text(
+                            "متوسطة",
+                            style: Theme.of(context).textTheme.displayMedium,
+                          ),
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll(
+                                  Theme.of(context).accentColor))),
+                      ElevatedButton(
+                          onPressed: () {
+                            HomePage.freq = 5;
+                          },
+                          child: Text(
+                            "قليلة",
+                            style: Theme.of(context).textTheme.displayMedium,
+                          ),
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll(
+                                  Theme.of(context).accentColor))),
+                    ]),
+                  ],
+                )):
+                Column(
+                  
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(10),
                       child: Text(
-                        "Low",
-                        style: Theme.of(context).textTheme.displayMedium,
+                        "Notification Frequency:",
+                        style: Theme.of(context).textTheme.bodySmall,
                       ),
-                      style: ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(
-                              Theme.of(context).accentColor))),
-                ])),
+                    ),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+
+                          ElevatedButton(
+                            onPressed: () {
+                              HomePage.freq = 1;
+                            },
+                            child: Text(
+                              "High",
+                              style: Theme.of(context).textTheme.displayMedium,
+                            ),
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStatePropertyAll(
+                                    Theme.of(context).accentColor)),
+                          ),
+                          ElevatedButton(
+                              onPressed: () {
+                                HomePage.freq = 3;
+                              },
+                              child: Text(
+                                "Medium",
+                                style: Theme.of(context).textTheme.displayMedium,
+                              ),
+                              style: ButtonStyle(
+                                  backgroundColor: MaterialStatePropertyAll(
+                                      Theme.of(context).accentColor))),
+                          ElevatedButton(
+                              onPressed: () {
+                                HomePage.freq = 5;
+                              },
+                              child: Text(
+                                "Low",
+                                style: Theme.of(context).textTheme.displayMedium,
+                              ),
+                              style: ButtonStyle(
+                                  backgroundColor: MaterialStatePropertyAll(
+                                      Theme.of(context).accentColor))),
+                        ]),
+                  ],
+                )
+
+            ),
           ),
           Container(
             height: MediaQuery.of(context).size.height * 0.13,
