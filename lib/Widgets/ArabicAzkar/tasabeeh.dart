@@ -1,3 +1,4 @@
+import 'package:azkark/Screens/HomePage.dart';
 import 'package:azkark/Widgets/AzkarContainer.dart';
 import 'package:flutter/material.dart';
 
@@ -5,7 +6,7 @@ import '../CustomAppBar.dart';
 import '../CustomDrawer.dart';
 
 class tasabeeh extends StatelessWidget {
-  List<Map> azkary = [
+  List<Map> tasbeehAr = [
     {
       'zekr': '''سُبْحَانَ اللَّهِ''',
       'counter': 100,
@@ -140,7 +141,120 @@ class tasabeeh extends StatelessWidget {
       'title': '',
     },
   ];
+  List<Map> tasbeehEn = [
+    {
+      'zekr': '''Glory is to Allah''',
+      'counter': 100,
+      'initial': 100,
+      'fadl': 'يكتب له ألف حسنة أو يحط عنه ألف خطيئة.',
+      'title': '',
+    },
+    {
+      'zekr': '''Glory is to Allah and praise is to Him''',
+      'counter': 100,
+      'initial': 100,
+      'fadl':
+      'حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ. لَمْ يَأْتِ أَحَدٌ يَوْمَ الْقِيَامَةِ بِأَفْضَلَ مِمَّا جَاءَ بِهِ إِلَّا أَحَدٌ قَالَ مِثْلَ مَا قَالَ أَوْ زَادَ عَلَيْهِ.',
+      'title': '',
+    },
+    {
+      'zekr': '''Glorified is Allah and the praise is to Allah''',
+      'counter': 100,
+      'initial': 100,
+      'fadl': 'تَمْلَآَنِ مَا بَيْنَ السَّمَاوَاتِ وَالْأَرْضِ.',
+      'title': '',
+    },
 
+    {
+      'zekr':
+      '''None has the right to be worshiped but Allah alone, He has no partner, His is the dominion and His is the praise and He is Able to do all things.''',
+      'counter': 100,
+      'initial': 100,
+      'fadl':
+      'كانت له عدل عشر رقاب، وكتبت له مئة حسنة، ومحيت عنه مئة سيئة، وكانت له حرزا من الشيطان.',
+      'title': '',
+    },
+    {
+      'zekr': '''Praise be to Allah, the Lord of the Universe''',
+      'counter': 100,
+      'initial': 100,
+      'fadl': 'تملأ ميزان العبد بالحسنات.',
+      'title': '',
+    },
+    {
+      'zekr': '''There is no might and no power except by Allah''',
+      'counter': 100,
+      'initial': 100,
+      'fadl': 'كنز من كنوز الجنة (أى عدد).',
+      'title': '',
+    },
+    {
+      'zekr': '''O Allah, we ask for your peace and blessings upon our Prophet Muhammed''',
+      'counter': 100,
+      'initial': 100,
+      'fadl': 'من صلى على حين يصبح وحين يمسى ادركته شفاعتى يوم القيامة.',
+      'title': '',
+    },
+    {
+      'zekr': '''I seek forgiveness of Allah and repent to Him''',
+      'counter': 100,
+      'initial': 100,
+      'fadl': 'لفعل الرسول صلى الله عليه وسلم.',
+      'title': '',
+    },
+
+    {
+      'zekr': '''There is none worthy of worship but Allah''',
+      'counter': 100,
+      'initial': 100,
+      'fadl': 'أفضل الذكر لا إله إلاّ الله.',
+      'title': '',
+    },
+    {
+      'zekr': '''Allah is the Most Great''',
+      'counter': 100,
+      'initial': 100,
+      'fadl':
+      'من قال الله أكبر كتبت له عشرون حسنة وحطت عنه عشرون سيئة. الله أكبر من كل شيء.',
+      'title': '',
+    },
+    {
+      'zekr':
+      '''O Allah forgive me, and have mercy on me and guide me, and provide for me.''',
+      'counter': 100,
+      'initial': 100,
+      'fadl': 'خير الدنيا والآخرة',
+      'title': '',
+    },
+    {
+      'zekr':
+      '''All praise is to Allah, praise in abundance, good and blessed.''',
+      'counter': 100,
+      'initial': 100,
+      'fadl':
+      'قَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ ‏"‏لَقَدْ رَأَيْتُ اثْنَيْ عَشَرَ مَلَكًا يَبْتَدِرُونَهَا، أَيُّهُمْ يَرْفَعُهَا"‏.',
+      'title': '',
+    },
+    {
+      'zekr':
+      '''Allah is the Greatest, Most Great, Praise is to Allah ,abundantly, Glory is to Allah at the break of day and at its end.''',
+      'counter': 100,
+      'initial': 100,
+      'fadl':
+      'قَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ "عَجِبْتُ لَهَا ، فُتِحَتْ لَهَا أَبْوَابُ السَّمَاءِ".',
+      'title': '',
+    },
+    {
+      'zekr':
+      '''O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. 
+O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.''',
+      'counter': 100,
+      'initial': 100,
+      'fadl':
+      'في كل مره تحط عنه عشر خطايا ويرفع له عشر درجات ويصلي الله عليه عشرا وتعرض على الرسول صلى الله عليه وسلم (أى عدد).',
+      'title': '',
+    },
+  ];
   final darkMode;
 
   final darkModeSetter;
@@ -157,7 +271,7 @@ class tasabeeh extends StatelessWidget {
       ),
       body: AzkarContainer(
         darkMood: darkMode,
-        azkary: azkary,
+        azkary: HomePage.languageChoice==false? tasbeehAr:tasbeehEn,
       ),
     );
   }
