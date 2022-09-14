@@ -93,9 +93,55 @@ class ad3ya extends StatelessWidget {
               )
             ],
           ),
-        ))
+        )
+          )
               :
-          ( Text("asdasd"))
+          (
+              Directionality(
+                textDirection: TextDirection.ltr,
+                child: Column(
+
+                  children: [
+                    Expanded(
+
+                      child: ListView.builder(
+                          scrollDirection: Axis.vertical,
+                          shrinkWrap: true,
+                          itemCount: choice==0?BeforeenteringthebathroomEN.length:choice==1?AfterleavingthebathroomEn.length:choice==2?BeforeablutionEN.length:choice==3?UponcompletingtheablutionEn.length:choice==4?WhengoingtothemosqueEn.length:choice==5?UponenteringthemosqueEn.length:choice==6?UponleavingtheMosqueEn.length:choice==7?WhenprostratingduetorecitationoftheQuranEn.length:ForanxietyandsorrowEn.length,
+                          itemBuilder: (context,position){
+                            return Stack(
+
+                              children: [
+
+                                Padding(
+
+                                  child: Container(
+
+                                    padding: EdgeInsets.all(10),
+                                    alignment: Alignment.center,
+                                    child: Text(
+
+                            choice==0?BeforeenteringthebathroomEN[position]:choice==1?AfterleavingthebathroomEn[position]:choice==2?BeforeablutionEN[position]:choice==3?UponcompletingtheablutionEn[position]:choice==4?WhengoingtothemosqueEn[position]:choice==5?UponenteringthemosqueEn[position]:choice==6?UponleavingtheMosqueEn[position]:choice==7?WhenprostratingduetorecitationoftheQuranEn[position]:ForanxietyandsorrowEn[position],
+                                       style: TextStyle(fontSize: 30, color: Colors.white),
+                                    ),
+                                    decoration: BoxDecoration(
+                                        color: Colors.black.withOpacity(0.4),
+                                        borderRadius: BorderRadius.circular(15)),
+                                  ),
+                                  padding: EdgeInsets.all(15),
+                                )
+                              ],
+                            );
+
+                          }
+                      ),
+                    )
+                  ],
+                ),
+              )
+
+
+          )
 
 
     );

@@ -251,3 +251,170 @@ List<String> ad3yaGowm3ElDoa2 = [
   " اللَّهُمَّ أَبْرِمْ لِهَذِهِ الأُمَّةِ أَمْرَ رُشْدٍ ، يُعَزُّ فِيْهِ أَهْلُ طَاعَتِكَ ، وَيُذَلُّ فِيْهِ أَهْلُ مَعْصِيَتِكَ ، وَيُؤمَرُ فِيْهِ بِالمَعْرُوفِ ، وَيُنْهَى فِيْهِ عَنِ المُنْكَرِ.",
   " اللَّهُمَّ اللهمَّ صلِّ وسلِّمْ وبارِكْ علَى عَبْدِكَ ورَسُوْلِكَ محمَّد وعلى آله وصحبه أجمعين."
 ];
+List<String>WhengoingtothemosqueAr=[
+  ''' اللّهُـمَّ اجْعَـلْ فِي قَلْبـي نُوراً ،
+ وَفي لِسَـانِي نُوراً،
+ وَفِي سَمْعِي نُوراً,
+ وَفِي بَصَرِيِ نُوراً,
+ وَمِنْ فََوْقِي نُوراً ,
+ وَ مِنْ تَحْتِي نُوراً,
+ وَ عَنْ يَمِينيِ نُوراَ,
+ وعَنْ شِمَالِي نُوراً,
+ وَمْن أَماَمِي نُوراً,
+ وَمِنْ خَلْفيِ نُوراَ,
+ واجْعَلْ فِي نَفْسِي نُوراً, 
+وأَعْظِمْ لِي نُوراً,
+ وَعظِّمْ لِي نُوراً,
+ وَاجْعَلْ لِي نُوراً,
+ واجْعَلنِي نُوراً,
+ أللَّهُمَّ أَعْطِنِي نُوراً,
+ واجْعَلْ فِي عَصَبِي نُوراً,
+ وَفِي لَحْمِي نُوراً,
+ وَفِي دَمِي نُوراً
+ وَفِي شَعْرِي نُوراً,
+ وفِي بَشَرِي نُوراً
+ (أَللَّهُمَّ اجِعَلْ لِي نُوراً فِي قّبْرِي
+ وَ نُوراَ فِي عِظاَمِي) 
+(وَزِدْنِي نُوراً,
+ وَزِدْنِي نُوراَ ,
+ وَزِدْنِي نُوراً)
+ (وَهَبْ لِي نُوراً عَلَى نُوراً )'''
+];
+
+List<String>BeforeenteringthebathroomEN=[
+  '''O Allah, I seek protection in You from evil and the evil ones.'''  ,
+];
+
+List<String>AfterleavingthebathroomEn=[
+  '''I seek Your forgiveness'''  ,
+
+];
+
+List<String>BeforeablutionEN=[
+  '''In the Name of Allah'''  ,
+
+];
+
+List<String>UponcompletingtheablutionEn=[
+  '''I bear witness that none has the right to be worshipped but Allah alone, 
+Who has no partner; 
+and I bear witness that Muhammad is His slave and His Messenger.'''  ,
+  '''O Allah, make me among those who turn to You in repentance, 
+and make me among those who are purified.'''  ,
+  '''Glory is to You, O Allah, and praise; 
+I bear witness that there is none 
+worthy of worship but You. 
+I seek Your forgiveness and turn to You in 
+repentance.'''  ,
+];
+
+
+
+List<String>WhengoingtothemosqueEn=[
+  '''O Allah, place light in my heart, 
+and on my tongue light, 
+and in my ears light 
+and in my sight light, 
+and above me light, 
+and below me light, 
+and to my right light, 
+and to my left light, 
+and before me light 
+and behind me light. 
+Place in my soul light. 
+Magnify for me light, 
+and amplify for me light. 
+Make for me light 
+and make me a light. 
+O Allah, grant me light, 
+and place light in my nerves, 
+and in my body light 
+and in my blood light 
+and in my hair light 
+and in my skin light.'''  ,
+
+];
+List<String>UponenteringthemosqueEn=[
+  '''I seek refuge in Almighty Allah, 
+By His Noble Face, 
+By His primordial power, 
+From Satan the outcast.
+[In the Name of Allah, and blessings  and peace be upon the Messenger of Allah.
+O Allah, open before me the doors of Your mercy.'''  ,
+
+];
+
+List<String>UponenteringthemosqueAr=[
+  '''أَعوذُ باللهِ العَظيـم وَبِوَجْهِـهِ الكَرِيـم وَسُلْطـانِه القَديـم مِنَ الشّيْـطانِ الرَّجـيم، [ بِسْـمِ الله، وَالصَّلاةُ وَالسَّلامُ عَلى رَسولِ الله]، اللّهُـمَّ افْتَـحْ لي أَبْوابَ رَحْمَتـِك'''  ,
+
+];
+
+List<String>UponleavingtheMosqueEn=[
+  '''In the Name of Allah, and peace and blessings be upon the Messenger of Allah.
+O Allah, I ask for Your favor,
+O Allah, protect me from Satan the outcast.'''  ,
+
+];
+
+
+List<String>UponleavingtheMosqueAr=[
+  ''' بِسمِ الله وَالصّلاةُ وَالسّلامُ عَلى رَسولِ الله،
+اللّهُـمَّ إِنّـي أَسْأَلُكَ مِـنْ فَضْـلِك،
+اللّهُـمَّ اعصِمْنـي مِنَ الشَّيْـطانِ الرَّجـيم.'''  ,
+
+];
+List<String>WhenprostratingduetorecitationoftheQuranEn=[
+  '''I have prostrated my face to the One Who created it, 
+and gave it hearing and sight by His might and His power. 
+Glory is to Allah, the Best of creators.'''  ,
+  '''O Allah, write it as a reward for me, 
+and release me from a burden for it, 
+and make it a treasure for me with You.
+Accept it from me as You accepted it from your servant Dawud'''
+
+];
+
+List<String>WhenprostratingduetorecitationoftheQuranAr=[
+  ''' سَجَـدَ وَجْهـي للَّـذي خَلَقَـهُ
+وَشَقَّ سَمْـعَـهُ وَبَصَـرَهُ بِحَـوْلِـهِ وَقُـوَّتِهِ
+﴿فتَبـارَكَ اللهُ أَحْسَـنُ الخـالِقيـن﴾..'''  ,
+  ''' اللّهُـمَّ اكْتُـبْ لي بِهـا عِنْـدَكَ أَجْـراً ، 
+وَضَـعْ عَنِّـي بِهـا وِزْراً ، 
+وَاجْعَـلها لي عِنْـدَكَ ذُخْـراً ، 
+وَتَقَبَّـلها مِنِّي كَمَا تَقَبَّلْتَهَا مِنْ عَبْدِكَ دَاوُدَ'''
+
+];
+List<String>ForanxietyandsorrowEn=[
+  '''O Allah, I am Your slave,
+and the son of Your male slave,
+and the son of your female slave. 
+My forehead is in Your Hand (i.e. you have control over me). 
+Your Judgment upon me is assured,
+and Your Decree concerning me is just. 
+I ask You by every Name that You have named Yourself with, 
+revealed in Your Book, 
+taught any one of Your creation, 
+or kept unto Yourself in the knowledge of the unseen that is with You, 
+to make the Qur'an the spring of my heart,
+and the light of my chest,
+the banisher of my sadness,
+and the reliever of my distress.'''
+];
+List<String>ForanxietyandsorrowAr=[
+  ''' اللّهُـمَّ إِنِّي عَبْـدُكَ
+ابْنُ عَبْـدِكَ
+ابْنُ أَمَتِـكَ
+نَاصِيَتِي بِيَـدِكَ
+مَاضٍ فِيَّ حُكْمُكَ
+عَدْلٌ فِيَّ قَضَاؤكَ
+أَسْأَلُـكَ بِكُلِّ اسْمٍ هُوَ لَكَ
+سَمَّـيْتَ بِهِ نَفْسَكَ
+أِوْ أَنْزَلْتَـهُ فِي كِتَابِكَ 
+أَوْ عَلَّمْـتَهُ أَحَداً مِنْ خَلْقِـكَ
+أَوِ اسْتَـأْثَرْتَ بِهِ فِي عِلْمِ الغَيْـبِ عِنْـدَكَ
+أَنْ تَجْـعَلَ القُرْآنَ رَبِيـعَ قَلْبِـي
+وَنورَ صَـدْرِي
+وجَلَاءَ حُـزْنِي
+وذَهَابَ هَمِّـي
+Reference.'''
+];
