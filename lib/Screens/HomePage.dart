@@ -25,8 +25,14 @@ class _HomePageState extends State<HomePage> {
     // return Scaffold(
     //   body: MainPage(darkMode: dkWidget),
     // );
+
+    /// used to scale the fonts depending on the user settings
+    final contentScaleFactor = MediaQuery.textScaleFactorOf(context);
     return MaterialApp(
         theme: ThemeData(
+            canvasColor: dkWidget == true
+                ? Color.fromARGB(255, 127, 167, 200)
+                : Colors.green[100],
             splashColor: dkWidget == false
                 ? Color.fromARGB(255, 17, 133, 66)
                 : Color.fromARGB(255, 52, 83, 132),
@@ -53,12 +59,12 @@ class _HomePageState extends State<HomePage> {
             fontFamily: 'Gulzar',
             textTheme: TextTheme(
                 titleSmall: TextStyle(
-                    fontSize: 24,
+                    fontSize: 24 * contentScaleFactor,
                     fontFamily: 'Amiri',
                     color: dkWidget == false ? Colors.amber : Colors.blue),
                 titleLarge: TextStyle(
                     letterSpacing: 1.2,
-                    fontSize: 38,
+                    fontSize: 38 * contentScaleFactor,
                     color: dkWidget == false ? Colors.white : Colors.amber,
                     shadows: [
                       Shadow(
@@ -68,13 +74,15 @@ class _HomePageState extends State<HomePage> {
                     ]),
                 displayMedium: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: 18 * contentScaleFactor,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'S'),
                 bodySmall: TextStyle(
-                    fontSize: 25, color: Colors.black, fontFamily: 'DS-DIGI'),
+                    fontSize: 25 * contentScaleFactor,
+                    color: Colors.black,
+                    fontFamily: 'DS-DIGI'),
                 bodyMedium: TextStyle(
-                    fontSize: 30,
+                    fontSize: 30 * contentScaleFactor,
                     color: Colors.white,
                     fontFamily: 'Amiri',
                     shadows: [
@@ -100,9 +108,7 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(),
       body: Container(
-        color: darkMode == true
-            ? Color.fromARGB(255, 127, 167, 200)
-            : Colors.green[100],
+        color: Theme.of(context).canvasColor,
         child: GridView(
             padding: EdgeInsets.all(10),
             gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(

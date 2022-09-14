@@ -19,7 +19,6 @@ class _AzkarContainerState extends State<AzkarContainer> {
     final azkary = widget.azkary;
 
     return Container(
-        // color: Colors.green[300],
         color: Theme.of(context).primaryColor,
         child: Card(
             child: ListView.builder(

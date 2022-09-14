@@ -17,16 +17,6 @@ class _SettingsState extends State<Settings> {
   _SettingsState({required this.dkMode});
   void toggel() {
     widget.darkModeSetter();
-    setState(() {
-      // var temp = !dkMode;
-      // dkMode = temp;
-      // print("dkMode is $dkMode ");
-
-      var temp = HomePage.darkMode;
-      // HomePage.darkMode = !temp;
-      print(temp);
-      print(HomePage.darkMode);
-    });
   }
 
   @override
@@ -34,12 +24,13 @@ class _SettingsState extends State<Settings> {
     return Scaffold(
       appBar: CustomAppBar(),
       body: Container(
-        width: double.infinity,
-        color: Theme.of(context).primaryColor,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        color: Theme.of(context).canvasColor,
         child:
             Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           Container(
-            height: 100,
+            height: MediaQuery.of(context).size.height * 0.1,
             child: Card(
                 shadowColor: Theme.of(context).accentColor,
                 elevation: 10,
@@ -62,7 +53,7 @@ class _SettingsState extends State<Settings> {
                 )),
           ),
           Container(
-            height: 100,
+            height: MediaQuery.of(context).size.height * 0.13,
             child: Card(
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -108,7 +99,7 @@ class _SettingsState extends State<Settings> {
                 ])),
           ),
           Container(
-            height: 100,
+            height: MediaQuery.of(context).size.height * 0.13,
             child: Card(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

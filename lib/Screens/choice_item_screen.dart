@@ -21,7 +21,7 @@ class choiceItemScreen extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           child: Image.asset(
             image,
-            height: 450,
+            height: MediaQuery.of(context).size.height,
             fit: BoxFit.cover,
           ),
         ),

@@ -25,24 +25,19 @@ class Zekr extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Container(
-        // color: Colors.grey,
         color: Theme.of(context).hintColor,
-
-        // color: Theme.of(context).splashColor,
         child: Card(
-          // color: Theme.of(context).splashColor,
           color: Theme.of(context).primaryColor,
-
-          // color: Colors.grey,
-          elevation: 100,
+          elevation: 10,
+          shadowColor: Theme.of(context).accentColor,
+          // margin: EdgeInsets.symmetric(vertical: 4),
           child: Container(
             decoration: BoxDecoration(
                 color: Theme.of(context).errorColor,
-                border:
-                    Border.all(width: 3, color: Theme.of(context).accentColor),
+                border: Border.all(
+                    width: 2.5, color: Theme.of(context).accentColor),
                 borderRadius: BorderRadius.circular(50)),
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -65,7 +60,7 @@ class Zekr extends StatelessWidget {
                   height: 5,
                 ),
                 Container(
-                  width: 360,
+                  width: MediaQuery.of(context).size.width,
                   margin: EdgeInsets.only(top: 5, right: 30, left: 10),
                   alignment: Alignment.bottomRight,
                   child: Text(
@@ -79,8 +74,8 @@ class Zekr extends StatelessWidget {
                 ),
                 Stack(alignment: AlignmentDirectional.bottomStart, children: [
                   Container(
-                    width: 180,
-                    height: 120,
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    height: MediaQuery.of(context).size.height * 0.15,
                     padding: EdgeInsets.all(10),
                     margin: EdgeInsets.symmetric(horizontal: 30, vertical: 12),
                     child: ElevatedButton(
