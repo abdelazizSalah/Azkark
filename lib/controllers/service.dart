@@ -59,11 +59,20 @@ void chooseOptioninHomePage(
               builder: (c) =>
                   tasabeeh(darkMode: dark, darkModeSetter: darkModeSetter)));
   } else if (choice == 3) {
-    Navigator.push(
-        c,
-        MaterialPageRoute(
-            builder: (c) =>
-                Settings(darkMode: dark, darkModeSetter: darkModeSetter)));
+    print(where);
+    if (where == 0)
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) =>
+                  Settings(darkMode: dark, darkModeSetter: darkModeSetter)));
+    else
+      Navigator.pushReplacement(
+          c,
+          MaterialPageRoute(
+              builder: (c) =>
+                  Settings(darkMode: dark, darkModeSetter: darkModeSetter)));
+   
   }
 }
 
@@ -215,14 +224,4 @@ void chooseOptioninDoa2Page(BuildContext c, num choice,bool dark, darkModeSetter
             builder: (c) =>
               ad3ya(darkMode: HomePage.darkMode, darkModeSetter:darkModeSetter , choice: choice, languageSelected: HomePage.languageChoice)));
 
-
-  print("from option doaa2");
-  print(choice);
-}
-
-void changeMode() {
-  //flip boolean to change colors;
-}
-void changeLanguage() {
-  //flip boolean to change language;
 }
