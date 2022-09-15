@@ -1,3 +1,5 @@
+import 'package:azkark/Widgets/CustomAppBar.dart';
+import 'package:azkark/Widgets/CustomDrawer.dart';
 import 'package:flutter/material.dart';
 import '../AzkarContainer.dart';
 
@@ -37,12 +39,21 @@ class WhenWakingup extends StatelessWidget {
   ];
 
   final darkMode;
-  WhenWakingup({required this.darkMode});
+  final darkModeSetter;
+
+  WhenWakingup({required this.darkMode,this.darkModeSetter});
   @override
   Widget build(BuildContext context) {
-    return AzkarContainer(
-      darkMood: darkMode,
-      azkary: azkary,
+    return Scaffold(
+        appBar: CustomAppBar(),
+        drawer: CustomDrawer(
+          darkMode: darkMode,
+          darkModeSetter: darkModeSetter,
+        ),
+        body:  AzkarContainer(
+          darkMood: darkMode,
+          azkary: azkary,
+        )
     );
   }
 }

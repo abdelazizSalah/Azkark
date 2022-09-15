@@ -1,3 +1,5 @@
+import 'package:azkark/Widgets/CustomAppBar.dart';
+import 'package:azkark/Widgets/CustomDrawer.dart';
 import 'package:flutter/material.dart';
 import '../AzkarContainer.dart';
 
@@ -14,12 +16,21 @@ class Uponenteringthehome extends StatelessWidget {
   ];
 
   final darkMode;
-  Uponenteringthehome({required this.darkMode});
+  final darkModeSetter;
+
+  Uponenteringthehome({required this.darkMode,this.darkModeSetter});
   @override
   Widget build(BuildContext context) {
-    return AzkarContainer(
-      darkMood: darkMode,
-      azkary: azkary,
+    return Scaffold(
+        appBar: CustomAppBar(),
+        drawer: CustomDrawer(
+          darkMode: darkMode,
+          darkModeSetter: darkModeSetter,
+        ),
+        body:  AzkarContainer(
+          darkMood: darkMode,
+          azkary: azkary,
+        )
     );
   }
 }

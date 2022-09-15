@@ -171,7 +171,7 @@ void chooseOptionInAzkar(
             MaterialPageRoute(
                 builder: (c) =>
                     MorningAzkar(
-                        darkMode: dark )));
+                        darkMode: dark ,darkModeSetter: darkModeSetter,)));
 
         break;
       case 2:
@@ -180,7 +180,7 @@ void chooseOptionInAzkar(
             MaterialPageRoute(
                 builder: (c) =>
                     EveningAzkar(
-                        darkMode: dark )));
+                        darkMode: dark ,darkModeSetter: darkModeSetter)));
 
         break;
       case 3:
@@ -189,7 +189,7 @@ void chooseOptionInAzkar(
             MaterialPageRoute(
                 builder: (c) =>
                     WhenLeavingHome(
-                        darkMode: dark )));
+                        darkMode: dark ,darkModeSetter: darkModeSetter)));
 
         break;
       case 4:
@@ -198,7 +198,7 @@ void chooseOptionInAzkar(
             MaterialPageRoute(
                 builder: (c) =>
                     WhenWakingup(
-                        darkMode: dark )));
+                        darkMode: dark ,darkModeSetter: darkModeSetter)));
 
         break;
 
@@ -208,7 +208,7 @@ void chooseOptionInAzkar(
             MaterialPageRoute(
                 builder: (c) =>
                     Uponenteringthehome(
-                        darkMode: dark )));
+                        darkMode: dark ,darkModeSetter: darkModeSetter)));
 
         break;
     }
