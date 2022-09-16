@@ -240,13 +240,12 @@ Future openDialog(
     showDialog(
         context: context,
         builder: (context) => AlertDialog(
-              title: HomePage.languageChoice == false
-                  ? Center(
-                      child: Text("بما تشعر؟",
-                          style: TextStyle(color: Colors.black)))
-                  : Center(
-                      child: Text("How do you feel?",
-                          style: TextStyle(color: Colors.black, fontSize: 30))),
+              title: Center(
+                  child: Text(
+                      HomePage.languageChoice == false
+                          ? "بما تشعر؟"
+                          : "How do you feel?",
+                      style: Theme.of(context).textTheme.bodySmall)),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0))),
               insetPadding: EdgeInsets.all(10),
@@ -283,8 +282,13 @@ Future openDialog(
                                             )));
                               },
                               child: HomePage.languageChoice == false
-                                  ? Text("سبح الله")
-                                  : Text("Praise Allah"),
+                                  ? Text("سبح الله",
+                                      style:
+                                          Theme.of(context).textTheme.bodySmall)
+                                  : Text("Praise Allah",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodySmall),
                             ),
                           )
                         ],
@@ -299,31 +303,33 @@ Future openDialog(
                             height: 92,
                           ),
                           Container(
-                            width: HomePage.languageChoice == true ? 180 : 120,
+                            width: HomePage.languageChoice == true ? 180 : 140,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(40),
                             ),
                             child: ElevatedButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (c) => ad3ya(
-                                            darkMode: darkMode,
-                                            setLang: setLang,
-                                            darkModeSetter: darkModeSetter,
-                                            choice:
-                                                HomePage.languageChoice == false
-                                                    ? 4
-                                                    : 8,
-                                            languageSelected:
-                                                HomePage.languageChoice)));
-                              },
-                              child: HomePage.languageChoice == false
-                                  ? Text("دعاء الحزن")
-                                  : Text("Anxiety Supplication"),
-                            ),
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (c) => ad3ya(
+                                              darkMode: darkMode,
+                                              setLang: setLang,
+                                              darkModeSetter: darkModeSetter,
+                                              choice: HomePage.languageChoice ==
+                                                      false
+                                                  ? 4
+                                                  : 8,
+                                              languageSelected:
+                                                  HomePage.languageChoice)));
+                                },
+                                child: Text(
+                                    HomePage.languageChoice == false
+                                        ? "دعاء الحزن"
+                                        : "Anxiety Supplication",
+                                    style:
+                                        Theme.of(context).textTheme.bodySmall)),
                           )
                         ],
                       ),
