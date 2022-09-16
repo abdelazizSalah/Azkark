@@ -6,7 +6,7 @@ import '../Screens/HomePage.dart';
 class Settings extends StatefulWidget {
   bool darkMode;
   final darkModeSetter;
-  Settings({required this.darkMode, required this.darkModeSetter});
+  Settings({required this.darkMode,  this.darkModeSetter});
 
   @override
   State<Settings> createState() => _SettingsState(dkMode: darkMode);
@@ -179,6 +179,22 @@ class _SettingsState extends State<Settings> {
                         setState(() {
                           HomePage.languageChoice=false;
                         });
+                        Navigator.pop(context);
+                        Navigator.pop(context);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (c) =>
+                                    HomePage()
+                            )
+                        );
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (c) =>
+                        //             Settings(darkMode: HomePage.darkMode)
+                        //     )
+                        // );
 
                       },
                       child: Text(
@@ -193,8 +209,23 @@ class _SettingsState extends State<Settings> {
                         setState(() {
                           HomePage.languageChoice=true;
                         });
-                        print(HomePage.languageChoice);
-
+                     //   print(HomePage.languageChoice);
+                      Navigator.pop(context);
+                        Navigator.pop(context);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (c) =>
+                              HomePage()
+                            )
+                        );
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (c) =>
+                        //             Settings(darkMode: HomePage.darkMode)
+                        //     )
+                        // );
                       },
                       child: Text(
                         "English",

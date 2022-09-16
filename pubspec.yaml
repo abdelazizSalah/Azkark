@@ -32,6 +32,7 @@ dependencies:
   rolling_switch: ^0.0.2
   google_fonts: ^2.1.0
   cron: ^0.5.0
+  flutter_emoji: ">= 2.0.0"
   awesome_notifications: ^0.6.21
   flutter:
     sdk: flutter
@@ -85,6 +86,8 @@ flutter:
     - assets/imgs/setting.png
     - assets/imgs/tasbeehchoice.jpg
     - assets/imgs/backad3ya.jpg
+    - assets/imgs/smileface.png
+    - assets/imgs/sadface.png
     # - assets/imgs/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

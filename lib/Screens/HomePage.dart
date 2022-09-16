@@ -1,6 +1,7 @@
 import 'package:azkark/Models/Choices_data.dart';
 import 'package:azkark/Screens/choice_item_screen.dart';
 import 'package:azkark/Widgets/CustomAppBar.dart';
+import 'package:azkark/controllers/service.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -114,10 +115,37 @@ class MainPage extends StatelessWidget {
   final darkModeSetter;
   //final bool languageChoice;
   MainPage({required this.darkMode, required this.darkModeSetter});
+
+
+
+
   @override
   Widget build(BuildContext context) {
     //print(languageChoice);
     return Scaffold(
+
+      floatingActionButton:
+          Container(
+            height: 80,
+            width: 100,
+            child: FloatingActionButton(
+
+              hoverColor: Colors.black,
+              backgroundColor:
+              darkMode==false?
+              (Colors.green)
+                  :Colors.black12,
+              onPressed: (){
+                 openDialog(context,darkMode,darkModeSetter);
+              },
+              child: Icon(Icons.add_reaction_outlined,color:
+              darkMode==false?
+              (Colors.white)
+                :Colors.black12
+                ,size: 40,)
+            ),
+          ),
+
       appBar: CustomAppBar(),
       body: Directionality(
         textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
@@ -158,5 +186,7 @@ class MainPage extends StatelessWidget {
         ),
       ),
     );
+
+
   }
 }

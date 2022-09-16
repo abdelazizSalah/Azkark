@@ -384,6 +384,7 @@ List<String>WhenprostratingduetorecitationoftheQuranAr=[
 وَتَقَبَّـلها مِنِّي كَمَا تَقَبَّلْتَهَا مِنْ عَبْدِكَ دَاوُدَ'''
 
 ];
+
 List<String>ForanxietyandsorrowEn=[
   '''O Allah, I am Your slave,
 and the son of Your male slave,
@@ -416,5 +417,5 @@ List<String>ForanxietyandsorrowAr=[
 وَنورَ صَـدْرِي
 وجَلَاءَ حُـزْنِي
 وذَهَابَ هَمِّـي
-Reference.'''
+.'''
 ];

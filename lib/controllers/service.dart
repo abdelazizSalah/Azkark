@@ -20,7 +20,7 @@ import '../Screens/ChoicePage.dart';
 import '../Widgets/ArabicAzkar/tasabeeh.dart';
 import 'package:azkark/Screens/Doa2ChoicePage.dart';
 import '../Widgets/Settings.dart';
-
+import 'package:flutter_emoji/flutter_emoji.dart';
 num currentContextNumberInChoicePage = -1;
 void chooseOptioninHomePage(
     BuildContext c, num choice, num where, bool dark, darkModeSetter) {
@@ -225,3 +225,109 @@ void chooseOptioninDoa2Page(BuildContext c, num choice,bool dark, darkModeSetter
               ad3ya(darkMode: HomePage.darkMode, darkModeSetter:darkModeSetter , choice: choice, languageSelected: HomePage.languageChoice)));
 
 }
+
+ Future openDialog(BuildContext context,bool darkMode,darkModeSetter)=>showDialog(context: context, builder:
+    (context)=>AlertDialog(
+
+  title:
+  HomePage.languageChoice==false?
+  Center(child: Text("بما تشعر؟",style:TextStyle(color: Colors.black))):Center(child: Text("How do you feel?",style:TextStyle(color: Colors.black,fontSize: 30))),
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(10.0))
+      ),
+      insetPadding: EdgeInsets.all(10),
+      content:
+      Container(
+
+        padding: EdgeInsets.all(10),
+        child:
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              padding: 
+              EdgeInsets.symmetric(horizontal: 8),
+              height: 140,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset("assets/imgs/smileface.png"
+                      ,height: 90,
+                  ),
+
+                  Container(
+                    width: 120,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+
+                    ),
+                    child: ElevatedButton(onPressed: (){
+                      Navigator.pop(context);
+
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (c) =>
+                              tasabeeh(darkMode: darkMode, darkModeSetter: darkModeSetter)
+                            ));
+
+
+
+                    }, child:
+                        HomePage.languageChoice==false?
+                    Text("سبح الله"):
+                      Text("Praise Allah")
+                      ,
+
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              height: 140,
+              child: Column(
+                children: [
+                  Image.asset("assets/imgs/sadface.png"
+                    ,height: 92,
+                  ),
+                  Container(
+                    width:
+                    HomePage.languageChoice==true?
+                    180:120,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+
+                    ),
+                    child: ElevatedButton(onPressed: (){
+                      Navigator.pop(context);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (c) =>
+                                  ad3ya(darkMode: darkMode, darkModeSetter: darkModeSetter, choice: HomePage.languageChoice==false?4:8
+
+                                      , languageSelected: HomePage.languageChoice)));
+
+                    }, child:
+                        HomePage.languageChoice==false?
+                    Text("دعاء الحزن")
+                      :
+                      Text("Anxiety Supplication")
+                      ,
+
+                    ),
+                  )
+
+
+                ],
+              ),
+            )
+          ],
+        )
+        ,
+      )
+      ,
+
+)
+);

@@ -62,7 +62,7 @@ class ad3ya extends StatelessWidget {
                 child: ListView.builder(
                     scrollDirection: Axis.vertical,
                     shrinkWrap: true,
-                    itemCount: choice==0?ad3yaNabawya.length:choice==1?ad3yaYoum3rafa.length:choice==2?ad3ya5tmElQuran.length:ad3yaGowm3ElDoa2.length,
+                    itemCount: choice==0?ad3yaNabawya.length:choice==1?ad3yaYoum3rafa.length:choice==2?ad3ya5tmElQuran.length:choice==3?ad3yaGowm3ElDoa2.length:ForanxietyandsorrowAr.length,
                     itemBuilder: (context,position){
                      return Stack(
 
@@ -76,7 +76,7 @@ class ad3ya extends StatelessWidget {
                               alignment: Alignment.center,
                               child: Text(
 
-                                choice==0?ad3yaNabawya[position]:choice==1?ad3yaYoum3rafa[position]:choice==2?ad3ya5tmElQuran[position]:ad3yaGowm3ElDoa2[position],
+                                choice==0?ad3yaNabawya[position]:choice==1?ad3yaYoum3rafa[position]:choice==2?ad3ya5tmElQuran[position]:choice==3?ad3yaGowm3ElDoa2[position]:ForanxietyandsorrowAr[position],
                                 style: TextStyle(fontSize: 30, color: Colors.white),
                               ),
                               decoration: BoxDecoration(
