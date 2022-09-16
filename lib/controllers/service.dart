@@ -256,54 +256,58 @@ Future openDialog(
                   children: [
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 8),
-                      height: 140,
+                      height: MediaQuery.of(context).size.height * 0.3,
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Image.asset(
                             "assets/imgs/smileface.png",
-                            height: 90,
+                            height: MediaQuery.of(context).size.height * 0.1,
                           ),
                           Container(
-                            width: 120,
+                            width: MediaQuery.of(context).size.width * 0.3,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(40),
                             ),
                             child: ElevatedButton(
-                              onPressed: () {
-                                Navigator.pop(context);
+                                onPressed: () {
+                                  Navigator.pop(context);
 
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (c) => tasabeeh(
-                                              langSetter: setLang,
-                                              darkModeSetter: darkModeSetter,
-                                            )));
-                              },
-                              child: HomePage.languageChoice == false
-                                  ? Text("سبح الله",
-                                      style:
-                                          Theme.of(context).textTheme.bodySmall)
-                                  : Text("Praise Allah",
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (c) => tasabeeh(
+                                                langSetter: setLang,
+                                                darkModeSetter: darkModeSetter,
+                                              )));
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                      HomePage.languageChoice == false
+                                          ? "سبح الله"
+                                          : "Praise Allah",
                                       style: Theme.of(context)
                                           .textTheme
-                                          .bodySmall),
-                            ),
+                                          .displaySmall),
+                                )),
                           )
                         ],
                       ),
                     ),
                     Container(
-                      height: 140,
+                      height: MediaQuery.of(context).size.height * 0.3,
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Image.asset(
                             "assets/imgs/sadface.png",
-                            height: 92,
+                            height: MediaQuery.of(context).size.height * 0.1,
                           ),
                           Container(
-                            width: HomePage.languageChoice == true ? 180 : 140,
+                            width: HomePage.languageChoice == true
+                                ? MediaQuery.of(context).size.width * 0.35
+                                : MediaQuery.of(context).size.width * 0.33,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(40),
                             ),
@@ -324,12 +328,16 @@ Future openDialog(
                                               languageSelected:
                                                   HomePage.languageChoice)));
                                 },
-                                child: Text(
-                                    HomePage.languageChoice == false
-                                        ? "دعاء الحزن"
-                                        : "Anxiety Supplication",
-                                    style:
-                                        Theme.of(context).textTheme.bodySmall)),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                      HomePage.languageChoice == false
+                                          ? "دعاء الحزن"
+                                          : "Anxiety\nSupplication",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .displaySmall),
+                                )),
                           )
                         ],
                       ),

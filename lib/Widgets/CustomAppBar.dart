@@ -1,3 +1,4 @@
+import 'package:azkark/Screens/HomePage.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -9,7 +10,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Padding(
         padding: const EdgeInsets.only(top: 30.0),
         child: Text(
-          'أذكارك',
+          HomePage.languageChoice == false ? 'أذكارك' : "Azkark",
           style: Theme.of(context).textTheme.titleLarge,
         ),
       ),

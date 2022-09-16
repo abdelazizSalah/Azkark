@@ -59,15 +59,15 @@ class ChoicePage extends StatelessWidget {
       'number': 2,
     },
     {
-      'zekr': 'When Leaving Home Remembrance',
+      'zekr': 'When Leaving Home',
       'number': 3,
     },
     {
-      'zekr': 'When Waking Up Remembrance',
+      'zekr': 'When Waking Up',
       'number': 4,
     },
     {
-      'zekr': 'Upon Entering Home Remembrance',
+      'zekr': 'Upon Entering Home',
       'number': 5,
     },
   ];

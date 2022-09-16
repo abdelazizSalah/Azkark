@@ -26,15 +26,12 @@ class _Doa2ChoicePageState extends State<Doa2ChoicePage> {
             mainAxisSpacing: 10,
             crossAxisSpacing: 10,
           ),
-          children: HomePage.languageChoice == false
-              ? (choices_Doa2Ar
-                  .map((ch) => choice_doa2Widget(ch.image, ch.word, ch.choice,
-                      HomePage.darkMode, widget.modeSetter, widget.langSetter))
-                  .toList())
-              : choices_Doa2En
-                  .map((ch) => choice_doa2Widget(ch.image, ch.word, ch.choice,
-                      HomePage.darkMode, widget.modeSetter, widget.langSetter))
-                  .toList()),
+          children: (HomePage.languageChoice == false
+                  ? choices_Doa2Ar
+                  : choices_Doa2En)
+              .map((ch) => choice_doa2Widget(ch.image, ch.word, ch.choice,
+                  HomePage.darkMode, widget.modeSetter, widget.langSetter))
+              .toList()),
     );
   }
 }

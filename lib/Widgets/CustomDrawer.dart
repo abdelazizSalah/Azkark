@@ -34,7 +34,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       color: Theme.of(context).splashColor)
                 ], color: Theme.of(context).splashColor),
                 child: Center(
-                  child: Text('أذكارك',
+                  child: Text(
+                      HomePage.languageChoice == false ? 'أذكارك' : 'Azkark',
                       style: Theme.of(context).textTheme.titleLarge),
                 ),
               ),

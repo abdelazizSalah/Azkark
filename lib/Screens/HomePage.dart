@@ -79,11 +79,16 @@ class _HomePageState extends State<HomePage> {
                           color: Color.fromARGB(255, 220, 171, 27),
                           offset: Offset(20, 5))
                     ]),
+                displaySmall: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15 * contentScaleFactor,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'DG-DIGI'),
                 displayMedium: TextStyle(
                     color: Colors.white,
                     fontSize: 18 * contentScaleFactor,
                     fontWeight: FontWeight.bold,
-                    fontFamily: 'S'),
+                    fontFamily: 'Amiri'),
                 bodySmall: TextStyle(
                     fontSize: 25 * contentScaleFactor,
                     color: Colors.black,
@@ -124,7 +129,7 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       floatingActionButton: Container(
         height: MediaQuery.of(context).size.height * 0.07,
-        width: 100,
+        width: MediaQuery.of(context).size.width * 0.3,
         child: FloatingActionButton(
             hoverColor: Colors.black,
             backgroundColor:
