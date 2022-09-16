@@ -40,10 +40,14 @@ class _SettingsState extends State<Settings> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text(
+                    HomePage.languageChoice==false?
+                    (Text(
+                      "الوضع المظلم",
+                      style: Theme.of(context).textTheme.bodySmall,
+                    )):(Text(
                       "Dark Mode",
                       style: Theme.of(context).textTheme.bodySmall,
-                    ),
+                    )),
                     Transform.scale(
                         scale: 1.4,
                         child: Switch.adaptive(
@@ -170,10 +174,15 @@ class _SettingsState extends State<Settings> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text(
+                 HomePage.languageChoice==false?
+                 (Text(
+                   "اللغة",
+                   style: Theme.of(context).textTheme.bodySmall,
+                 )):
+                 (Text(
                     "Lang",
                     style: Theme.of(context).textTheme.bodySmall,
-                  ),
+                  )),
                   ElevatedButton(
                       onPressed: () {
                         setState(() {

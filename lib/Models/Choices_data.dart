@@ -36,7 +36,7 @@ List<Choice_item> choices_dataEn = [
 List<Choice_item> choices_Doa2Ar = [
   Choice_item(
       "assets/imgs/doa2nabwy.jpg",
-      "Before entering the bathroom",
+      " ادعية نبوية",
       0),
   Choice_item(
       "assets/imgs/ad3yayoumarfa.jpg",
