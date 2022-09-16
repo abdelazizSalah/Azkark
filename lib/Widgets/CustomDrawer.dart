@@ -1,12 +1,13 @@
-import 'package:azkark/Screens/HomePage.dart';
+import '../Screens/HomePage.dart';
 
 import '../controllers/service.dart';
 import 'package:flutter/material.dart';
 
 class CustomDrawer extends StatefulWidget {
-  final bool darkMode;
-  final darkModeSetter;
-  CustomDrawer({required this.darkMode, required this.darkModeSetter});
+  final setMode;
+  final setLang;
+  CustomDrawer({required this.setMode, required this.setLang});
+
   @override
   State<CustomDrawer> createState() => _CustomDrawerState();
 }
@@ -15,7 +16,9 @@ class _CustomDrawerState extends State<CustomDrawer> {
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection:HomePage.languageChoice==false ?TextDirection.rtl:TextDirection.ltr,
+      textDirection: HomePage.languageChoice == false
+          ? TextDirection.rtl
+          : TextDirection.ltr,
       child: Drawer(
         child: ListView(
           // Important: Remove any padding from the ListView.
@@ -36,63 +39,54 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 ),
               ),
             ),
-
-           ListTile(
-              title: HomePage.languageChoice==false? Text(
-                'أذكار',
+            ListTile(
+              title: Text(
+                HomePage.languageChoice == false ? 'أذكار' : "Remembrance",
                 style: Theme.of(context).textTheme.bodySmall,
-              ):Text("Remembrance", style: Theme.of(context).textTheme.bodySmall,),
+              ),
               onTap: () {
                 // Update the state of the app
                 setState(() {
                   chooseOptioninHomePage(
-                      context, 0, 1, HomePage.darkMode, widget.darkModeSetter);
+                      context, 0, 1, widget.setMode, widget.setLang);
                 });
                 // Then close the drawer
               },
             ),
             ListTile(
-              title: HomePage.languageChoice==false? Text(
-                'تسبيح',
+              title: Text(
+                HomePage.languageChoice == false ? 'تسبيح' : 'Praise',
                 style: Theme.of(context).textTheme.bodySmall,
-              ):Text(
-                'Praise',
-                style: Theme.of(context).textTheme.bodySmall,
-              )
-              ,
+              ),
               onTap: () {
                 setState(() {
                   chooseOptioninHomePage(
-                      context, 2, 1, HomePage.darkMode, widget.darkModeSetter);
+                      context, 2, 1, widget.setMode, widget.setLang);
                 });
               },
             ),
             ListTile(
-              title: HomePage.languageChoice==false?
-                  Text('أدعية', style: Theme.of(context).textTheme.bodySmall):
-              Text('Supplications', style: Theme.of(context).textTheme.bodySmall)
-
-              ,
-              onTap: () {
-                setState(() {
-                  chooseOptioninHomePage(
-                      context, 1, 1, HomePage.darkMode, widget.darkModeSetter);
-                });
-              },
-            ),
-            ListTile(
-              title: HomePage.languageChoice==false? Text('الاعدادات',
-                  style: Theme.of(context).textTheme.bodySmall):
-              Text('Settings',
+              title: Text(
+                  HomePage.languageChoice == false ? 'أدعية' : 'Supplications',
                   style: Theme.of(context).textTheme.bodySmall),
               onTap: () {
                 setState(() {
                   chooseOptioninHomePage(
-                      context, 3, 0, HomePage.darkMode, widget.darkModeSetter);
+                      context, 1, 1, widget.setMode, widget.setLang);
+                });
+              },
+            ),
+            ListTile(
+              title: Text(
+                  HomePage.languageChoice == false ? 'الاعدادات' : 'Settings',
+                  style: Theme.of(context).textTheme.bodySmall),
+              onTap: () {
+                setState(() {
+                  chooseOptioninHomePage(
+                      context, 3, 0, widget.setMode, widget.setLang);
                 });
               },
             )
-
           ],
         ),
       ),

@@ -41,22 +41,21 @@ class AzkarElWodo2 extends StatelessWidget {
       'title': ''
     },
   ];
-  final darkMode;
 
   final darkModeSetter;
+  final langSetter;
 
-  AzkarElWodo2({required this.darkMode, required this.darkModeSetter});
+  AzkarElWodo2({required this.langSetter, required this.darkModeSetter});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
       drawer: CustomDrawer(
-        darkMode: darkMode,
-        darkModeSetter: darkModeSetter,
+        setLang: langSetter,
+        setMode: darkModeSetter,
       ),
       body: AzkarContainer(
-        darkMood: darkMode,
         azkary: azkary,
       ),
     );

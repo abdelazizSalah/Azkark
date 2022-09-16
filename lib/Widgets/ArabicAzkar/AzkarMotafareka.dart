@@ -390,20 +390,19 @@ class AzkarMotafareka extends StatelessWidget {
       'title': 'الدعـــاء إذا أحسست بوجع في جسدك'
     },
   ];
-  final darkMode;
   final darkModeSetter;
-  AzkarMotafareka({required this.darkMode, required this.darkModeSetter});
+  final langSetter;
+  AzkarMotafareka({required this.langSetter, required this.darkModeSetter});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
       drawer: CustomDrawer(
-        darkMode: darkMode,
-        darkModeSetter: darkModeSetter,
+        setLang: langSetter,
+        setMode: darkModeSetter,
       ),
       body: AzkarContainer(
-        darkMood: darkMode,
         azkary: azkary,
       ),
     );

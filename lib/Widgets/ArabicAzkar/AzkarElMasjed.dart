@@ -30,22 +30,20 @@ class AzkarElMasjed extends StatelessWidget {
       'title': 'دُعَاءُ الخُرُوجِ مِنَ المَسْجِدِ'
     },
   ];
-  final darkMode;
-
   final darkModeSetter;
+  final langSetter;
 
-  AzkarElMasjed({required this.darkMode, required this.darkModeSetter});
+  AzkarElMasjed({required this.langSetter, required this.darkModeSetter});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
       drawer: CustomDrawer(
-        darkMode: darkMode,
-        darkModeSetter: darkModeSetter,
+        setLang: langSetter,
+        setMode: darkModeSetter,
       ),
       body: AzkarContainer(
-        darkMood: darkMode,
         azkary: azkary,
       ),
     );

@@ -8,11 +8,15 @@ class choice_doa2Widget extends StatelessWidget {
   final num choice;
   final bool darkMode;
   final darkModeSetter;
-  choice_doa2Widget(this.image, this.word, this.choice,this.darkMode,this.darkModeSetter);
+  final langSetter;
+  choice_doa2Widget(this.image, this.word, this.choice, this.darkMode,
+      this.darkModeSetter, this.langSetter);
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
+      textDirection: HomePage.languageChoice == false
+          ? TextDirection.rtl
+          : TextDirection.ltr,
       child: Stack(
         children: [
           ClipRRect(
@@ -25,7 +29,8 @@ class choice_doa2Widget extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              chooseOptioninDoa2Page(context, choice,darkMode,darkModeSetter);
+              chooseOptioninDoa2Page(
+                  context, choice, darkMode, darkModeSetter, langSetter);
             },
             child: Container(
               padding: EdgeInsets.all(10),

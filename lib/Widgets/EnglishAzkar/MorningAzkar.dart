@@ -188,23 +188,17 @@ class MorningAzkar extends StatelessWidget {
     },
   ];
 
-  final darkMode;
   final darkModeSetter;
 
-  MorningAzkar({required this.darkMode,this.darkModeSetter});
+  final langSetter;
+  MorningAzkar({this.darkModeSetter, this.langSetter});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: CustomAppBar(),
-        drawer: CustomDrawer(
-          darkMode: darkMode,
-          darkModeSetter: darkModeSetter,
-        ),
-        body:  AzkarContainer(
-          darkMood: darkMode,
+        drawer: CustomDrawer(setMode: darkModeSetter, setLang: langSetter),
+        body: AzkarContainer(
           azkary: azkary,
-        )
-    );
-
+        ));
   }
 }

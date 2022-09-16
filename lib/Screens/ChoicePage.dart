@@ -70,68 +70,66 @@ class ChoicePage extends StatelessWidget {
       'zekr': 'Upon Entering Home Remembrance',
       'number': 5,
     },
-
   ];
-  final darkMode;
-  final darkModeSetter;
-  ChoicePage({required this.darkMode, required this.darkModeSetter});
+
+  final setDarkMode;
+  final setLang;
+  ChoicePage({required this.setDarkMode, required this.setLang});
   @override
   Widget build(BuildContext context) {
     return Scrollable(viewportBuilder: (context, position) {
       return Scaffold(
         appBar: CustomAppBar(),
         drawer: CustomDrawer(
-          darkMode: darkMode,
-          darkModeSetter: darkModeSetter,
+          setLang: setLang,
+          setMode: setDarkMode,
         ),
         body: ListView(
           children: [
             Column(
                 // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                children:
-                HomePage.languageChoice==false?
-                (arabicChoices.map((myMap) {
-                  return Container(
-                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                          elevation: MaterialStateProperty.all(10),
-                          backgroundColor: MaterialStateProperty.all(
-                              Theme.of(context).splashColor)),
-                      child: Text(
-                        myMap['zekr'] as String,
-                        style: Theme.of(context).textTheme.bodyMedium,
-                      ),
-                      onPressed: () {
-                        chooseOptionInAzkar(context, myMap['number'] as int,
-                            darkMode, darkModeSetter);
-                      },
-                    ),
-                  );
-                }).toList()):
-            (
-          englishChoices.map((myMap) {
-        return Container(
-          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
-          child: ElevatedButton(
-            style: ButtonStyle(
-                elevation: MaterialStateProperty.all(10),
-                backgroundColor: MaterialStateProperty.all(
-                    Theme.of(context).splashColor)),
-            child: Text(
-              myMap['zekr'] as String,
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-            onPressed: () {
-              chooseOptionInAzkar(context, myMap['number'] as int,
-                  darkMode, darkModeSetter);
-            },
-          ),
-        );
-      }).toList())
-            )
-            ,
+                children: HomePage.languageChoice == false
+                    ? (arabicChoices.map((myMap) {
+                        return Container(
+                          margin:
+                              EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                                elevation: MaterialStateProperty.all(10),
+                                backgroundColor: MaterialStateProperty.all(
+                                    Theme.of(context).splashColor)),
+                            child: Text(
+                              myMap['zekr'] as String,
+                              style: Theme.of(context).textTheme.bodyMedium,
+                            ),
+                            onPressed: () {
+                              chooseOptionInAzkar(context,
+                                  myMap['number'] as int, setDarkMode, setLang);
+                            },
+                          ),
+                        );
+                      }).toList())
+                    : (englishChoices.map((myMap) {
+                        return Container(
+                          margin:
+                              EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                                elevation: MaterialStateProperty.all(10),
+                                backgroundColor: MaterialStateProperty.all(
+                                    Theme.of(context).splashColor)),
+                            child: Text(
+                              myMap['zekr'] as String,
+                              style: Theme.of(context).textTheme.bodyMedium,
+                            ),
+                            onPressed: () {
+                              chooseOptionInAzkar(context,
+                                  myMap['number'] as int, setDarkMode, setLang);
+                            },
+                          ),
+                        );
+                      }).toList())),
           ],
         ),
       );

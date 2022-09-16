@@ -187,24 +187,19 @@ class EveningAzkar extends StatelessWidget {
       'fadl': '',
     },
   ];
-  final darkMode;
   final darkModeSetter;
-
-  EveningAzkar({required this.darkMode,this.darkModeSetter});
+  final langSetter;
+  EveningAzkar({this.darkModeSetter, this.langSetter});
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      appBar: CustomAppBar(),
-      drawer: CustomDrawer(
-        darkMode: darkMode,
-        darkModeSetter: darkModeSetter,
-      ),
-      body:  AzkarContainer(
-        darkMood: darkMode,
-        azkary: azkary,
-      )
-    );
-
+        appBar: CustomAppBar(),
+        drawer: CustomDrawer(
+          setLang: langSetter,
+          setMode: darkModeSetter,
+        ),
+        body: AzkarContainer(
+          azkary: azkary,
+        ));
   }
 }
