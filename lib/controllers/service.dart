@@ -348,8 +348,8 @@ Future openDialog(
                                               darkModeSetter: darkModeSetter,
                                               choice: HomePage.languageChoice ==
                                                       false
-                                                  ? 4
-                                                  : 8,
+                                                  ? 10
+                                                  : 19,
                                               languageSelected:
                                                   HomePage.languageChoice)));
                                 },
@@ -369,46 +369,5 @@ Future openDialog(
                     )
                   ],
                 ),
-              ),
-            ));
-
-late TextEditingController controller = TextEditingController();
-
-Future<String?> openAzkarDialog<String>(
-        BuildContext c, bool darkMode, setMode, setLang) =>
-    showDialog(
-        context: c,
-        builder: (c) => Container(
-              // color: Theme.of(c).canvasColor,
-              color: Colors.amber,
-              child: AlertDialog(
-                title: Center(
-                  child: Text(
-                    HomePage.languageChoice == false
-                        ? "ادخل الذكر الخاص بك"
-                        : "Add your special remembrance",
-                    style: TextStyle(fontSize: 30, color: Colors.black),
-                  ),
-                ),
-                content: TextField(
-                  autofocus: true,
-                  controller: controller,
-                ),
-                actions: [
-                  Center(
-                    child: TextButton(
-                        onPressed: () {
-                          Navigator.of(c).pop(controller.text);
-                        },
-                        child: Text(
-                          HomePage.languageChoice == false ? "تم" : "OK",
-                          style: TextStyle(
-                              fontSize: 30,
-                              color: darkMode == false
-                                  ? Colors.green
-                                  : Colors.black),
-                        )),
-                  )
-                ],
               ),
             ));

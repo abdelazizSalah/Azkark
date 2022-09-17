@@ -51,6 +51,36 @@ List<Choice_item> choices_Doa2Ar = [
       "assets/imgs/ad3yaGom3Eldoaa.jpg",
       "جوامع الدعاء",
       3),
+  Choice_item(
+      "assets/imgs/ad3yaGom3Eldoaa.jpg",
+      "دعاء الذهاب الي المسجد",
+      4),
+  Choice_item(
+      "assets/imgs/ad3yaGom3Eldoaa.jpg",
+      "دعاء دخول المسجد",
+      5),
+  Choice_item(
+      "assets/imgs/ad3yaGom3Eldoaa.jpg",
+      "الخروج من المسجد",
+      6),
+  Choice_item(
+      "assets/imgs/ad3yaGom3Eldoaa.jpg",
+      "دعاء دخول الخلاء",
+      7),
+Choice_item(
+"assets/imgs/ad3yaGom3Eldoaa.jpg",
+"دعاء الخروج من الخلاء",
+8),
+
+  Choice_item(
+      "assets/imgs/ad3yaGom3Eldoaa.jpg",
+      "دعاء سجدة التلاوة",
+      9),
+  Choice_item(
+      "assets/imgs/ad3yaGom3Eldoaa.jpg",
+      "دعاء الحزن",
+      10),
+
 
 ];
 
@@ -58,37 +88,37 @@ List<Choice_item> choices_Doa2En = [
   Choice_item(
       "assets/imgs/backad3ya.jpg",
       "Before Entering The Bathroom",
-      0),
+      11),
   Choice_item(
       "assets/imgs/backad3ya.jpg",
       "After Leaving The Bathroom",
-      1),
+      12),
   Choice_item(
       "assets/imgs/backad3ya.jpg",
       "Before Ablution",
-      2),
+      13),
   Choice_item(
       "assets/imgs/backad3ya.jpg",
       "Upon Completing The Ablution",
-      3),
+      14),
   Choice_item(
       "assets/imgs/backad3ya.jpg",
       "When Going To The Mosque",
-      4),
+      15),
   Choice_item(
       "assets/imgs/backad3ya.jpg",
       "Upon Entering The Mosque",
-      5),
+      16),
   Choice_item(
       "assets/imgs/backad3ya.jpg",
       "Upon Leaving The Mosque",
-      6),
+      17),
   Choice_item(
       "assets/imgs/backad3ya.jpg",
       "When Prostrating Due To Recitation Of The Quran",
-      7),
+      18),
   Choice_item(
       "assets/imgs/backad3ya.jpg",
       "For Anxiety And Sorrow",
-      8),
+      19),
 ];
