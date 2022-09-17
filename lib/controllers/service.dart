@@ -1,11 +1,13 @@
 import 'package:azkark/Screens/HomePage.dart';
 import 'package:azkark/Widgets/ArabicAzkar/AzkarElSabah.dart';
+import 'package:azkark/Widgets/ArabicAzkar/AzkarkEl5asa.dart';
 import 'package:azkark/Widgets/ArabicAzkar/ad3ya.dart';
 import 'package:azkark/Widgets/EnglishAzkar/EveningAzkar.dart';
 import 'package:azkark/Widgets/EnglishAzkar/MorningAzkar.dart';
 import 'package:azkark/Widgets/EnglishAzkar/Uponenteringthehome.dart';
 import 'package:azkark/Widgets/EnglishAzkar/WhenLeavingHome.dart';
 import 'package:azkark/Widgets/EnglishAzkar/WhenWakingup.dart';
+import 'package:azkark/Widgets/EnglishAzkar/YourSpecialAzkar.dart';
 import '../Widgets/ArabicAzkar/AzkarElAzan.dart';
 import '../Widgets/ArabicAzkar/AzkarB3dElSalah.dart';
 import '../Widgets/ArabicAzkar/AzkarElEstykaz.dart';
@@ -161,6 +163,14 @@ void chooseOptionInAzkar(
                     AzkarMotafareka(
                         darkMode: dark, darkModeSetter: darkModeSetter)));
         break;
+      case 11:
+        Navigator.push(
+            c,
+            MaterialPageRoute(
+                builder: (c) =>
+                    AzkarkEl5asa(
+                        darkMode: dark, darkModeSetter: darkModeSetter)));
+        break;
     }
   }
   else{
@@ -211,6 +221,17 @@ void chooseOptionInAzkar(
                         darkMode: dark ,darkModeSetter: darkModeSetter)));
 
         break;
+      case 6:
+        Navigator.push(
+            c,
+            MaterialPageRoute(
+                builder: (c) =>
+                    YourSpecialAzkar(
+                        darkMode: dark ,darkModeSetter: darkModeSetter)));
+
+        break;
+
+
     }
   }
 }
@@ -225,6 +246,8 @@ void chooseOptioninDoa2Page(BuildContext c, num choice,bool dark, darkModeSetter
               ad3ya(darkMode: HomePage.darkMode, darkModeSetter:darkModeSetter , choice: choice, languageSelected: HomePage.languageChoice)));
 
 }
+
+
 
  Future openDialog(BuildContext context,bool darkMode,darkModeSetter)=>showDialog(context: context, builder:
     (context)=>AlertDialog(

@@ -47,6 +47,10 @@ class ChoicePage extends StatelessWidget {
       'zekr': 'أذكار متفرقه',
       'number': 10,
     },
+    {
+      'zekr': 'أذكارك الخاصة',
+      'number': 11,
+    },
   ];
 
   final List<Map<String, Object>> englishChoices = [
@@ -70,6 +74,10 @@ class ChoicePage extends StatelessWidget {
       'zekr': 'Upon Entering Home Remembrance',
       'number': 5,
     },
+    {
+      'zekr': 'Your Special Remembrance',
+      'number': 6,
+    },
 
   ];
   final darkMode;
@@ -79,6 +87,26 @@ class ChoicePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scrollable(viewportBuilder: (context, position) {
       return Scaffold(
+        floatingActionButton: Container(
+          height: 80,
+          width: 100,
+          child: FloatingActionButton(
+
+              hoverColor: Colors.black,
+              backgroundColor:
+              darkMode==false?
+              (Colors.green)
+                  :Colors.black12,
+              onPressed: (){
+                openDialog(context,darkMode,darkModeSetter);
+              },
+              child: Icon(Icons.add,color:
+              darkMode==false?
+              (Colors.white)
+                  :Colors.black12
+                ,size: 40,)
+          ),
+        ),
         appBar: CustomAppBar(),
         drawer: CustomDrawer(
           darkMode: darkMode,
