@@ -195,7 +195,6 @@ void chooseOptionInAzkar(BuildContext c, num choice, setMode, setLang,
                       darkModeSetter: setMode,
                     )));
         break;
-
     }
   } else {
     switch (choice) {
@@ -221,7 +220,6 @@ void chooseOptionInAzkar(BuildContext c, num choice, setMode, setLang,
             c, MaterialPageRoute(builder: (c) => Uponenteringthehome()));
 
         break;
-
     }
   }
 }
@@ -256,6 +254,8 @@ Future openDialog(
                   borderRadius: BorderRadius.all(Radius.circular(10.0))),
               insetPadding: EdgeInsets.all(10),
               content: Container(
+                // color: Colors.amber,
+                height: MediaQuery.of(context).size.height * 0.3,
                 padding: EdgeInsets.all(10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

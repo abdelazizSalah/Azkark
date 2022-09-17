@@ -15,17 +15,19 @@ class CustomDrawer extends StatefulWidget {
 class _CustomDrawerState extends State<CustomDrawer> {
   @override
   Widget build(BuildContext context) {
+    var devOrientation = MediaQuery.of(context).orientation;
     return Directionality(
       textDirection: HomePage.languageChoice == false
           ? TextDirection.rtl
           : TextDirection.ltr,
       child: Drawer(
         child: ListView(
-          // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * 0.24,
+              height: (devOrientation == Orientation.landscape)
+                  ? MediaQuery.of(context).size.height * 0.35
+                  : MediaQuery.of(context).size.height * 0.22,
               child: DrawerHeader(
                 decoration: BoxDecoration(boxShadow: [
                   BoxShadow(
