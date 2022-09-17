@@ -17,50 +17,26 @@
 <li>flutter_native_splash</li>
 
 </ul>
-<h2>سيذكرك هذا البرنامج كل ساعة بذكر الله من خلال تنبيه</h2>
+<h2> (notification) سيذكرك هذا البرنامج بذكر الله من خلال تنبيه</h2>
 
 ## ScreenShots 
- ### **Home page**
-* <img src="./assets/imgs/Homepage.png" alt="Main Page" width="200" height ="420"/>
- -------
-  ### **Splash Screen**
-* <img src="./assets/imgs/splashscreen.png" alt="Main Page" width="200" height ="420"/>
- -------
-  ### **Icon**
-* <img src="./assets/imgs/icon.png" alt="icon Page" width="200" height ="420"/>
- -------
- ### **Azkar Page**
-* <img src="./assets/imgs/MainPage.png" alt="Main Page" width="200" height ="420"/>
- -------
- ### **أذكار الصباح**
-* <img src="./assets/imgs/AzkarElSabah.png" alt="Main Page" width="200" height ="420"/>
- -------
- ### **أذكار المساء**
-* <img src="./assets/imgs/Elmasa2.png" alt="Main Page" width="200" height ="420"/>
- -------
- ### **أذكار بعد الصلاة**
-* <img src="./assets/imgs/B3dElSalah.png" alt="Main Page" width="200" height ="420"/>
- -------
- ### **أذكار الأستيقاظ**
-* <img src="./assets/imgs/ElEstykaz.png" alt="Main Page" width="200" height ="420"/>
- -------
- ### **أذكار النوم**
-* <img src="./assets/imgs/ElNom.png" alt="Main Page" width="200" height ="420"/>
- -------
- ### **أذكار المسجد**
-* <img src="./assets/imgs/Masjed.png" alt="Main Page" width="200" height ="420"/>
- -------
- ### **أذكار الصلاة**
-* <img src="./assets/imgs/Salah.png" alt="Main Page" width="200" height ="420"/>
- -------
- ### **أذكار الوضوء**
-* <img src="./assets/imgs/Wodo2.png" alt="Main Page" width="200" height ="420"/>
- -------
 
- ### **أذكار متفرقة**
-* <img src="./assets/imgs/Motafareka.png" alt="Main Page" width="200" height ="420"/>
+ <img src="./assets/imgs/Screens/1.jpg" alt="."/>
+<img src="./assets/imgs/Screens/2.jpg" alt="."/>
+<img src="./assets/imgs/Screens/3.jpg" alt="."/>
+<img src="./assets/imgs/Screens/4.jpg" alt="."/>
+<img src="./assets/imgs/Screens/5.jpg" alt="."/>
+<img src="./assets/imgs/Screens/6.jpg" alt="."/>
+<img src="./assets/imgs/Screens/7.jpg" alt="."/>
+<img src="./assets/imgs/Screens/8.jpg" alt="."/>
+<img src="./assets/imgs/Screens/9.jpg" alt="."/>
+<img src="./assets/imgs/Screens/10.jpg" alt="."/>
+<img src="./assets/imgs/Screens/11.jpg" alt="."/>
+<img src="./assets/imgs/Screens/12.jpg" alt="."/>
+<img src="./assets/imgs/Screens/13.jpg" alt="."/>
 
 <h2>Contributors: </h2>
+
 <table>
   <tbody>
     <tr>
