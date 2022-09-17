@@ -7,34 +7,31 @@ import 'package:flutter/material.dart';
 class HomePage extends StatefulWidget {
   static bool darkMode = false;
   static int freq = 1;
-  static bool languageChoice=false;
+
+  /// false -> arabic
+  static bool languageChoice = false;
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  void  toggleButton() {
+  void toggleMode() {
     setState(() {
       var temp = HomePage.darkMode;
       HomePage.darkMode = !temp;
-
     });
   }
-  void toogleLanguage(bool c){
+
+  void toggleLanguage() {
     setState(() {
-     HomePage.languageChoice=c;
-
+      var temp = !HomePage.languageChoice;
+      HomePage.languageChoice = temp;
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
     bool dkWidget = HomePage.darkMode;
-   // bool languageC=HomePage.languageChoice;
-    // return Scaffold(
-    //   body: MainPage(darkMode: dkWidget),
-    // );
 
     /// used to scale the fonts depending on the user settings
     final contentScaleFactor = MediaQuery.textScaleFactorOf(context);
@@ -82,11 +79,16 @@ class _HomePageState extends State<HomePage> {
                           color: Color.fromARGB(255, 220, 171, 27),
                           offset: Offset(20, 5))
                     ]),
+                displaySmall: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15 * contentScaleFactor,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'DG-DIGI'),
                 displayMedium: TextStyle(
                     color: Colors.white,
                     fontSize: 18 * contentScaleFactor,
                     fontWeight: FontWeight.bold,
-                    fontFamily: 'S'),
+                    fontFamily: 'Amiri'),
                 bodySmall: TextStyle(
                     fontSize: 25 * contentScaleFactor,
                     color: Colors.black,
@@ -103,9 +105,10 @@ class _HomePageState extends State<HomePage> {
                     ]))),
         debugShowCheckedModeBanner: false,
         home: MainPage(
+          LangSetter: toggleLanguage,
           darkMode: dkWidget,
-          darkModeSetter: toggleButton,
-        //  languageChoice:languageChoice,
+          darkModeSetter: toggleMode,
+          //  languageChoice:languageChoice,
         ));
   }
 }
@@ -113,80 +116,63 @@ class _HomePageState extends State<HomePage> {
 class MainPage extends StatelessWidget {
   final bool darkMode;
   final darkModeSetter;
+  final LangSetter;
   //final bool languageChoice;
-  MainPage({required this.darkMode, required this.darkModeSetter});
-
-
-
+  MainPage(
+      {required this.darkMode,
+      required this.darkModeSetter,
+      required this.LangSetter});
 
   @override
   Widget build(BuildContext context) {
     //print(languageChoice);
     return Scaffold(
-
-      floatingActionButton:
-          Container(
-            height: 80,
-            width: 100,
-            child: FloatingActionButton(
-
-              hoverColor: Colors.black,
-              backgroundColor:
-              darkMode==false?
-              (Colors.green)
-                  :Colors.black12,
-              onPressed: (){
-                 openDialog(context,darkMode,darkModeSetter);
-              },
-              child: Icon(Icons.add_reaction_outlined,color:
-              darkMode==false?
-              (Colors.white)
-                :Colors.black12
-                ,size: 40,)
-            ),
-          ),
-
+      floatingActionButton: Container(
+        height: MediaQuery.of(context).size.height * 0.07,
+        width: MediaQuery.of(context).size.width * 0.3,
+        child: FloatingActionButton(
+            hoverColor: Colors.black,
+            backgroundColor:
+                darkMode == false ? (Colors.green) : Colors.black12,
+            onPressed: () {
+              openDialog(context, darkMode, darkModeSetter, LangSetter);
+            },
+            child: Icon(
+              Icons.add_reaction_outlined,
+              color: darkMode == false ? (Colors.white) : Colors.black12,
+              size: 40,
+            )),
+      ),
       appBar: CustomAppBar(),
       body: Directionality(
-        textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
+        textDirection: HomePage.languageChoice == false
+            ? TextDirection.rtl
+            : TextDirection.ltr,
         child: Container(
-          color: Theme.of(context).canvasColor,
-          child: GridView(
-              padding: EdgeInsets.all(10),
-              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 200,
-                childAspectRatio: 7 / 13,
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-              ),
-              children:
-
-              HomePage.languageChoice==false?
-              ( choices_dataAr
-                  .map((ch) => choiceItemScreen(
-                      darkModeSetter: darkModeSetter,
-                      image: ch.image,
-                      word: ch.word,
-                      choice: ch.choice,
-                      darkMode: darkMode,
-              ))
-                  .toList()):
-              (
-            choices_dataEn
-            .map((ch) => choiceItemScreen(
-          darkModeSetter: darkModeSetter,
-          image: ch.image,
-          word: ch.word,
-          choice: ch.choice,
-          darkMode: darkMode))
-          .toList())
-          )
-
-          ,
-        ),
+            color: Theme.of(context).canvasColor,
+            child: GridView(
+                padding: EdgeInsets.all(10),
+                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent: 200,
+                  // childAspectRatio: 7 / 12,
+                  childAspectRatio:
+                      (MediaQuery.of(context).size.height * 0.58) /
+                          MediaQuery.of(context).size.height,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                ),
+                children: (HomePage.languageChoice == false
+                        ? choices_dataAr
+                        : choices_dataEn)
+                    .map((ch) => choiceItemScreen(
+                          image: ch.image,
+                          word: ch.word,
+                          choice: ch.choice,
+                          toggleMode: darkModeSetter,
+                          toggleLang: LangSetter,
+                        ))
+                    .toList())),
       ),
     );
-
-
   }
 }

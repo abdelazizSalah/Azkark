@@ -15,22 +15,16 @@ class Uponenteringthehome extends StatelessWidget {
     },
   ];
 
-  final darkMode;
   final darkModeSetter;
-
-  Uponenteringthehome({required this.darkMode,this.darkModeSetter});
+  final langSetter;
+  Uponenteringthehome({this.darkModeSetter, this.langSetter});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: CustomAppBar(),
-        drawer: CustomDrawer(
-          darkMode: darkMode,
-          darkModeSetter: darkModeSetter,
-        ),
-        body:  AzkarContainer(
-          darkMood: darkMode,
+        drawer: CustomDrawer(setMode: darkModeSetter, setLang: langSetter),
+        body: AzkarContainer(
           azkary: azkary,
-        )
-    );
+        ));
   }
 }

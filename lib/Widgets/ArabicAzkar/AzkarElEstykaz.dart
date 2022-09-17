@@ -5,12 +5,6 @@ import '../CustomAppBar.dart';
 import '../CustomDrawer.dart';
 
 class AzkarElEstykaz extends StatelessWidget {
-  final darkMode;
-
-  final darkModeSetter;
-
-  AzkarElEstykaz({required this.darkMode, required this.darkModeSetter});
-
   List<Map<String, Object>> azkary = [
     {
       'zekr':
@@ -38,16 +32,20 @@ class AzkarElEstykaz extends StatelessWidget {
     },
   ];
 
+  final darkModeSetter;
+  final langSetter;
+
+  AzkarElEstykaz({required this.langSetter, required this.darkModeSetter});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
       drawer: CustomDrawer(
-        darkMode: darkMode,
-        darkModeSetter: darkModeSetter,
+        setLang: langSetter,
+        setMode: darkModeSetter,
       ),
       body: AzkarContainer(
-        darkMood: darkMode,
         azkary: azkary,
       ),
     );

@@ -23,9 +23,10 @@ import '../Widgets/ArabicAzkar/tasabeeh.dart';
 import 'package:azkark/Screens/Doa2ChoicePage.dart';
 import '../Widgets/Settings.dart';
 import 'package:flutter_emoji/flutter_emoji.dart';
+
 num currentContextNumberInChoicePage = -1;
 void chooseOptioninHomePage(
-    BuildContext c, num choice, num where, bool dark, darkModeSetter) {
+    BuildContext c, num choice, num where, setMode, setLang) {
   if (choice == currentContextNumberInChoicePage && where == 1) return;
   currentContextNumberInChoicePage = choice;
   if (choice == 0) {
@@ -33,135 +34,164 @@ void chooseOptioninHomePage(
       Navigator.push(
           c,
           MaterialPageRoute(
-              builder: (c) =>
-                  ChoicePage(darkMode: dark, darkModeSetter: darkModeSetter)));
+              builder: (c) => ChoicePage(
+                    setLang: setLang,
+                    setDarkMode: setMode,
+                  )));
     else
       Navigator.pushReplacement(
           c,
           MaterialPageRoute(
-              builder: (c) =>
-                  ChoicePage(darkMode: dark, darkModeSetter: darkModeSetter)));
+              builder: (c) => ChoicePage(
+                    setLang: setLang,
+                    setDarkMode: setMode,
+                  )));
   } else if (choice == 1) {
     if (where == 0)
-      Navigator.push(c, MaterialPageRoute(builder: (c) => Doa2ChoicePage()));
+      Navigator.push(
+          c,
+          MaterialPageRoute(
+              builder: (c) => Doa2ChoicePage(
+                    langSetter: setLang,
+                    modeSetter: setMode,
+                  )));
     else
       Navigator.pushReplacement(
-          c, MaterialPageRoute(builder: (c) => Doa2ChoicePage()));
+          c,
+          MaterialPageRoute(
+              builder: (c) => Doa2ChoicePage(
+                    langSetter: setLang,
+                    modeSetter: setMode,
+                  )));
   } else if (choice == 2) {
     if (where == 0)
       Navigator.push(
           c,
           MaterialPageRoute(
-              builder: (c) =>
-                  tasabeeh(darkMode: dark, darkModeSetter: darkModeSetter)));
+              builder: (c) => tasabeeh(
+                    langSetter: setLang,
+                    darkModeSetter: setMode,
+                  )));
     else
       Navigator.pushReplacement(
           c,
           MaterialPageRoute(
-              builder: (c) =>
-                  tasabeeh(darkMode: dark, darkModeSetter: darkModeSetter)));
+              builder: (c) => tasabeeh(
+                    langSetter: setLang,
+                    darkModeSetter: setMode,
+                  )));
   } else if (choice == 3) {
     print(where);
     if (where == 0)
       Navigator.push(
           c,
           MaterialPageRoute(
-              builder: (c) =>
-                  Settings(darkMode: dark, darkModeSetter: darkModeSetter)));
+              builder: (c) => Settings(
+                    langSetter: setLang,
+                    darkModeSetter: setMode,
+                  )));
     else
       Navigator.pushReplacement(
           c,
           MaterialPageRoute(
               builder: (c) =>
-                  Settings(darkMode: dark, darkModeSetter: darkModeSetter)));
-   
+                  Settings(langSetter: setLang, darkModeSetter: setMode)));
   }
 }
 
-void chooseOptionInAzkar(
-    BuildContext c, num choice, bool dark, darkModeSetter) {
-  if(!HomePage.languageChoice) {
+void chooseOptionInAzkar(BuildContext c, num choice, setMode, setLang) {
+  if (!HomePage.languageChoice) {
     switch (choice) {
       case 1:
         Navigator.push(
             c,
             MaterialPageRoute(
-                builder: (c) =>
-                    AzkarElSabah(
-                        darkMode: dark, darkModeSetter: darkModeSetter)));
+                builder: (c) => AzkarElSabah(
+                      langSetter: setLang,
+                      darkModeSetter: setMode,
+                    )));
         break;
       case 2:
         Navigator.push(
             c,
             MaterialPageRoute(
-                builder: (c) =>
-                    AzkarElMasa2(
-                        darkMode: dark, darkModeSetter: darkModeSetter)));
+                builder: (c) => AzkarElMasa2(
+                      langSetter: setLang,
+                      darkModeSetter: setMode,
+                    )));
         break;
       case 3:
         Navigator.push(
             c,
             MaterialPageRoute(
-                builder: (c) =>
-                    AzkarB3dElSalah(
-                        darkMode: dark, darkModeSetter: darkModeSetter)));
+                builder: (c) => AzkarB3dElSalah(
+                      langSetter: setLang,
+                      darkModeSetter: setMode,
+                    )));
         break;
       case 4:
         Navigator.push(
             c,
             MaterialPageRoute(
-                builder: (c) =>
-                    AzkarElNom(
-                        darkMode: dark, darkModeSetter: darkModeSetter)));
+                builder: (c) => AzkarElNom(
+                      langSetter: setLang,
+                      darkModeSetter: setMode,
+                    )));
         break;
       case 5:
         Navigator.push(
             c,
             MaterialPageRoute(
-                builder: (c) =>
-                    AzkarElEstykaz(
-                        darkMode: dark, darkModeSetter: darkModeSetter)));
+                builder: (c) => AzkarElEstykaz(
+                      langSetter: setLang,
+                      darkModeSetter: setMode,
+                    )));
         break;
       case 6:
         Navigator.push(
             c,
             MaterialPageRoute(
-                builder: (c) =>
-                    AzkarElSalah(
-                        darkMode: dark, darkModeSetter: darkModeSetter)));
+                builder: (c) => AzkarElSalah(
+                      langSetter: setLang,
+                      darkModeSetter: setMode,
+                    )));
         break;
       case 7:
         Navigator.push(
             c,
             MaterialPageRoute(
-                builder: (c) =>
-                    AzkarElWodo2(
-                        darkMode: dark, darkModeSetter: darkModeSetter)));
+                builder: (c) => AzkarElWodo2(
+                      langSetter: setLang,
+                      darkModeSetter: setMode,
+                    )));
         break;
       case 8:
         Navigator.push(
             c,
             MaterialPageRoute(
-                builder: (c) =>
-                    AzkarElAzan(
-                        darkMode: dark, darkModeSetter: darkModeSetter)));
+                builder: (c) => AzkarElAzan(
+                      langSetter: setLang,
+                      darkModeSetter: setMode,
+                    )));
         break;
       case 9:
         Navigator.push(
             c,
             MaterialPageRoute(
-                builder: (c) =>
-                    AzkarElMasjed(
-                        darkMode: dark, darkModeSetter: darkModeSetter)));
-        print(dark);
+                builder: (c) => AzkarElMasjed(
+                      langSetter: setLang,
+                      darkModeSetter: setMode,
+                    )));
+
         break;
       case 10:
         Navigator.push(
             c,
             MaterialPageRoute(
-                builder: (c) =>
-                    AzkarMotafareka(
-                        darkMode: dark, darkModeSetter: darkModeSetter)));
+                builder: (c) => AzkarMotafareka(
+                      langSetter: setLang,
+                      darkModeSetter: setMode,
+                    )));
         break;
       case 11:
         Navigator.push(
@@ -172,53 +202,28 @@ void chooseOptionInAzkar(
                         darkMode: dark, darkModeSetter: darkModeSetter)));
         break;
     }
-  }
-  else{
-    switch (choice){
+  } else {
+    switch (choice) {
       case 1:
-        Navigator.push(
-            c,
-            MaterialPageRoute(
-                builder: (c) =>
-                    MorningAzkar(
-                        darkMode: dark ,darkModeSetter: darkModeSetter,)));
+        Navigator.push(c, MaterialPageRoute(builder: (c) => MorningAzkar()));
 
         break;
       case 2:
-        Navigator.push(
-            c,
-            MaterialPageRoute(
-                builder: (c) =>
-                    EveningAzkar(
-                        darkMode: dark ,darkModeSetter: darkModeSetter)));
+        Navigator.push(c, MaterialPageRoute(builder: (c) => EveningAzkar()));
 
         break;
       case 3:
-        Navigator.push(
-            c,
-            MaterialPageRoute(
-                builder: (c) =>
-                    WhenLeavingHome(
-                        darkMode: dark ,darkModeSetter: darkModeSetter)));
+        Navigator.push(c, MaterialPageRoute(builder: (c) => WhenLeavingHome()));
 
         break;
       case 4:
-        Navigator.push(
-            c,
-            MaterialPageRoute(
-                builder: (c) =>
-                    WhenWakingup(
-                        darkMode: dark ,darkModeSetter: darkModeSetter)));
+        Navigator.push(c, MaterialPageRoute(builder: (c) => WhenWakingup()));
 
         break;
 
       case 5:
         Navigator.push(
-            c,
-            MaterialPageRoute(
-                builder: (c) =>
-                    Uponenteringthehome(
-                        darkMode: dark ,darkModeSetter: darkModeSetter)));
+            c, MaterialPageRoute(builder: (c) => Uponenteringthehome()));
 
         break;
       case 6:
@@ -236,121 +241,130 @@ void chooseOptionInAzkar(
   }
 }
 
-void chooseOptioninDoa2Page(BuildContext c, num choice,bool dark, darkModeSetter) {
+void chooseOptioninDoa2Page(
+    BuildContext c, num choice, bool dark, darkModeSetter, setLang) {
   //change choice in decider of doaa pages
 
-    Navigator.push(
-        c,
-        MaterialPageRoute(
-            builder: (c) =>
-              ad3ya(darkMode: HomePage.darkMode, darkModeSetter:darkModeSetter , choice: choice, languageSelected: HomePage.languageChoice)));
-
+  Navigator.push(
+      c,
+      MaterialPageRoute(
+          builder: (c) => ad3ya(
+              darkMode: HomePage.darkMode,
+              darkModeSetter: darkModeSetter,
+              choice: choice,
+              setLang: setLang,
+              languageSelected: HomePage.languageChoice)));
 }
 
+Future openDialog(
+        BuildContext context, bool darkMode, darkModeSetter, setLang) =>
+    showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+              title: Center(
+                  child: Text(
+                      HomePage.languageChoice == false
+                          ? "بما تشعر؟"
+                          : "How do you feel?",
+                      style: Theme.of(context).textTheme.bodySmall)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0))),
+              insetPadding: EdgeInsets.all(10),
+              content: Container(
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 8),
+                      height: MediaQuery.of(context).size.height * 0.3,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Image.asset(
+                            "assets/imgs/smileface.png",
+                            height: MediaQuery.of(context).size.height * 0.1,
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.3,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(40),
+                            ),
+                            child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
 
 
- Future openDialog(BuildContext context,bool darkMode,darkModeSetter)=>showDialog(context: context, builder:
-    (context)=>AlertDialog(
-
-  title:
-  HomePage.languageChoice==false?
-  Center(child: Text("بما تشعر؟",style:TextStyle(color: Colors.black))):Center(child: Text("How do you feel?",style:TextStyle(color: Colors.black,fontSize: 30))),
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(10.0))
-      ),
-      insetPadding: EdgeInsets.all(10),
-      content:
-      Container(
-
-        padding: EdgeInsets.all(10),
-        child:
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              padding: 
-              EdgeInsets.symmetric(horizontal: 8),
-              height: 140,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Image.asset("assets/imgs/smileface.png"
-                      ,height: 90,
-                  ),
-
-                  Container(
-                    width: 120,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (c) => tasabeeh(
+                                                langSetter: setLang,
+                                                darkModeSetter: darkModeSetter,
+                                              )));
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                      HomePage.languageChoice == false
+                                          ? "سبح الله"
+                                          : "Praise Allah",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .displaySmall),
+                                )),
+                          )
+                        ],
+                      ),
                     ),
-                    child: ElevatedButton(onPressed: (){
-                      Navigator.pop(context);
-
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (c) =>
-                              tasabeeh(darkMode: darkMode, darkModeSetter: darkModeSetter)
-                            ));
-
-
-
-                    }, child:
-                        HomePage.languageChoice==false?
-                    Text("سبح الله"):
-                      Text("Praise Allah")
-                      ,
-
-                    ),
-                  )
-                ],
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.3,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Image.asset(
+                            "assets/imgs/sadface.png",
+                            height: MediaQuery.of(context).size.height * 0.1,
+                          ),
+                          Container(
+                            width: HomePage.languageChoice == true
+                                ? MediaQuery.of(context).size.width * 0.35
+                                : MediaQuery.of(context).size.width * 0.33,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(40),
+                            ),
+                            child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (c) => ad3ya(
+                                              darkMode: darkMode,
+                                              setLang: setLang,
+                                              darkModeSetter: darkModeSetter,
+                                              choice: HomePage.languageChoice ==
+                                                      false
+                                                  ? 4
+                                                  : 8,
+                                              languageSelected:
+                                                  HomePage.languageChoice)));
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                      HomePage.languageChoice == false
+                                          ? "دعاء الحزن"
+                                          : "Anxiety\nSupplication",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .displaySmall),
+                                )),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Container(
-              height: 140,
-              child: Column(
-                children: [
-                  Image.asset("assets/imgs/sadface.png"
-                    ,height: 92,
-                  ),
-                  Container(
-                    width:
-                    HomePage.languageChoice==true?
-                    180:120,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-
-                    ),
-                    child: ElevatedButton(onPressed: (){
-                      Navigator.pop(context);
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (c) =>
-                                  ad3ya(darkMode: darkMode, darkModeSetter: darkModeSetter, choice: HomePage.languageChoice==false?4:8
-
-                                      , languageSelected: HomePage.languageChoice)));
-
-                    }, child:
-                        HomePage.languageChoice==false?
-                    Text("دعاء الحزن")
-                      :
-                      Text("Anxiety Supplication")
-                      ,
-
-                    ),
-                  )
-
-
-                ],
-              ),
-            )
-          ],
-        )
-        ,
-      )
-      ,
-
-)
-);
+            ));

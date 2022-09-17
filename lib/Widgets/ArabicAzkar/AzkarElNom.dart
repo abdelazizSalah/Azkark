@@ -129,22 +129,21 @@ class AzkarElNom extends StatelessWidget {
       'title': 'أذكار الأحلام'
     },
   ];
-  final darkMode;
 
   final darkModeSetter;
+  final langSetter;
 
-  AzkarElNom({required this.darkMode, required this.darkModeSetter});
+  AzkarElNom({required this.langSetter, required this.darkModeSetter});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
       drawer: CustomDrawer(
-        darkMode: darkMode,
-        darkModeSetter: darkModeSetter,
+        setLang: langSetter,
+        setMode: darkModeSetter,
       ),
       body: AzkarContainer(
-        darkMood: darkMode,
         azkary: azkary,
       ),
     );

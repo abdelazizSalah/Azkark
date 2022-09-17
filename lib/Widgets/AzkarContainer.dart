@@ -6,8 +6,7 @@ import 'Zekr.dart';
 
 class AzkarContainer extends StatefulWidget {
   final azkary;
-  final darkMood;
-  const AzkarContainer({required this.azkary, required this.darkMood});
+  const AzkarContainer({required this.azkary});
 
   @override
   State<AzkarContainer> createState() => _AzkarContainerState();
@@ -19,14 +18,15 @@ class _AzkarContainerState extends State<AzkarContainer> {
     final azkary = widget.azkary;
 
     return Directionality(
-      textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
+      textDirection: HomePage.languageChoice == false
+          ? TextDirection.rtl
+          : TextDirection.ltr,
       child: Container(
           color: Theme.of(context).primaryColor,
           child: Card(
               child: ListView.builder(
             itemBuilder: (context, index) {
               return Zekr(
-                darkMood: HomePage.darkMode,
                 counter: azkary[index]['counter'],
                 zekr: azkary[index]['zekr'],
                 title: azkary[index]['title'],

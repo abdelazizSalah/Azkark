@@ -38,22 +38,20 @@ class WhenWakingup extends StatelessWidget {
     },
   ];
 
-  final darkMode;
   final darkModeSetter;
+  final langSetter;
 
-  WhenWakingup({required this.darkMode,this.darkModeSetter});
+  WhenWakingup({this.darkModeSetter, this.langSetter});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: CustomAppBar(),
         drawer: CustomDrawer(
-          darkMode: darkMode,
-          darkModeSetter: darkModeSetter,
+          setMode: darkModeSetter,
+          setLang: langSetter,
         ),
-        body:  AzkarContainer(
-          darkMood: darkMode,
+        body: AzkarContainer(
           azkary: azkary,
-        )
-    );
+        ));
   }
 }

@@ -2,18 +2,18 @@ import 'package:azkark/controllers/service.dart';
 import 'package:flutter/material.dart';
 
 class choiceItemScreen extends StatelessWidget {
-  final bool darkMode;
-  final darkModeSetter;
   final String word;
   final String image;
   final num choice;
-  choiceItemScreen(
-      {required this.image,
-      required this.word,
-      required this.darkModeSetter,
-      required this.choice,
-      required this.darkMode,
-      });
+  final toggleMode;
+  final toggleLang;
+  choiceItemScreen({
+    required this.image,
+    required this.toggleMode,
+    required this.toggleLang,
+    required this.word,
+    required this.choice,
+  });
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -28,8 +28,7 @@ class choiceItemScreen extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            chooseOptioninHomePage(
-                context, choice, 0, darkMode, darkModeSetter);
+            chooseOptioninHomePage(context, choice, 0, toggleMode, toggleLang);
           },
           child: Container(
             padding: EdgeInsets.all(10),

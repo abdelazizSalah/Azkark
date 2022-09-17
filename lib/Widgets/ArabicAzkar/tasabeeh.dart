@@ -154,7 +154,7 @@ class tasabeeh extends StatelessWidget {
       'counter': 100,
       'initial': 100,
       'fadl':
-      'حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ. لَمْ يَأْتِ أَحَدٌ يَوْمَ الْقِيَامَةِ بِأَفْضَلَ مِمَّا جَاءَ بِهِ إِلَّا أَحَدٌ قَالَ مِثْلَ مَا قَالَ أَوْ زَادَ عَلَيْهِ.',
+          'حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ. لَمْ يَأْتِ أَحَدٌ يَوْمَ الْقِيَامَةِ بِأَفْضَلَ مِمَّا جَاءَ بِهِ إِلَّا أَحَدٌ قَالَ مِثْلَ مَا قَالَ أَوْ زَادَ عَلَيْهِ.',
       'title': '',
     },
     {
@@ -164,14 +164,13 @@ class tasabeeh extends StatelessWidget {
       'fadl': 'تَمْلَآَنِ مَا بَيْنَ السَّمَاوَاتِ وَالْأَرْضِ.',
       'title': '',
     },
-
     {
       'zekr':
-      '''None has the right to be worshiped but Allah alone, He has no partner, His is the dominion and His is the praise and He is Able to do all things.''',
+          '''None has the right to be worshiped but Allah alone, He has no partner, His is the dominion and His is the praise and He is Able to do all things.''',
       'counter': 100,
       'initial': 100,
       'fadl':
-      'كانت له عدل عشر رقاب، وكتبت له مئة حسنة، ومحيت عنه مئة سيئة، وكانت له حرزا من الشيطان.',
+          'كانت له عدل عشر رقاب، وكتبت له مئة حسنة، ومحيت عنه مئة سيئة، وكانت له حرزا من الشيطان.',
       'title': '',
     },
     {
@@ -189,7 +188,8 @@ class tasabeeh extends StatelessWidget {
       'title': '',
     },
     {
-      'zekr': '''O Allah, we ask for your peace and blessings upon our Prophet Muhammed''',
+      'zekr':
+          '''O Allah, we ask for your peace and blessings upon our Prophet Muhammed''',
       'counter': 100,
       'initial': 100,
       'fadl': 'من صلى على حين يصبح وحين يمسى ادركته شفاعتى يوم القيامة.',
@@ -202,7 +202,6 @@ class tasabeeh extends StatelessWidget {
       'fadl': 'لفعل الرسول صلى الله عليه وسلم.',
       'title': '',
     },
-
     {
       'zekr': '''There is none worthy of worship but Allah''',
       'counter': 100,
@@ -215,12 +214,12 @@ class tasabeeh extends StatelessWidget {
       'counter': 100,
       'initial': 100,
       'fadl':
-      'من قال الله أكبر كتبت له عشرون حسنة وحطت عنه عشرون سيئة. الله أكبر من كل شيء.',
+          'من قال الله أكبر كتبت له عشرون حسنة وحطت عنه عشرون سيئة. الله أكبر من كل شيء.',
       'title': '',
     },
     {
       'zekr':
-      '''O Allah forgive me, and have mercy on me and guide me, and provide for me.''',
+          '''O Allah forgive me, and have mercy on me and guide me, and provide for me.''',
       'counter': 100,
       'initial': 100,
       'fadl': 'خير الدنيا والآخرة',
@@ -228,50 +227,48 @@ class tasabeeh extends StatelessWidget {
     },
     {
       'zekr':
-      '''All praise is to Allah, praise in abundance, good and blessed.''',
+          '''All praise is to Allah, praise in abundance, good and blessed.''',
       'counter': 100,
       'initial': 100,
       'fadl':
-      'قَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ ‏"‏لَقَدْ رَأَيْتُ اثْنَيْ عَشَرَ مَلَكًا يَبْتَدِرُونَهَا، أَيُّهُمْ يَرْفَعُهَا"‏.',
+          'قَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ ‏"‏لَقَدْ رَأَيْتُ اثْنَيْ عَشَرَ مَلَكًا يَبْتَدِرُونَهَا، أَيُّهُمْ يَرْفَعُهَا"‏.',
       'title': '',
     },
     {
       'zekr':
-      '''Allah is the Greatest, Most Great, Praise is to Allah ,abundantly, Glory is to Allah at the break of day and at its end.''',
+          '''Allah is the Greatest, Most Great, Praise is to Allah ,abundantly, Glory is to Allah at the break of day and at its end.''',
       'counter': 100,
       'initial': 100,
       'fadl':
-      'قَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ "عَجِبْتُ لَهَا ، فُتِحَتْ لَهَا أَبْوَابُ السَّمَاءِ".',
+          'قَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ "عَجِبْتُ لَهَا ، فُتِحَتْ لَهَا أَبْوَابُ السَّمَاءِ".',
       'title': '',
     },
     {
       'zekr':
-      '''O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. 
+          '''O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. 
 O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.''',
       'counter': 100,
       'initial': 100,
       'fadl':
-      'في كل مره تحط عنه عشر خطايا ويرفع له عشر درجات ويصلي الله عليه عشرا وتعرض على الرسول صلى الله عليه وسلم (أى عدد).',
+          'في كل مره تحط عنه عشر خطايا ويرفع له عشر درجات ويصلي الله عليه عشرا وتعرض على الرسول صلى الله عليه وسلم (أى عدد).',
       'title': '',
     },
   ];
-  final darkMode;
 
   final darkModeSetter;
-
-  tasabeeh({required this.darkMode, required this.darkModeSetter});
+  final langSetter; 
+  tasabeeh({required this.darkModeSetter, required this.langSetter});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
       drawer: CustomDrawer(
-        darkMode: darkMode,
-        darkModeSetter: darkModeSetter,
+        setLang: langSetter,
+        setMode: darkModeSetter,
       ),
       body: AzkarContainer(
-        darkMood: darkMode,
-        azkary: HomePage.languageChoice==false? tasbeehAr:tasbeehEn,
+        azkary: HomePage.languageChoice == false ? tasbeehAr : tasbeehEn,
       ),
     );
   }
