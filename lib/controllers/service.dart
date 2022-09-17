@@ -198,8 +198,8 @@ void chooseOptionInAzkar(BuildContext c, num choice, setMode, setLang) {
             c,
             MaterialPageRoute(
                 builder: (c) =>
-                    AzkarkEl5asa(
-                        darkMode: dark, darkModeSetter: darkModeSetter)));
+                AzkarkEl5asa(darkModeSetter: setMode,langSetter: setLang,)
+            ));
         break;
     }
   } else {
@@ -231,8 +231,8 @@ void chooseOptionInAzkar(BuildContext c, num choice, setMode, setLang) {
             c,
             MaterialPageRoute(
                 builder: (c) =>
-                    YourSpecialAzkar(
-                        darkMode: dark ,darkModeSetter: darkModeSetter)));
+                YourSpecialAzkar(darkModeSetter: setMode,langSetter: setLang,)
+            ));
 
         break;
 
@@ -368,3 +368,35 @@ Future openDialog(
                 ),
               ),
             ));
+
+
+
+late TextEditingController controller=TextEditingController();
+
+
+Future<String?> openAzkarDialog<String>(BuildContext c,bool darkMode,setMode,setLang)=>showDialog(context: c, builder:(c)=>AlertDialog(
+
+  title: Center(
+    child: Text(
+      HomePage.languageChoice==false?"ادخل الذكر الخاص بك":"Add your special remembrance"
+,style: TextStyle(fontSize: 30,color: Colors.black),
+    ),
+  ),
+  content:
+  TextField(
+    autofocus: true,
+    controller: controller,
+  ),
+  actions: [
+    Center(
+      child: TextButton(
+
+          onPressed: (){
+
+            Navigator.of(c).pop(controller.text);
+          }, child: Text(HomePage.languageChoice==false?"تم":"OK",style: TextStyle(fontSize: 30,color:darkMode==false ?Colors.green:Colors.black),)),
+    )
+  ]
+  ,
+));
+

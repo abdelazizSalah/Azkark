@@ -4,6 +4,8 @@ import '/Widgets/CustomAppBar.dart';
 import '/Widgets/CustomDrawer.dart';
 import '/controllers/service.dart';
 import 'package:flutter/material.dart';
+import '../Widgets/EnglishAzkar/YourSpecialAzkar.dart';
+import '../Widgets/ArabicAzkar/AzkarkEl5asa.dart';
 
 class ChoicePage extends StatelessWidget {
   List<Map<String, Object>> arabicChoices = [
@@ -98,14 +100,33 @@ class ChoicePage extends StatelessWidget {
 
               hoverColor: Colors.black,
               backgroundColor:
-              darkMode==false?
+              HomePage.darkMode==false?
               (Colors.green)
                   :Colors.black12,
-              onPressed: (){
-                openDialog(context,darkMode,darkModeSetter);
+              onPressed: ()async{
+                 final String name=await openAzkarDialog(context, HomePage.darkMode, setDarkMode, setLang);
+                  if(name==null||name.isEmpty)return;
+                  print(name);
+                 var zekr={
+
+                   'zekr': name.toString(),
+                   'counter': 1,
+                   'initial': 1,
+                   'fadl': '',
+                   'title':''
+
+
+                 };
+                  if(HomePage.languageChoice)
+                    {
+                      YourSpecialAzkar.AzkarkEn.add(zekr);
+                    }
+                  else{
+                      AzkarkEl5asa.AzkarkAr.add(zekr);
+                  }
               },
               child: Icon(Icons.add,color:
-              darkMode==false?
+              HomePage.darkMode==false?
               (Colors.white)
                   :Colors.black12
                 ,size: 40,)

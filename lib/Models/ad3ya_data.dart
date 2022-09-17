@@ -285,13 +285,28 @@ List<String>BeforeenteringthebathroomEN=[
   '''O Allah, I seek protection in You from evil and the evil ones.'''  ,
 ];
 
+List<String>BeforeenteringthebathroomAr=[
+  '''اللّهُـمَّ إِنِّـي أَعـوذُ بِـكَ مِـنَ الْخُـبْثِ وَالْخَبائِث.'''  ,
+
+];
+
 List<String>AfterleavingthebathroomEn=[
   '''I seek Your forgiveness'''  ,
 
 ];
 
+List<String>AfterleavingthebathroomAr=[
+  ''' غُفْـرانَك'''  ,
+
+];
+
 List<String>BeforeablutionEN=[
   '''In the Name of Allah'''  ,
+
+];
+
+List<String>BeforeablutionAr=[
+  ''' بِسْمِ الله'''  ,
 
 ];
 
@@ -308,6 +323,17 @@ I seek Your forgiveness and turn to You in
 repentance.'''  ,
 ];
 
+
+List<String>UponcompletingtheablutionAr=[
+  ''' أَشْهَدُ أَنْ لا إِلَـهَ إِلاّ اللهُ 
+وَحْدَهُ لا شَريـكَ لَـهُ 
+وَأَشْهَدُأَنَّ مُحَمّـداً عَبْـدُهُ وَرَسـولُـه.'''  ,
+  ''' اللّهُـمَّ اجْعَلنـي مِنَ التَّـوّابينَ
+وَاجْعَـلْني مِنَ المتَطَهّـرين.'''  ,
+  ''' سُبْحـانَكَ اللّهُـمَّ وَبِحَمدِك
+أَشْهَـدُ أَنْ لا إِلهَ إِلاّ أَنْتَ 
+أَسْتَغْفِرُكَ وَأَتوبُ إِلَـيْك.'''  ,
+];
 
 
 List<String>WhengoingtothemosqueEn=[
@@ -334,6 +360,7 @@ and in my hair light
 and in my skin light.'''  ,
 
 ];
+
 List<String>UponenteringthemosqueEn=[
   '''I seek refuge in Almighty Allah, 
 By His Noble Face, 

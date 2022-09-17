@@ -4,27 +4,26 @@ import 'package:flutter/material.dart';
 import '../AzkarContainer.dart';
 
 class YourSpecialAzkar extends StatelessWidget {
-  List<Map<String, Object>> AzkarkEn = [
+  static List<Map<String, Object>> AzkarkEn = [
 
   ];
-  final darkMode;
-  final darkModeSetter;
 
-  YourSpecialAzkar({required this.darkMode,this.darkModeSetter});
+  final darkModeSetter;
+  final langSetter;
+
+  YourSpecialAzkar({this.darkModeSetter, this.langSetter});
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
-        appBar: CustomAppBar(),
-        drawer: CustomDrawer(
-          darkMode: darkMode,
-          darkModeSetter: darkModeSetter,
-        ),
-        body:  AzkarContainer(
-          darkMood: darkMode,
-          azkary: AzkarkEn,
-        )
-    );
+    appBar: CustomAppBar(),
+    drawer: CustomDrawer(
+    setMode: darkModeSetter,
+    setLang: langSetter,
+    ),
+    body: AzkarContainer(
+    azkary: AzkarkEn,
+    ));
 
   }
 }

@@ -146,7 +146,7 @@ class tasabeeh extends StatelessWidget {
       'zekr': '''Glory is to Allah''',
       'counter': 100,
       'initial': 100,
-      'fadl': 'يكتب له ألف حسنة أو يحط عنه ألف خطيئة.',
+      'fadl': 'A thousand good deeds will be written for him or a thousand sins will be erased from him.',
       'title': '',
     },
     {
@@ -154,14 +154,14 @@ class tasabeeh extends StatelessWidget {
       'counter': 100,
       'initial': 100,
       'fadl':
-          'حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ. لَمْ يَأْتِ أَحَدٌ يَوْمَ الْقِيَامَةِ بِأَفْضَلَ مِمَّا جَاءَ بِهِ إِلَّا أَحَدٌ قَالَ مِثْلَ مَا قَالَ أَوْ زَادَ عَلَيْهِ.',
+          'His sins are erased, even if they are like foam of the sea. No one will come on the Day of Resurrection with something better than what he brought except someone who said the same as he said or added to me.',
       'title': '',
     },
     {
       'zekr': '''Glorified is Allah and the praise is to Allah''',
       'counter': 100,
       'initial': 100,
-      'fadl': 'تَمْلَآَنِ مَا بَيْنَ السَّمَاوَاتِ وَالْأَرْضِ.',
+      'fadl': 'fill between the heavens and the earth.',
       'title': '',
     },
     {
@@ -170,21 +170,21 @@ class tasabeeh extends StatelessWidget {
       'counter': 100,
       'initial': 100,
       'fadl':
-          'كانت له عدل عشر رقاب، وكتبت له مئة حسنة، ومحيت عنه مئة سيئة، وكانت له حرزا من الشيطان.',
+          'He had ten necks, and a hundred good deeds were written for him, and a hundred bad deeds were erased from him, and it was a protection for him from Satan..',
       'title': '',
     },
     {
       'zekr': '''Praise be to Allah, the Lord of the Universe''',
       'counter': 100,
       'initial': 100,
-      'fadl': 'تملأ ميزان العبد بالحسنات.',
+      'fadl': 'Fill the scale of the slave with good deeds.',
       'title': '',
     },
     {
       'zekr': '''There is no might and no power except by Allah''',
       'counter': 100,
       'initial': 100,
-      'fadl': 'كنز من كنوز الجنة (أى عدد).',
+      'fadl': 'A treasure from the treasures of Paradise (any number).',
       'title': '',
     },
     {
@@ -192,21 +192,21 @@ class tasabeeh extends StatelessWidget {
           '''O Allah, we ask for your peace and blessings upon our Prophet Muhammed''',
       'counter': 100,
       'initial': 100,
-      'fadl': 'من صلى على حين يصبح وحين يمسى ادركته شفاعتى يوم القيامة.',
+      'fadl': 'Whoever prays in the morning and in the evening, my intercession will reach him on the Day of Resurrection.',
       'title': '',
     },
     {
       'zekr': '''I seek forgiveness of Allah and repent to Him''',
       'counter': 100,
       'initial': 100,
-      'fadl': 'لفعل الرسول صلى الله عليه وسلم.',
+      'fadl': 'For the Prophet, may God bless him and grant him peace, did.',
       'title': '',
     },
     {
       'zekr': '''There is none worthy of worship but Allah''',
       'counter': 100,
       'initial': 100,
-      'fadl': 'أفضل الذكر لا إله إلاّ الله.',
+      'fadl': 'The best remembrance is there is no god but God.',
       'title': '',
     },
     {
@@ -214,7 +214,7 @@ class tasabeeh extends StatelessWidget {
       'counter': 100,
       'initial': 100,
       'fadl':
-          'من قال الله أكبر كتبت له عشرون حسنة وحطت عنه عشرون سيئة. الله أكبر من كل شيء.',
+          'Whoever says God is great, twenty good deeds are written for him and twenty bad deeds are erased from him. God is greater than everything.',
       'title': '',
     },
     {
@@ -222,7 +222,7 @@ class tasabeeh extends StatelessWidget {
           '''O Allah forgive me, and have mercy on me and guide me, and provide for me.''',
       'counter': 100,
       'initial': 100,
-      'fadl': 'خير الدنيا والآخرة',
+      'fadl': 'The best of this world and the hereafter',
       'title': '',
     },
     {
@@ -230,8 +230,7 @@ class tasabeeh extends StatelessWidget {
           '''All praise is to Allah, praise in abundance, good and blessed.''',
       'counter': 100,
       'initial': 100,
-      'fadl':
-          'قَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ ‏"‏لَقَدْ رَأَيْتُ اثْنَيْ عَشَرَ مَلَكًا يَبْتَدِرُونَهَا، أَيُّهُمْ يَرْفَعُهَا"‏.',
+      'fadl':'',
       'title': '',
     },
     {
@@ -240,7 +239,7 @@ class tasabeeh extends StatelessWidget {
       'counter': 100,
       'initial': 100,
       'fadl':
-          'قَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ "عَجِبْتُ لَهَا ، فُتِحَتْ لَهَا أَبْوَابُ السَّمَاءِ".',
+          'The Prophet, may God bless him and grant him peace, said, “I was astonished at her, so the gates of heaven were opened for her.”".',
       'title': '',
     },
     {
@@ -250,7 +249,7 @@ O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim a
       'counter': 100,
       'initial': 100,
       'fadl':
-          'في كل مره تحط عنه عشر خطايا ويرفع له عشر درجات ويصلي الله عليه عشرا وتعرض على الرسول صلى الله عليه وسلم (أى عدد).',
+          'Every time, ten sins are removed from him and ten degrees are raised for him, and God blesses him ten times, and it is presented to the Messenger, may God bless him and grant him peace (any number).',
       'title': '',
     },
   ];

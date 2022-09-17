@@ -31,6 +31,7 @@ List<Choice_item> choices_dataEn = [
       "assets/imgs/setting.png",
       "Settings",
       3),
+
 ];
 
 List<Choice_item> choices_Doa2Ar = [
@@ -50,6 +51,7 @@ List<Choice_item> choices_Doa2Ar = [
       "assets/imgs/ad3yaGom3Eldoaa.jpg",
       "جوامع الدعاء",
       3),
+
 ];
 
 List<Choice_item> choices_Doa2En = [
