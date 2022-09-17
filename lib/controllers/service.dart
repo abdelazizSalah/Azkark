@@ -307,7 +307,7 @@ Future openDialog(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Image.asset(
-                            "assets/imgs/sadface.png",
+                            "assets/imgs/11.jpg",
                             height: MediaQuery.of(context).size.height * 0.1,
                           ),
                           Container(
