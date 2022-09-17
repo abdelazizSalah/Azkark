@@ -84,7 +84,9 @@ class _HomePageState extends State<HomePage> {
                     color: dkWidget == true
                         ? Color.fromARGB(255, 245, 188, 18)
                         : Colors.white,
-                    fontSize: dkWidget == true ? 22 : 27,
+                    fontSize: dkWidget == true
+                        ? 22 * contentScaleFactor
+                        : 27 * contentScaleFactor,
                     shadows: [
                       Shadow(
                           blurRadius: dkWidget == true ? 100 : 30,
@@ -107,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                     fontFamily: 'DS-DIGI'),
                 displayLarge: TextStyle(
                     fontFamily: 'Amiri',
-                    fontSize: 25,
+                    fontSize: 25 * contentScaleFactor,
                     fontWeight: FontWeight.bold),
                 bodyMedium: TextStyle(
                     fontSize: 30 * contentScaleFactor,
