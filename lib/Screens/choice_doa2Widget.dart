@@ -40,7 +40,9 @@ class choice_doa2Widget extends StatelessWidget {
                 style: TextStyle(fontSize: 28, color: Colors.white),
               ),
               decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.4),
+                  color:
+                  HomePage.languageChoice==false?
+                  Colors.black.withOpacity(0.4):Colors.black.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(15)),
             ),
           )
