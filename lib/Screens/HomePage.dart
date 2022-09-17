@@ -22,10 +22,9 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  void toggleLanguage() {
+  void toggleLanguage(bool val) {
     setState(() {
-      var temp = !HomePage.languageChoice;
-      HomePage.languageChoice = temp;
+      HomePage.languageChoice = val;
     });
   }
 
@@ -81,15 +80,13 @@ class _HomePageState extends State<HomePage> {
                     ]),
                 labelMedium: TextStyle(
                     fontFamily: 'DS-DIGI',
-                    color: dkWidget == true
-                        ? Color.fromARGB(255, 245, 188, 18)
-                        : Colors.white,
-                    fontSize: dkWidget == true
-                        ? 22 * contentScaleFactor
+                    color: dkWidget == true ? Colors.amber : Colors.white,
+                    fontSize: HomePage.languageChoice
+                        ? 23 * contentScaleFactor
                         : 27 * contentScaleFactor,
                     shadows: [
                       Shadow(
-                          blurRadius: dkWidget == true ? 100 : 30,
+                          blurRadius: dkWidget == true ? 50 : 30,
                           offset: Offset(5, 5),
                           color: Colors.black)
                     ]),
@@ -126,7 +123,6 @@ class _HomePageState extends State<HomePage> {
           LangSetter: toggleLanguage,
           darkMode: dkWidget,
           darkModeSetter: toggleMode,
-          //  languageChoice:languageChoice,
         ));
   }
 }
@@ -143,13 +139,11 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //print(languageChoice);
     return Scaffold(
       floatingActionButton: Container(
         height: MediaQuery.of(context).size.height * 0.07,
         width: MediaQuery.of(context).size.width * 0.3,
         child: FloatingActionButton(
-            // hoverColor: Colors.black,
             backgroundColor: Theme.of(context).splashColor,
             foregroundColor: Theme.of(context).focusColor,
             onPressed: () {
