@@ -22,19 +22,19 @@
 
 ## ScreenShots 
 
- <img src="./assets/imgs/Screens/1.jpg" alt="."/>
-<img src="./assets/imgs/Screens/2.jpg" alt="."/>
-<img src="./assets/imgs/Screens/3.jpg" alt="."/>
-<img src="./assets/imgs/Screens/4.jpg" alt="."/>
-<img src="./assets/imgs/Screens/5.jpg" alt="."/>
-<img src="./assets/imgs/Screens/6.jpg" alt="."/>
-<img src="./assets/imgs/Screens/7.jpg" alt="."/>
-<img src="./assets/imgs/Screens/8.jpg" alt="."/>
-<img src="./assets/imgs/Screens/9.jpg" alt="."/>
-<img src="./assets/imgs/Screens/10.jpg" alt="."/>
-<img src="./assets/imgs/Screens/11.jpg" alt="."/>
-<img src="./assets/imgs/Screens/12.jpg" alt="."/>
-<img src="./assets/imgs/Screens/13.jpg" alt="."/>
+ <img src="./assets/imgs/Screens/1s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/2s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/3s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/4s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/5s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/6s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/7s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/8s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/9s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/10s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/11s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/12s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/13s.jpg" alt="."/>
 
 <h2>Contributors: </h2>
 
