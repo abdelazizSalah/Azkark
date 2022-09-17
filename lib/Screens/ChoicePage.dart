@@ -4,8 +4,6 @@ import '/Widgets/CustomAppBar.dart';
 import '/Widgets/CustomDrawer.dart';
 import '/controllers/service.dart';
 import 'package:flutter/material.dart';
-import '../Widgets/EnglishAzkar/YourSpecialAzkar.dart';
-import '../Widgets/ArabicAzkar/AzkarkEl5asa.dart';
 
 class ChoicePage extends StatelessWidget {
   List<Map<String, Object>> arabicChoices = [
@@ -49,10 +47,7 @@ class ChoicePage extends StatelessWidget {
       'zekr': 'أذكار متفرقه',
       'number': 10,
     },
-    {
-      'zekr': 'أذكارك الخاصة',
-      'number': 11,
-    },
+
   ];
 
   final List<Map<String, Object>> englishChoices = [
@@ -76,10 +71,7 @@ class ChoicePage extends StatelessWidget {
       'zekr': 'Upon Entering Home',
       'number': 5,
     },
-    {
-      'zekr': 'Your Special Remembrance',
-      'number': 6,
-    },
+
   ];
 
   final setDarkMode;

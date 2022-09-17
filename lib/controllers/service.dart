@@ -1,13 +1,11 @@
 import '../Screens/HomePage.dart';
 import '../Widgets/ArabicAzkar/AzkarElSabah.dart';
-import '../Widgets/ArabicAzkar/AzkarkEl5asa.dart';
 import '../Widgets/ArabicAzkar/ad3ya.dart';
 import '../Widgets/EnglishAzkar/EveningAzkar.dart';
 import '../Widgets/EnglishAzkar/MorningAzkar.dart';
 import '../Widgets/EnglishAzkar/Uponenteringthehome.dart';
 import '../Widgets/EnglishAzkar/WhenLeavingHome.dart';
 import '../Widgets/EnglishAzkar/WhenWakingup.dart';
-import '../Widgets/EnglishAzkar/YourSpecialAzkar.dart';
 import '../Widgets/ArabicAzkar/AzkarElAzan.dart';
 import '../Widgets/ArabicAzkar/AzkarB3dElSalah.dart';
 import '../Widgets/ArabicAzkar/AzkarElEstykaz.dart';
@@ -197,15 +195,7 @@ void chooseOptionInAzkar(BuildContext c, num choice, setMode, setLang,
                       darkModeSetter: setMode,
                     )));
         break;
-      case 11:
-        Navigator.push(
-            c,
-            MaterialPageRoute(
-                builder: (c) => AzkarkEl5asa(
-                      darkModeSetter: setMode,
-                      langSetter: setLang,
-                    )));
-        break;
+
     }
   } else {
     switch (choice) {
@@ -231,16 +221,7 @@ void chooseOptionInAzkar(BuildContext c, num choice, setMode, setLang,
             c, MaterialPageRoute(builder: (c) => Uponenteringthehome()));
 
         break;
-      case 6:
-        Navigator.push(
-            c,
-            MaterialPageRoute(
-                builder: (c) => YourSpecialAzkar(
-                      darkModeSetter: setMode,
-                      langSetter: setLang,
-                    )));
 
-        break;
     }
   }
 }
