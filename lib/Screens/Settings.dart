@@ -1,135 +1,159 @@
-// import 'package:azkark/Widgets/CustomAppBar.dart';
-// import 'package:azkark/controllers/service.dart';
-// import 'package:flutter/material.dart';
+import 'package:azkark/Widgets/CustomAppBar.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-// class Settings extends StatelessWidget {
-//   final bool darkMode;
-//   final darkModeSetter;
-//   Settings({required this.darkMode, required this.darkModeSetter});
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//         home: Scaffold(
-//             appBar: CustomAppBar(),
-//             body: GridView(
-//                 scrollDirection: Axis.vertical,
-//                 padding: EdgeInsets.all(10),
-//                 gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-//                   maxCrossAxisExtent: 200,
-//                   childAspectRatio: 7 / 13,
-//                   mainAxisSpacing: 10,
-//                   crossAxisSpacing: 10,
-//                 ),
-//                 children: [
-//                   SwitchForMode(),
-//                   SwitchForLanguage(),
-//                 ])));
-//   }
-// }
+import '../Screens/HomePage.dart';
 
-// class SwitchForMode extends StatefulWidget {
-//   @override
-//   SwitchClass createState() => new SwitchClass();
-// }
+class Settings extends StatefulWidget {
+  final darkModeSetter;
+  final langSetter;
+  Settings({required this.darkModeSetter, required this.langSetter});
 
-// class SwitchForLanguage extends StatefulWidget {
-//   @override
-//   SwitchClassForLanguages createState() => new SwitchClassForLanguages();
-// }
+  @override
+  State<Settings> createState() => _SettingsState();
+}
 
-// class SwitchClass extends State {
-//   bool isSwitched = false;
-//   var textValue = 'Light Mode';
+class _SettingsState extends State<Settings> {
+  void toggleLng() {
+    widget.darkModeSetter();
+  }
 
-//   void toggleSwitch(bool value) {
-//     changeMode();
-//     if (isSwitched == false) {
-//       setState(() {
-//         isSwitched = true;
-//         textValue = 'Dark Mode';
-//       });
-//       print('Dark Mode');
-//     } else {
-//       setState(() {
-//         isSwitched = false;
-//         textValue = 'Light Mode';
-//       });
-//       print('Dark Mode');
-//     }
-//   }
+  void toggleMode() {
+    widget.langSetter();
+  }
 
-// // final customSize = MediaQuery().textscal
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-//       Text(
-//         "Mode",
-//         style: TextStyle(
-//           fontSize: 22,
-//         ),
-//       ),
-//       Transform.scale(
-//           scale: 2,
-//           child: Switch(
-//             onChanged: toggleSwitch,
-//             value: isSwitched,
-//             activeColor: Colors.blue,
-//             activeTrackColor: Colors.yellow,
-//             inactiveThumbColor: Colors.green,
-//             inactiveTrackColor: Colors.red[100],
-//           )),
-//       Text(
-//         '$textValue',
-//         style: TextStyle(fontSize: 20),
-//       )
-//     ]);
-//   }
-// }
-
-// class SwitchClassForLanguages extends State {
-//   bool isSwitched = false;
-//   var textValue = 'اللغة العربية';
-//   void toggleSwitch(bool value) {
-//     changeLanguage();
-
-//     if (isSwitched == false) {
-//       setState(() {
-//         isSwitched = true;
-//         textValue = 'English';
-//       });
-//       print('English');
-//     } else {
-//       setState(() {
-//         isSwitched = false;
-//         textValue = 'اللغة العربية';
-//       });
-//       print('Arabic');
-//     }
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-//       Text(
-//         "Language/اللغة",
-//         style: TextStyle(
-//           fontSize: 22,
-//         ),
-//       ),
-//       Transform.scale(
-//           scale: 2,
-//           child: Switch(
-//             onChanged: toggleSwitch,
-//             value: isSwitched,
-//             activeColor: Colors.blue,
-//             activeTrackColor: Colors.yellow,
-//             inactiveThumbColor: Colors.redAccent,
-//             inactiveTrackColor: Colors.orange,
-//           )),
-//       Text(
-//         '$textValue',
-//         style: TextStyle(fontSize: 20),
-//       )
-//     ]);
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: CustomAppBar(),
+      body: Container(
+        padding: EdgeInsets.all(10),
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        color: Theme.of(context).canvasColor,
+        child: ListView(children: [
+          Container(
+            height: MediaQuery.of(context).size.height * 0.15,
+            child: Card(
+                shadowColor: Theme.of(context).accentColor,
+                elevation: 10,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      HomePage.languageChoice == true
+                          ? "Night Mode"
+                          : "الوضع الليلي",
+                      style: Theme.of(context).textTheme.displayLarge,
+                    ),
+                    Transform.scale(
+                        scale: 1.4,
+                        child: Switch.adaptive(
+                          onChanged: ((_) {
+                            toggleLng();
+                          }),
+                          value: HomePage.darkMode,
+                        ))
+                  ],
+                )),
+          ),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.28,
+            child: Card(
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  HomePage.languageChoice == false
+                      ? "تكرار  التنبيهات"
+                      : "Notification Frequency:",
+                  style: Theme.of(context).textTheme.displayLarge,
+                ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          HomePage.freq = 1;
+                        },
+                        child: Text(
+                          HomePage.languageChoice == false
+                              ? "باستمرار"
+                              : "High",
+                          style: Theme.of(context).textTheme.displayMedium,
+                        ),
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                                Theme.of(context).accentColor)),
+                      ),
+                      ElevatedButton(
+                          onPressed: () {
+                            HomePage.freq = 3;
+                          },
+                          child: Text(
+                            HomePage.languageChoice == false
+                                ? "متوسطة"
+                                : "Medium",
+                            style: Theme.of(context).textTheme.displayMedium,
+                          ),
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll(
+                                  Theme.of(context).accentColor))),
+                      ElevatedButton(
+                          onPressed: () {
+                            HomePage.freq = 5;
+                          },
+                          child: Text(
+                            HomePage.languageChoice == false ? "قليلة" : "Low",
+                            style: Theme.of(context).textTheme.displayMedium,
+                          ),
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll(
+                                  Theme.of(context).accentColor))),
+                    ]),
+              ],
+            )),
+          ),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.15,
+            child: Card(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    HomePage.languageChoice == true ? "Lang" : 'اللغة',
+                    style: Theme.of(context).textTheme.displayLarge,
+                  ),
+                  ElevatedButton(
+                      onPressed: () {
+                        toggleMode();
+                      },
+                      child: Text(
+                        HomePage.languageChoice == false ? "العريبة" : "Arabic",
+                        style: Theme.of(context).textTheme.displayMedium,
+                      ),
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll(
+                              Theme.of(context).accentColor))),
+                  ElevatedButton(
+                      onPressed: () {
+                        toggleMode();
+                      },
+                      child: Text(
+                        HomePage.languageChoice == true
+                            ? "English"
+                            : "الانجليزية",
+                        style: Theme.of(context).textTheme.displayMedium,
+                      ),
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll(
+                              Theme.of(context).accentColor))),
+                ],
+              ),
+            ),
+          ),
+        ]),
+      ),
+    );
+  }
+}

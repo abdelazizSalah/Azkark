@@ -1,13 +1,13 @@
-import 'package:azkark/Screens/HomePage.dart';
-import 'package:azkark/Widgets/ArabicAzkar/AzkarElSabah.dart';
-import 'package:azkark/Widgets/ArabicAzkar/AzkarkEl5asa.dart';
-import 'package:azkark/Widgets/ArabicAzkar/ad3ya.dart';
-import 'package:azkark/Widgets/EnglishAzkar/EveningAzkar.dart';
-import 'package:azkark/Widgets/EnglishAzkar/MorningAzkar.dart';
-import 'package:azkark/Widgets/EnglishAzkar/Uponenteringthehome.dart';
-import 'package:azkark/Widgets/EnglishAzkar/WhenLeavingHome.dart';
-import 'package:azkark/Widgets/EnglishAzkar/WhenWakingup.dart';
-import 'package:azkark/Widgets/EnglishAzkar/YourSpecialAzkar.dart';
+import '../Screens/HomePage.dart';
+import '../Widgets/ArabicAzkar/AzkarElSabah.dart';
+import '../Widgets/ArabicAzkar/AzkarkEl5asa.dart';
+import '../Widgets/ArabicAzkar/ad3ya.dart';
+import '../Widgets/EnglishAzkar/EveningAzkar.dart';
+import '../Widgets/EnglishAzkar/MorningAzkar.dart';
+import '../Widgets/EnglishAzkar/Uponenteringthehome.dart';
+import '../Widgets/EnglishAzkar/WhenLeavingHome.dart';
+import '../Widgets/EnglishAzkar/WhenWakingup.dart';
+import '../Widgets/EnglishAzkar/YourSpecialAzkar.dart';
 import '../Widgets/ArabicAzkar/AzkarElAzan.dart';
 import '../Widgets/ArabicAzkar/AzkarB3dElSalah.dart';
 import '../Widgets/ArabicAzkar/AzkarElEstykaz.dart';
@@ -17,12 +17,11 @@ import '../Widgets/ArabicAzkar/AzkarElNom.dart';
 import '../Widgets/ArabicAzkar/AzkarElSalah.dart';
 import '../Widgets/ArabicAzkar/AzkarElWodo2.dart';
 import '../Widgets/ArabicAzkar/AzkarMotafareka.dart';
-import 'package:flutter/material.dart';
 import '../Screens/ChoicePage.dart';
 import '../Widgets/ArabicAzkar/tasabeeh.dart';
-import 'package:azkark/Screens/Doa2ChoicePage.dart';
-import '../Widgets/Settings.dart';
-import 'package:flutter_emoji/flutter_emoji.dart';
+import '../Screens/Doa2ChoicePage.dart';
+import '../Screens/Settings.dart';
+import 'package:flutter/material.dart';
 
 num currentContextNumberInChoicePage = -1;
 void chooseOptioninHomePage(
@@ -99,7 +98,12 @@ void chooseOptioninHomePage(
   }
 }
 
-void chooseOptionInAzkar(BuildContext c, num choice, setMode, setLang) {
+void chooseOptionInAzkar(BuildContext c, num choice, setMode, setLang,
+    {int where = 0}) {
+  // TODO : Fixahaa ya lotfyyy
+
+  // if (choice == currentContextNumberInChoicePage && where == 1) return;
+  // currentContextNumberInChoicePage = choice;
   if (!HomePage.languageChoice) {
     switch (choice) {
       case 1:
@@ -197,9 +201,10 @@ void chooseOptionInAzkar(BuildContext c, num choice, setMode, setLang) {
         Navigator.push(
             c,
             MaterialPageRoute(
-                builder: (c) =>
-                AzkarkEl5asa(darkModeSetter: setMode,langSetter: setLang,)
-            ));
+                builder: (c) => AzkarkEl5asa(
+                      darkModeSetter: setMode,
+                      langSetter: setLang,
+                    )));
         break;
     }
   } else {
@@ -230,13 +235,12 @@ void chooseOptionInAzkar(BuildContext c, num choice, setMode, setLang) {
         Navigator.push(
             c,
             MaterialPageRoute(
-                builder: (c) =>
-                YourSpecialAzkar(darkModeSetter: setMode,langSetter: setLang,)
-            ));
+                builder: (c) => YourSpecialAzkar(
+                      darkModeSetter: setMode,
+                      langSetter: setLang,
+                    )));
 
         break;
-
-
     }
   }
 }
@@ -293,7 +297,6 @@ Future openDialog(
                             child: ElevatedButton(
                                 onPressed: () {
                                   Navigator.pop(context);
-
 
                                   Navigator.push(
                                       context,
@@ -369,34 +372,43 @@ Future openDialog(
               ),
             ));
 
+late TextEditingController controller = TextEditingController();
 
-
-late TextEditingController controller=TextEditingController();
-
-
-Future<String?> openAzkarDialog<String>(BuildContext c,bool darkMode,setMode,setLang)=>showDialog(context: c, builder:(c)=>AlertDialog(
-
-  title: Center(
-    child: Text(
-      HomePage.languageChoice==false?"ادخل الذكر الخاص بك":"Add your special remembrance"
-,style: TextStyle(fontSize: 30,color: Colors.black),
-    ),
-  ),
-  content:
-  TextField(
-    autofocus: true,
-    controller: controller,
-  ),
-  actions: [
-    Center(
-      child: TextButton(
-
-          onPressed: (){
-
-            Navigator.of(c).pop(controller.text);
-          }, child: Text(HomePage.languageChoice==false?"تم":"OK",style: TextStyle(fontSize: 30,color:darkMode==false ?Colors.green:Colors.black),)),
-    )
-  ]
-  ,
-));
-
+Future<String?> openAzkarDialog<String>(
+        BuildContext c, bool darkMode, setMode, setLang) =>
+    showDialog(
+        context: c,
+        builder: (c) => Container(
+              // color: Theme.of(c).canvasColor,
+              color: Colors.amber,
+              child: AlertDialog(
+                title: Center(
+                  child: Text(
+                    HomePage.languageChoice == false
+                        ? "ادخل الذكر الخاص بك"
+                        : "Add your special remembrance",
+                    style: TextStyle(fontSize: 30, color: Colors.black),
+                  ),
+                ),
+                content: TextField(
+                  autofocus: true,
+                  controller: controller,
+                ),
+                actions: [
+                  Center(
+                    child: TextButton(
+                        onPressed: () {
+                          Navigator.of(c).pop(controller.text);
+                        },
+                        child: Text(
+                          HomePage.languageChoice == false ? "تم" : "OK",
+                          style: TextStyle(
+                              fontSize: 30,
+                              color: darkMode == false
+                                  ? Colors.green
+                                  : Colors.black),
+                        )),
+                  )
+                ],
+              ),
+            ));

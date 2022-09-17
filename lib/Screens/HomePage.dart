@@ -76,8 +76,20 @@ class _HomePageState extends State<HomePage> {
                     shadows: [
                       Shadow(
                           blurRadius: 40,
-                          color: Color.fromARGB(255, 220, 171, 27),
+                          color: Color.fromARGB(255, 250, 187, 0),
                           offset: Offset(20, 5))
+                    ]),
+                labelMedium: TextStyle(
+                    fontFamily: 'DS-DIGI',
+                    color: dkWidget == true
+                        ? Color.fromARGB(255, 245, 188, 18)
+                        : Colors.white,
+                    fontSize: dkWidget == true ? 22 : 27,
+                    shadows: [
+                      Shadow(
+                          blurRadius: dkWidget == true ? 100 : 30,
+                          offset: Offset(5, 5),
+                          color: Colors.black)
                     ]),
                 displaySmall: TextStyle(
                     color: Colors.white,
@@ -93,6 +105,10 @@ class _HomePageState extends State<HomePage> {
                     fontSize: 25 * contentScaleFactor,
                     color: Colors.black,
                     fontFamily: 'DS-DIGI'),
+                displayLarge: TextStyle(
+                    fontFamily: 'Amiri',
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold),
                 bodyMedium: TextStyle(
                     fontSize: 30 * contentScaleFactor,
                     color: Colors.white,
@@ -131,15 +147,14 @@ class MainPage extends StatelessWidget {
         height: MediaQuery.of(context).size.height * 0.07,
         width: MediaQuery.of(context).size.width * 0.3,
         child: FloatingActionButton(
-            hoverColor: Colors.black,
-            backgroundColor:
-                darkMode == false ? (Colors.green) : Colors.black12,
+            // hoverColor: Colors.black,
+            backgroundColor: Theme.of(context).splashColor,
+            foregroundColor: Theme.of(context).focusColor,
             onPressed: () {
               openDialog(context, darkMode, darkModeSetter, LangSetter);
             },
             child: Icon(
               Icons.add_reaction_outlined,
-              color: darkMode == false ? (Colors.white) : Colors.black12,
               size: 40,
             )),
       ),

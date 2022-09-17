@@ -76,14 +76,10 @@ class ChoicePage extends StatelessWidget {
       'zekr': 'Upon Entering Home',
       'number': 5,
     },
-
     {
       'zekr': 'Your Special Remembrance',
       'number': 6,
     },
-
-
-
   ];
 
   final setDarkMode;
@@ -93,45 +89,6 @@ class ChoicePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scrollable(viewportBuilder: (context, position) {
       return Scaffold(
-        floatingActionButton: Container(
-          height: 80,
-          width: 100,
-          child: FloatingActionButton(
-
-              hoverColor: Colors.black,
-              backgroundColor:
-              HomePage.darkMode==false?
-              (Colors.green)
-                  :Colors.black12,
-              onPressed: ()async{
-                 final String name=await openAzkarDialog(context, HomePage.darkMode, setDarkMode, setLang);
-                  if(name==null||name.isEmpty)return;
-                  print(name);
-                 var zekr={
-
-                   'zekr': name.toString(),
-                   'counter': 1,
-                   'initial': 1,
-                   'fadl': '',
-                   'title':''
-
-
-                 };
-                  if(HomePage.languageChoice)
-                    {
-                      YourSpecialAzkar.AzkarkEn.add(zekr);
-                    }
-                  else{
-                      AzkarkEl5asa.AzkarkAr.add(zekr);
-                  }
-              },
-              child: Icon(Icons.add,color:
-              HomePage.darkMode==false?
-              (Colors.white)
-                  :Colors.black12
-                ,size: 40,)
-          ),
-        ),
         appBar: CustomAppBar(),
         drawer: CustomDrawer(
           setLang: setLang,

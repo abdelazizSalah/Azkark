@@ -42,9 +42,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
             ),
             ListTile(
               title: Text(
-                HomePage.languageChoice == false ? 'أذكار' : "Remembrance",
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
+                  HomePage.languageChoice == false ? 'أذكار' : "Remembrance",
+                  style: Theme.of(context).textTheme.labelMedium),
               onTap: () {
                 // Update the state of the app
                 setState(() {
@@ -55,10 +54,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
               },
             ),
             ListTile(
-              title: Text(
-                HomePage.languageChoice == false ? 'تسبيح' : 'Praise',
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
+              title: Text(HomePage.languageChoice == false ? 'تسبيح' : 'Praise',
+                  style: Theme.of(context).textTheme.labelMedium),
               onTap: () {
                 setState(() {
                   chooseOptioninHomePage(
@@ -69,7 +66,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             ListTile(
               title: Text(
                   HomePage.languageChoice == false ? 'أدعية' : 'Supplications',
-                  style: Theme.of(context).textTheme.bodySmall),
+                  style: Theme.of(context).textTheme.labelMedium),
               onTap: () {
                 setState(() {
                   chooseOptioninHomePage(
@@ -80,7 +77,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             ListTile(
               title: Text(
                   HomePage.languageChoice == false ? 'الاعدادات' : 'Settings',
-                  style: Theme.of(context).textTheme.bodySmall),
+                  style: Theme.of(context).textTheme.labelMedium),
               onTap: () {
                 setState(() {
                   chooseOptioninHomePage(
