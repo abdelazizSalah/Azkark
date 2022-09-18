@@ -191,7 +191,7 @@ class MorningAzkar extends StatelessWidget {
   final darkModeSetter;
 
   final langSetter;
-  MorningAzkar({this.darkModeSetter, this.langSetter});
+  MorningAzkar({required this.darkModeSetter, required this.langSetter});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -17,7 +17,7 @@ class Uponenteringthehome extends StatelessWidget {
 
   final darkModeSetter;
   final langSetter;
-  Uponenteringthehome({this.darkModeSetter, this.langSetter});
+  Uponenteringthehome({required this.darkModeSetter, required this.langSetter});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -92,16 +92,16 @@ class _HomePageState extends State<HomePage> {
                     ]),
                 displaySmall: TextStyle(
                     color: Colors.white,
-                    fontSize: 15 * contentScaleFactor,
+                    fontSize: 22 * contentScaleFactor,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'DG-DIGI'),
                 displayMedium: TextStyle(
                     color: Colors.white,
-                    fontSize: 18 * contentScaleFactor,
+                    fontSize: 22 * contentScaleFactor,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Amiri'),
                 bodySmall: TextStyle(
-                    fontSize: 25 * contentScaleFactor,
+                    fontSize: 28 * contentScaleFactor,
                     color: Colors.black,
                     fontFamily: 'DS-DIGI'),
                 displayLarge: TextStyle(
@@ -139,6 +139,7 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Orientation devOrientation = MediaQuery.of(context).orientation;
     return Scaffold(
       floatingActionButton: Container(
         height: MediaQuery.of(context).size.height * 0.07,
@@ -150,7 +151,7 @@ class MainPage extends StatelessWidget {
               openDialog(context, darkMode, darkModeSetter, LangSetter);
             },
             child: Icon(
-              Icons.add_reaction_outlined,
+              Icons.hail_sharp,
               size: 40,
             )),
       ),
@@ -166,9 +167,11 @@ class MainPage extends StatelessWidget {
                 gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 200,
                   // childAspectRatio: 7 / 12,
-                  childAspectRatio:
-                      (MediaQuery.of(context).size.height * 0.58) /
-                          MediaQuery.of(context).size.height,
+                  childAspectRatio: (MediaQuery.of(context).size.height *
+                          (devOrientation == Orientation.portrait
+                              ? 0.58
+                              : 0.65)) /
+                      MediaQuery.of(context).size.height,
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
                 ),

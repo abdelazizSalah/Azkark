@@ -11,8 +11,10 @@ class choice_doa2Widget extends StatelessWidget {
   final langSetter;
   choice_doa2Widget(this.image, this.word, this.choice, this.darkMode,
       this.darkModeSetter, this.langSetter);
+
   @override
   Widget build(BuildContext context) {
+    final Orientation devOrientation = MediaQuery.of(context).orientation;
     return Directionality(
       textDirection: HomePage.languageChoice == false
           ? TextDirection.rtl
@@ -40,9 +42,9 @@ class choice_doa2Widget extends StatelessWidget {
                 style: TextStyle(fontSize: 28, color: Colors.white),
               ),
               decoration: BoxDecoration(
-                  color:
-                  HomePage.languageChoice==false?
-                  Colors.black.withOpacity(0.4):Colors.black.withOpacity(0.5),
+                  color: HomePage.languageChoice == false
+                      ? Colors.black.withOpacity(0.4)
+                      : Colors.black.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(15)),
             ),
           )

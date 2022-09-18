@@ -25,7 +25,7 @@ class WhenLeavingHome extends StatelessWidget {
   final darkModeSetter;
   final langSetter;
 
-  WhenLeavingHome({this.darkModeSetter, this.langSetter});
+  WhenLeavingHome({required this.darkModeSetter, required this.langSetter});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -86,7 +86,6 @@ flutter:
     - assets/imgs/setting.png
     - assets/imgs/tasbeehchoice.jpg
     - assets/imgs/backad3ya.jpg
-    - assets/imgs/smileface.png
     - assets/imgs/1.jpg
     - assets/imgs/2.jpeg
     - assets/imgs/3.jpg
@@ -98,6 +97,8 @@ flutter:
     - assets/imgs/9.jpg
     - assets/imgs/10.jpg
     - assets/imgs/11.jpg
+    - assets/imgs/Sadness.png
+    - assets/imgs/gratitude.png
 
 
 

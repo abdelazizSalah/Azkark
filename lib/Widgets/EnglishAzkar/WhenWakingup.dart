@@ -41,7 +41,7 @@ class WhenWakingup extends StatelessWidget {
   final darkModeSetter;
   final langSetter;
 
-  WhenWakingup({this.darkModeSetter, this.langSetter});
+  WhenWakingup({required this.darkModeSetter, required this.langSetter});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

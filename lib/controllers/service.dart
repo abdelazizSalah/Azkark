@@ -199,25 +199,54 @@ void chooseOptionInAzkar(BuildContext c, num choice, setMode, setLang,
   } else {
     switch (choice) {
       case 1:
-        Navigator.push(c, MaterialPageRoute(builder: (c) => MorningAzkar()));
+        Navigator.push(
+            c,
+            MaterialPageRoute(
+                builder: (c) => MorningAzkar(
+                      darkModeSetter: setMode,
+                      langSetter: setLang,
+                    )));
 
         break;
       case 2:
-        Navigator.push(c, MaterialPageRoute(builder: (c) => EveningAzkar()));
+        Navigator.push(
+            c,
+            MaterialPageRoute(
+                builder: (c) => EveningAzkar(
+                      darkModeSetter: setMode,
+                      langSetter: setLang,
+                    )));
 
         break;
       case 3:
-        Navigator.push(c, MaterialPageRoute(builder: (c) => WhenLeavingHome()));
+        Navigator.push(
+            c,
+            MaterialPageRoute(
+                builder: (c) => WhenLeavingHome(
+                      darkModeSetter: setMode,
+                      langSetter: setLang,
+                    )));
 
         break;
       case 4:
-        Navigator.push(c, MaterialPageRoute(builder: (c) => WhenWakingup()));
+        Navigator.push(
+            c,
+            MaterialPageRoute(
+                builder: (c) => WhenWakingup(
+                      darkModeSetter: setMode,
+                      langSetter: setLang,
+                    )));
 
         break;
 
       case 5:
         Navigator.push(
-            c, MaterialPageRoute(builder: (c) => Uponenteringthehome()));
+            c,
+            MaterialPageRoute(
+                builder: (c) => Uponenteringthehome(
+                      darkModeSetter: setMode,
+                      langSetter: setLang,
+                    )));
 
         break;
     }
@@ -233,9 +262,9 @@ void chooseOptioninDoa2Page(
       MaterialPageRoute(
           builder: (c) => ad3ya(
               darkMode: HomePage.darkMode,
-              darkModeSetter: darkModeSetter,
+              darkModeSetter: setLang,
               choice: choice,
-              setLang: setLang,
+              setLang: darkModeSetter,
               languageSelected: HomePage.languageChoice)));
 }
 
@@ -245,37 +274,72 @@ Future openDialog(
         context: context,
         builder: (context) => AlertDialog(
               title: Center(
-                  child: Text(
-                      HomePage.languageChoice == false
-                          ? "بما تشعر؟"
-                          : "How do you feel?",
-                      style: Theme.of(context).textTheme.bodySmall)),
+                  child: Padding(
+                padding: const EdgeInsets.only(top: 15.0),
+                child: Text(
+                    HomePage.languageChoice == false
+                        ? "بما تشعر؟"
+                        : "How do you feel?",
+                    style: TextStyle(
+                        fontSize: 38, color: Theme.of(context).splashColor)),
+              )),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0))),
-              insetPadding: EdgeInsets.all(10),
+              insetPadding: EdgeInsets.symmetric(horizontal: 8),
               content: Container(
-                // color: Colors.amber,
-                height: MediaQuery.of(context).size.height * 0.3,
+                /// the main
+                height:
+                    MediaQuery.of(context).orientation == Orientation.portrait
+                        ? MediaQuery.of(context).size.height * 0.3
+                        : MediaQuery.of(context).size.height * 0.5,
+                width:
+                    MediaQuery.of(context).orientation == Orientation.portrait
+                        ? MediaQuery.of(context).size.width
+                        : MediaQuery.of(context).size.width * 0.5,
                 padding: EdgeInsets.all(10),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
+                      /// smile Face container
                       padding: EdgeInsets.symmetric(horizontal: 8),
-                      height: MediaQuery.of(context).size.height * 0.3,
+                      height: MediaQuery.of(context).orientation ==
+                              Orientation.portrait
+                          ? MediaQuery.of(context).size.height * 0.3
+                          : MediaQuery.of(context).size.height * 0.5,
+                      width: MediaQuery.of(context).orientation ==
+                              Orientation.portrait
+                          ? MediaQuery.of(context).size.width * 0.35
+                          : MediaQuery.of(context).size.width * 0.2,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Image.asset(
-                            "assets/imgs/smileface.png",
-                            height: MediaQuery.of(context).size.height * 0.1,
+                            "assets/imgs/gratitude.png",
+                            height: MediaQuery.of(context).orientation ==
+                                    Orientation.portrait
+                                ? MediaQuery.of(context).size.height * 0.2
+                                : MediaQuery.of(context).size.height * 0.2,
                           ),
                           Container(
-                            width: MediaQuery.of(context).size.width * 0.3,
+                            /// smile face button
+                            height: MediaQuery.of(context).orientation ==
+                                    Orientation.portrait
+                                ? MediaQuery.of(context).size.height * 0.3 * 0.2
+                                : MediaQuery.of(context).size.height *
+                                    0.5 *
+                                    0.24,
+                            width: MediaQuery.of(context).orientation ==
+                                    Orientation.portrait
+                                ? MediaQuery.of(context).size.width * 0.4
+                                : MediaQuery.of(context).size.width * 0.4,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(40),
                             ),
                             child: ElevatedButton(
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStatePropertyAll(
+                                        Theme.of(context).splashColor)),
                                 onPressed: () {
                                   Navigator.pop(context);
 
@@ -302,22 +366,44 @@ Future openDialog(
                       ),
                     ),
                     Container(
-                      height: MediaQuery.of(context).size.height * 0.3,
+                      /// anixeity container
+                      height: MediaQuery.of(context).orientation ==
+                              Orientation.portrait
+                          ? MediaQuery.of(context).size.height * 0.3
+                          : MediaQuery.of(context).size.height * 0.5,
+                      width: MediaQuery.of(context).orientation ==
+                              Orientation.portrait
+                          ? MediaQuery.of(context).size.width * 0.4
+                          : MediaQuery.of(context).size.width * 0.2,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Image.asset(
-                            "assets/imgs/11.jpg",
-                            height: MediaQuery.of(context).size.height * 0.1,
+                            "assets/imgs/Sadness.png",
+                            height: MediaQuery.of(context).orientation ==
+                                    Orientation.portrait
+                                ? MediaQuery.of(context).size.height * 0.2
+                                : MediaQuery.of(context).size.height * 0.2,
                           ),
                           Container(
-                            width: HomePage.languageChoice == true
-                                ? MediaQuery.of(context).size.width * 0.35
-                                : MediaQuery.of(context).size.width * 0.33,
+                            /// anixeity button
+                            height: MediaQuery.of(context).orientation ==
+                                    Orientation.portrait
+                                ? MediaQuery.of(context).size.height * 0.3 * 0.2
+                                : MediaQuery.of(context).size.height *
+                                    0.5 *
+                                    0.24,
+                            width: MediaQuery.of(context).orientation ==
+                                    Orientation.portrait
+                                ? MediaQuery.of(context).size.width * 0.4
+                                : MediaQuery.of(context).size.width * 0.4,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(40),
                             ),
                             child: ElevatedButton(
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStatePropertyAll(
+                                        Theme.of(context).splashColor)),
                                 onPressed: () {
                                   Navigator.pop(context);
                                   Navigator.push(
