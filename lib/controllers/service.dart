@@ -24,9 +24,7 @@ import 'package:flutter/material.dart';
 num currentContextNumberInChoicePage = -1;
 void chooseOptioninHomePage(
     BuildContext c, num choice, num where, setMode, setLang) {
-  print(currentContextNumberInChoicePage);
-  print(choice);
-  print(where);
+
 
   if(currentContextNumberInChoicePage==3){
     currentContextNumberInChoicePage = choice;
@@ -133,7 +131,6 @@ void chooseOptioninHomePage(
                     darkModeSetter: setMode,
                   )));
   } else if (choice == 3) {
-    print(where);
     if (where == 0)
       Navigator.push(
           c,
@@ -422,7 +419,7 @@ Future openDialog(
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: HomePage.languageChoice == true
-                                          ? 18 *
+                                          ? 14 *
                                               MediaQuery.textScaleFactorOf(
                                                   context)
                                           : 22 *
@@ -500,7 +497,7 @@ Future openDialog(
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: HomePage.languageChoice == true
-                                          ? 16 *
+                                          ? 12 *
                                               MediaQuery.textScaleFactorOf(
                                                   context)
                                           : 22 *
