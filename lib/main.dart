@@ -1,5 +1,5 @@
-import 'package:azkark/Screens/HomePage.dart';
-import 'package:azkark/controllers/scheduler.dart';
+import './Screens/HomePage.dart';
+import './controllers/scheduler.dart';
 import 'package:flutter/material.dart';
 
 void main() {
