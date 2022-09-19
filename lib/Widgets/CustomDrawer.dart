@@ -83,7 +83,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
               onTap: () {
                 setState(() {
                   chooseOptioninHomePage(
-                      context, 3, 0, widget.setMode, widget.setLang);
+                      context, 3, 1, widget.setMode, widget.setLang);
                 });
               },
             )

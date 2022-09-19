@@ -107,7 +107,7 @@ class ChoicePage extends StatelessWidget {
                             ),
                             onPressed: () {
                               chooseOptionInAzkar(context,
-                                  myMap['number'] as int, setDarkMode, setLang);
+                                  myMap['number'] as int,3, setDarkMode, setLang);
                             },
                           ),
                         );
@@ -127,7 +127,7 @@ class ChoicePage extends StatelessWidget {
                             ),
                             onPressed: () {
                               chooseOptionInAzkar(context,
-                                  myMap['number'] as int, setDarkMode, setLang);
+                                  myMap['number'] as int,3, setDarkMode, setLang);
                             },
                           ),
                         );

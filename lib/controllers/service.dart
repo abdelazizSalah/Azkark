@@ -24,7 +24,62 @@ import 'package:flutter/material.dart';
 num currentContextNumberInChoicePage = -1;
 void chooseOptioninHomePage(
     BuildContext c, num choice, num where, setMode, setLang) {
-  if (choice == currentContextNumberInChoicePage && where == 1) return;
+  print(currentContextNumberInChoicePage);
+  print(choice);
+  print(where);
+
+  if(currentContextNumberInChoicePage==3){
+    currentContextNumberInChoicePage = choice;
+
+    if(choice==0) {
+          Navigator.pushAndRemoveUntil(c,
+              MaterialPageRoute(
+                  builder: (c) => ChoicePage(
+                    setLang: setLang,
+                    setDarkMode: setMode,
+                  ))
+              ,   ModalRoute.withName('/')
+
+        );
+      }
+      else if(choice==1){
+          Navigator.pushAndRemoveUntil(c,
+              MaterialPageRoute(
+                  builder: (c) => Doa2ChoicePage(
+                    langSetter: setLang,
+                    modeSetter: setMode,
+                  ))
+              ,   ModalRoute.withName('/')
+
+          );
+        }
+      else if(choice==2){
+          Navigator.pushAndRemoveUntil(c,
+              MaterialPageRoute(
+                  builder: (c) => tasabeeh(
+                    langSetter: setLang,
+                    darkModeSetter: setMode,
+                  ))
+              ,   ModalRoute.withName('/')
+
+          );
+
+        }
+      else if(choice==3){
+          Navigator.pushAndRemoveUntil(c,
+              MaterialPageRoute(
+                  builder: (c) => Settings(
+                    langSetter: setLang,
+                    darkModeSetter: setMode,
+                  ))
+              ,   ModalRoute.withName('/')
+
+          );
+
+        }
+      return ;
+  }
+  if ((choice == currentContextNumberInChoicePage && where == 1)) return;
   currentContextNumberInChoicePage = choice;
   if (choice == 0) {
     if (where == 0)
@@ -96,12 +151,14 @@ void chooseOptioninHomePage(
   }
 }
 
-void chooseOptionInAzkar(BuildContext c, num choice, setMode, setLang,
-    {int where = 0}) {
+void chooseOptionInAzkar(BuildContext c, num choice,int where, setMode, setLang,
+   ) {
   // TODO : Fixahaa ya lotfyyy
+
 
   // if (choice == currentContextNumberInChoicePage && where == 1) return;
   // currentContextNumberInChoicePage = choice;
+  currentContextNumberInChoicePage=3;
   if (!HomePage.languageChoice) {
     switch (choice) {
       case 1:
