@@ -127,7 +127,7 @@ class _SettingsState extends State<Settings> {
                                     content:  Directionality(
                                         textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
 
-                                        child: Text(HomePage.languageChoice==false?"اصبحت باستمرار":"Frequency is high now")),
+                                        child: Text(HomePage.languageChoice==false?"اصبحت باستمرار":"Notification frequency is high now")),
 
                                   );
 
@@ -153,7 +153,7 @@ class _SettingsState extends State<Settings> {
                                       content:  Directionality(
                                           textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
 
-                                          child: Text(HomePage.languageChoice==false?"اصبحت متوسطة":"Frequency is medium now")),
+                                          child: Text(HomePage.languageChoice==false?"اصبحت متوسطة":"Notification frequency is medium now")),
 
                                     );
 
@@ -178,7 +178,7 @@ class _SettingsState extends State<Settings> {
                                     final snackBar = SnackBar(
                                       content:  Directionality(
                                           textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
-                                          child: Text(HomePage.languageChoice==false?"اصبحت قليلة":"Frequency is low now")),
+                                          child: Text(HomePage.languageChoice==false?"اصبحت قليلة":"Notification frequency is low now")),
 
                                     );
 
