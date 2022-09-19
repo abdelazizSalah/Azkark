@@ -38,7 +38,7 @@
 <img src="./assets/imgs/Screens/13s.jpg" alt="."/>
 <img src="./assets/imgs/Screens/14s.jpg" alt="."/>
 
-## Android APK: <a href=" https://drive.google.com/file/d/1EZF3fT7ELfLSXDqQF71FUeIq22Vu7Q3K/view?usp=sharing">DOWNLOAD LINK</a>
+## Android APK: <a href="https://drive.google.com/file/d/1EZF3fT7ELfLSXDqQF71FUeIq22Vu7Q3K/view?usp=sharing">DOWNLOAD LINK</a>
 <h2>Contributors: </h2>
 
 <table>
