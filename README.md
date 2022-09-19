@@ -21,7 +21,7 @@
 <h2> (notification) سيذكرك هذا البرنامج بذكر الله من خلال تنبيه</h2>
 
 ## ScreenShots 
-
+### Portrait Screens
  <img src="./assets/imgs/Screens/1s.jpg" alt="."/>
 <img src="./assets/imgs/Screens/2s.jpg" alt="."/>
 <img src="./assets/imgs/Screens/3s.jpg" alt="."/>
@@ -30,12 +30,15 @@
 <img src="./assets/imgs/Screens/6s.jpg" alt="."/>
 <img src="./assets/imgs/Screens/7s.jpg" alt="."/>
 <img src="./assets/imgs/Screens/8s.jpg" alt="."/>
+### Landscape Screens
 <img src="./assets/imgs/Screens/9s.jpg" alt="."/>
 <img src="./assets/imgs/Screens/10s.jpg" alt="."/>
 <img src="./assets/imgs/Screens/11s.jpg" alt="."/>
 <img src="./assets/imgs/Screens/12s.jpg" alt="."/>
 <img src="./assets/imgs/Screens/13s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/14s.jpg" alt="."/>
 
+## Android APK: <a href=" https://drive.google.com/file/d/1EZF3fT7ELfLSXDqQF71FUeIq22Vu7Q3K/view?usp=sharing">DOWNLOAD LINK</a>
 <h2>Contributors: </h2>
 
 <table>
