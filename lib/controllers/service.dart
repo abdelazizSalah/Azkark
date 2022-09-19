@@ -281,7 +281,11 @@ Future openDialog(
                         ? "بما تشعر؟"
                         : "How do you feel?",
                     style: TextStyle(
-                        fontSize: 38, color: Theme.of(context).splashColor)),
+                        fontSize: MediaQuery.of(context).orientation ==
+                                Orientation.landscape
+                            ? 30
+                            : 38,
+                        color: Theme.of(context).splashColor)),
               )),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0))),
@@ -306,7 +310,7 @@ Future openDialog(
                       height: MediaQuery.of(context).orientation ==
                               Orientation.portrait
                           ? MediaQuery.of(context).size.height * 0.3
-                          : MediaQuery.of(context).size.height * 0.5,
+                          : MediaQuery.of(context).size.height,
                       width: MediaQuery.of(context).orientation ==
                               Orientation.portrait
                           ? MediaQuery.of(context).size.width * 0.35
@@ -314,21 +318,24 @@ Future openDialog(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Image.asset(
-                            "assets/imgs/gratitude.png",
-                            height: MediaQuery.of(context).orientation ==
-                                    Orientation.portrait
-                                ? MediaQuery.of(context).size.height * 0.2
-                                : MediaQuery.of(context).size.height * 0.2,
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 8.0),
+                            child: Image.asset(
+                              "assets/imgs/gratitude.png",
+                              height: MediaQuery.of(context).orientation ==
+                                      Orientation.portrait
+                                  ? MediaQuery.of(context).size.height * 0.2
+                                  : MediaQuery.of(context).size.height * 0.3,
+                            ),
                           ),
                           Container(
-                            /// smile face button
+                            /// satisfied container
                             height: MediaQuery.of(context).orientation ==
                                     Orientation.portrait
                                 ? MediaQuery.of(context).size.height * 0.3 * 0.2
                                 : MediaQuery.of(context).size.height *
                                     0.5 *
-                                    0.24,
+                                    0.2,
                             width: MediaQuery.of(context).orientation ==
                                     Orientation.portrait
                                 ? MediaQuery.of(context).size.width * 0.4
@@ -351,15 +358,21 @@ Future openDialog(
                                                 darkModeSetter: darkModeSetter,
                                               )));
                                 },
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                      HomePage.languageChoice == false
-                                          ? "سبح الله"
-                                          : "Praise Allah",
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .displaySmall),
+                                child: Text(
+                                  HomePage.languageChoice == false
+                                      ? "سبح الله"
+                                      : "Praise Allah",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: HomePage.languageChoice == true
+                                          ? 18 *
+                                              MediaQuery.textScaleFactorOf(
+                                                  context)
+                                          : 22 *
+                                              MediaQuery.textScaleFactorOf(
+                                                  context),
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'DG-DIGI'),
                                 )),
                           )
                         ],
@@ -378,12 +391,15 @@ Future openDialog(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Image.asset(
-                            "assets/imgs/Sadness.png",
-                            height: MediaQuery.of(context).orientation ==
-                                    Orientation.portrait
-                                ? MediaQuery.of(context).size.height * 0.2
-                                : MediaQuery.of(context).size.height * 0.2,
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 8.0),
+                            child: Image.asset(
+                              "assets/imgs/Sadness.png",
+                              height: MediaQuery.of(context).orientation ==
+                                      Orientation.portrait
+                                  ? MediaQuery.of(context).size.height * 0.2
+                                  : MediaQuery.of(context).size.height * 0.3,
+                            ),
                           ),
                           Container(
                             /// anixeity button
@@ -392,7 +408,7 @@ Future openDialog(
                                 ? MediaQuery.of(context).size.height * 0.3 * 0.2
                                 : MediaQuery.of(context).size.height *
                                     0.5 *
-                                    0.24,
+                                    0.2,
                             width: MediaQuery.of(context).orientation ==
                                     Orientation.portrait
                                 ? MediaQuery.of(context).size.width * 0.4
@@ -420,15 +436,21 @@ Future openDialog(
                                               languageSelected:
                                                   HomePage.languageChoice)));
                                 },
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                      HomePage.languageChoice == false
-                                          ? "دعاء الحزن"
-                                          : "Anxiety\nSupplication",
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .displaySmall),
+                                child: Text(
+                                  HomePage.languageChoice == false
+                                      ? "دعاء الحزن"
+                                      : "Anxiety\nSupplication",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: HomePage.languageChoice == true
+                                          ? 16 *
+                                              MediaQuery.textScaleFactorOf(
+                                                  context)
+                                          : 22 *
+                                              MediaQuery.textScaleFactorOf(
+                                                  context),
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'DG-DIGI'),
                                 )),
                           )
                         ],

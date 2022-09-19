@@ -90,11 +90,13 @@ class _HomePageState extends State<HomePage> {
                           offset: Offset(5, 5),
                           color: Colors.black)
                     ]),
-                displaySmall: TextStyle(
-                    color: Colors.white,
-                    fontSize: 22 * contentScaleFactor,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'DG-DIGI'),
+                // displaySmall: TextStyle(
+                //     color: Colors.white,
+                //     fontSize: devOrientation == Orientation.landscape
+                //         ? 18 * contentScaleFactor
+                //         : 22 * contentScaleFactor,
+                //     fontWeight: FontWeight.bold,
+                //     fontFamily: 'DG-DIGI'),
                 displayMedium: TextStyle(
                     color: Colors.white,
                     fontSize: 22 * contentScaleFactor,
@@ -141,9 +143,8 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final Orientation devOrientation = MediaQuery.of(context).orientation;
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: Container(
-        height: MediaQuery.of(context).size.height * 0.07,
-        width: MediaQuery.of(context).size.width * 0.3,
         child: FloatingActionButton(
             backgroundColor: Theme.of(context).splashColor,
             foregroundColor: Theme.of(context).focusColor,
