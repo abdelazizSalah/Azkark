@@ -123,6 +123,17 @@ class _SettingsState extends State<Settings> {
                               ElevatedButton(
                                 onPressed: () {
                                   HomePage.freq = 1;
+                                  final snackBar = SnackBar(
+                                    content:  Directionality(
+                                        textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
+
+                                        child: Text(HomePage.languageChoice==false?"اصبحت باستمرار":"Frequency is high now")),
+
+                                  );
+
+
+                                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
                                 },
                                 child: Text(
                                   HomePage.languageChoice == false
@@ -138,6 +149,17 @@ class _SettingsState extends State<Settings> {
                               ElevatedButton(
                                   onPressed: () {
                                     HomePage.freq = 3;
+                                    final snackBar = SnackBar(
+                                      content:  Directionality(
+                                          textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
+
+                                          child: Text(HomePage.languageChoice==false?"اصبحت متوسطة":"Frequency is medium now")),
+
+                                    );
+
+
+                                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
                                   },
                                   child: Text(
                                     HomePage.languageChoice == false
@@ -153,6 +175,16 @@ class _SettingsState extends State<Settings> {
                               ElevatedButton(
                                   onPressed: () {
                                     HomePage.freq = 5;
+                                    final snackBar = SnackBar(
+                                      content:  Directionality(
+                                          textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
+                                          child: Text(HomePage.languageChoice==false?"اصبحت قليلة":"Frequency is low now")),
+
+                                    );
+
+
+                                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
                                   },
                                   child: Text(
                                     HomePage.languageChoice == false
@@ -189,6 +221,7 @@ class _SettingsState extends State<Settings> {
           }),
         ),
       ),
+
     );
   }
 }
