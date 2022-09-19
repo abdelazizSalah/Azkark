@@ -1,5 +1,15 @@
 # Azkark/اذكارك
 <img src="assets/Logos/sp.png" width="600">
+<br>
+<div align="center">
+
+[![GitHub contributors](https://img.shields.io/github/contributors/abdelazizSalah/Azkark)](https://github.com/abdelazizSalah/Azkark/contributors)
+[![GitHub issues](https://img.shields.io/github/issues/abdelazizSalah/Azkark)](https://github.com/abdelazizSalah/Azkark/issues)
+[![GitHub forks](https://img.shields.io/github/forks/abdelazizSalah/Azkark)](https://github.com/abdelazizSalah/Azkark/network)
+[![GitHub stars](https://img.shields.io/github/stars/abdelazizSalah/Azkark)](https://github.com/abdelazizSalah/Azkark/stargazers)
+[![GitHub Language](https://img.shields.io/github/languages/top/abdelazizSalah/Azkark)](https://img.shields.io/github/languages/count/https://github.com/abdelazizSalah/Azkark)
+
+</div>
 
 ## ما هو هذا البرنامج
 > __تطبيق جوال يحتوي علي أذكار المسلم و ادعية و تسابيح باللغة العربية و الانجليزية__
@@ -30,7 +40,9 @@
 <img src="./assets/imgs/Screens/6s.jpg" alt="."/>
 <img src="./assets/imgs/Screens/7s.jpg" alt="."/>
 <img src="./assets/imgs/Screens/8s.jpg" alt="."/>
+
 ### Landscape Screens
+
 <img src="./assets/imgs/Screens/9s.jpg" alt="."/>
 <img src="./assets/imgs/Screens/10s.jpg" alt="."/>
 <img src="./assets/imgs/Screens/11s.jpg" alt="."/>
