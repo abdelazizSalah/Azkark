@@ -31,35 +31,35 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     bool dkWidget = HomePage.darkMode;
+    final themeOF = Theme.of(context);
 
     /// used to scale the fonts depending on the user settings
     final contentScaleFactor = MediaQuery.textScaleFactorOf(context);
     return MaterialApp(
         theme: ThemeData(
             canvasColor: dkWidget == true
-                ? Color.fromARGB(255, 127, 167, 200)
+                ? const Color.fromARGB(255, 127, 167, 200)
                 : Colors.green[100],
             splashColor: dkWidget == false
-                ? Color.fromARGB(255, 17, 133, 66)
-                : Color.fromARGB(255, 52, 83, 132),
-            dividerColor: dkWidget == false
-                ? Theme.of(context).accentColor
-                : Theme.of(context).accentColor,
+                ? const Color.fromARGB(255, 17, 133, 66)
+                : const Color.fromARGB(255, 52, 83, 132),
+            dividerColor:
+                dkWidget == false ? themeOF.accentColor : themeOF.accentColor,
             hoverColor: dkWidget == false
-                ? Color.fromARGB(255, 118, 164, 120)
-                : Color.fromARGB(255, 104, 151, 192),
+                ? const Color.fromARGB(255, 118, 164, 120)
+                : const Color.fromARGB(255, 104, 151, 192),
             focusColor: dkWidget == false
-                ? Color.fromARGB(255, 251, 233, 173)
-                : Color.fromARGB(255, 237, 206, 113),
+                ? const Color.fromARGB(255, 251, 233, 173)
+                : const Color.fromARGB(255, 237, 206, 113),
             primaryColor:
                 dkWidget == false ? Colors.green[300] : Colors.blue[900],
             hintColor: dkWidget == false
                 ? Colors.green[500]
-                : Color.fromARGB(255, 106, 142, 179),
-            accentColor: Color.fromARGB(255, 220, 171, 27),
+                : const Color.fromARGB(255, 106, 142, 179),
+            accentColor: const Color.fromARGB(255, 220, 171, 27),
             errorColor: dkWidget == false
                 ? Colors.white
-                : Color.fromARGB(255, 251, 217, 167),
+                : const Color.fromARGB(255, 251, 217, 167),
             buttonTheme:
                 ButtonThemeData(buttonColor: Color.fromARGB(255, 220, 171, 27)),
             fontFamily: 'Gulzar',
@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                     fontSize: 38 * contentScaleFactor,
                     color: dkWidget == false ? Colors.white : Colors.amber,
                     shadows: [
-                      Shadow(
+                      const Shadow(
                           blurRadius: 40,
                           color: Color.fromARGB(255, 250, 187, 0),
                           offset: Offset(20, 5))
@@ -87,16 +87,9 @@ class _HomePageState extends State<HomePage> {
                     shadows: [
                       Shadow(
                           blurRadius: dkWidget == true ? 50 : 30,
-                          offset: Offset(5, 5),
+                          offset: const Offset(5, 5),
                           color: Colors.black)
                     ]),
-                // displaySmall: TextStyle(
-                //     color: Colors.white,
-                //     fontSize: devOrientation == Orientation.landscape
-                //         ? 18 * contentScaleFactor
-                //         : 22 * contentScaleFactor,
-                //     fontWeight: FontWeight.bold,
-                //     fontFamily: 'DG-DIGI'),
                 displayMedium: TextStyle(
                     color: Colors.white,
                     fontSize: 22 * contentScaleFactor,
@@ -115,10 +108,10 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.white,
                     fontFamily: 'Amiri',
                     shadows: [
-                      Shadow(
+                      const Shadow(
                           blurRadius: 40,
                           color: Colors.amberAccent,
-                          offset: Offset(20, 6))
+                          offset: const Offset(20, 6))
                     ]))),
         debugShowCheckedModeBanner: false,
         home: MainPage(
@@ -141,17 +134,19 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Orientation devOrientation = MediaQuery.of(context).orientation;
+    final mediaQuery = MediaQuery.of(context);
+    final themeOF = Theme.of(context);
+    final Orientation devOrientation = mediaQuery.orientation;
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: Container(
         child: FloatingActionButton(
-            backgroundColor: Theme.of(context).splashColor,
-            foregroundColor: Theme.of(context).focusColor,
+            backgroundColor: themeOF.splashColor,
+            foregroundColor: themeOF.focusColor,
             onPressed: () {
               openDialog(context, darkMode, darkModeSetter, LangSetter);
             },
-            child: Icon(
+            child: const Icon(
               Icons.hail_sharp,
               size: 40,
             )),
@@ -162,17 +157,16 @@ class MainPage extends StatelessWidget {
             ? TextDirection.rtl
             : TextDirection.ltr,
         child: Container(
-            color: Theme.of(context).canvasColor,
+            color: themeOF.canvasColor,
             child: GridView(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 200,
-                  // childAspectRatio: 7 / 12,
-                  childAspectRatio: (MediaQuery.of(context).size.height *
+                  childAspectRatio: (mediaQuery.size.height *
                           (devOrientation == Orientation.portrait
                               ? 0.58
                               : 0.65)) /
-                      MediaQuery.of(context).size.height,
+                      mediaQuery.size.height,
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
                 ),

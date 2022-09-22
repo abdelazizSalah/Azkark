@@ -16,13 +16,14 @@ class choiceItemScreen extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
     return Stack(
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(15),
           child: Image.asset(
             image,
-            height: MediaQuery.of(context).size.height,
+            height: mediaQuery.size.height,
             fit: BoxFit.cover,
           ),
         ),
@@ -31,11 +32,11 @@ class choiceItemScreen extends StatelessWidget {
             chooseOptioninHomePage(context, choice, 0, toggleMode, toggleLang);
           },
           child: Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             alignment: Alignment.center,
             child: Text(
               word,
-              style: TextStyle(fontSize: 27, color: Colors.white),
+              style: const TextStyle(fontSize: 27, color: Colors.white),
             ),
             decoration: BoxDecoration(
                 color: Colors.black.withOpacity(0.4),
