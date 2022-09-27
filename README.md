@@ -1,6 +1,8 @@
 # Azkark/اذكارك
 <img src="assets/Logos/sp.png" width="600">
 <br>
+
+
 <div align="center">
 
 [![GitHub contributors](https://img.shields.io/github/contributors/abdelazizSalah/Azkark)](https://github.com/abdelazizSalah/Azkark/contributors)
@@ -30,27 +32,58 @@
 </ul>
 <h2> (notification) سيذكرك هذا البرنامج بذكر الله من خلال تنبيه</h2>
 
-## ScreenShots 
-### Portrait Screens
- <img src="./assets/imgs/Screens/1s.jpg" alt="."/>
-<img src="./assets/imgs/Screens/2s.jpg" alt="."/>
-<img src="./assets/imgs/Screens/3s.jpg" alt="."/>
-<img src="./assets/imgs/Screens/4s.jpg" alt="."/>
-<img src="./assets/imgs/Screens/5s.jpg" alt="."/>
-<img src="./assets/imgs/Screens/6s.jpg" alt="."/>
-<img src="./assets/imgs/Screens/7s.jpg" alt="."/>
-<img src="./assets/imgs/Screens/8s.jpg" alt="."/>
+---
+> Android APK: <a href="https://drive.google.com/file/d/1EZF3fT7ELfLSXDqQF71FUeIq22Vu7Q3K/view?usp=sharing">DOWNLOAD LINK</a>
+___
+# ScreenShots 
+## Portrait Screens
+ 
+ > Icon and Splash Screen
+
+*  <img src=".\assets\imgs\Screens\Icon&SplashScreen.png" height =300 width = 290 alt="."/>
+
+> Main Screen in both modes 
+
+* <img src="./assets/imgs/Screens/MainScreen.png" alt="."/>
+
+> Drawer
+* <img src="./assets/imgs/Screens/drawer.png" alt="."/>
+
+> Azkar Page
+
+* <img src="./assets/imgs/Screens/AzkarPage.png" alt="."/>
+> Ad3eya page
+* <img src="./assets/imgs/Screens/Ad3ya.png" alt="."/>
+> Zekr Container 
+* <img src="./assets/imgs/Screens/ZekrContainer.png" alt="."/>
+> Feeling screen
+* <img src="./assets/imgs/Screens/feeling.png" alt="."/>
+> Settings 
+* <img src="./assets/imgs/Screens/Settings.png" alt="."/>
 
 ### Landscape Screens
 
 <img src="./assets/imgs/Screens/9s.jpg" alt="."/>
-<img src="./assets/imgs/Screens/10s.jpg" alt="."/>
+
+---
+
+<img src="./assets/imgs/Screens/do3a2LandScape.jpeg" alt="."/>
+
+---
 <img src="./assets/imgs/Screens/11s.jpg" alt="."/>
+
+---
 <img src="./assets/imgs/Screens/12s.jpg" alt="."/>
+
+---
 <img src="./assets/imgs/Screens/13s.jpg" alt="."/>
+
+---
 <img src="./assets/imgs/Screens/14s.jpg" alt="."/>
 
-## Android APK: <a href="https://drive.google.com/file/d/1EZF3fT7ELfLSXDqQF71FUeIq22Vu7Q3K/view?usp=sharing">DOWNLOAD LINK</a>
+---
+
+
 <h2>Contributors: </h2>
 
 <table>
