@@ -63,23 +63,23 @@ ___
 
 ### Landscape Screens
 
-<img src="./assets/imgs/Screens/9s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/9s.jpg" width = 330 alt="."/>
 
 ---
 
-<img src="./assets/imgs/Screens/do3a2LandScape.jpeg" alt="."/>
+<img src="./assets/imgs/Screens/do3a2LandScape.jpeg" width = 330 alt="."/>
 
 ---
-<img src="./assets/imgs/Screens/11s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/11s.jpg" width = 330 alt="."/>
 
 ---
-<img src="./assets/imgs/Screens/12s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/12s.jpg" width = 330 alt="."/>
 
 ---
-<img src="./assets/imgs/Screens/13s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/13s.jpg" width = 330 alt="."/>
 
 ---
-<img src="./assets/imgs/Screens/14s.jpg" alt="."/>
+<img src="./assets/imgs/Screens/14s.jpg" width = 330 alt="."/>
 
 ---
 
