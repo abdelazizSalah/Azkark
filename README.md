@@ -40,26 +40,26 @@ ___
  
  > Icon and Splash Screen
 
-*  <img src=".\assets\imgs\Screens\Icon&SplashScreen.png" height =350 width = 290 alt="."/>
+*  <img src=".\assets\imgs\Screens\Icon&SplashScreen.png" height =320 width = 300 alt="."/>
 
 > Main Screen in both modes 
 
-* <img src="./assets/imgs/Screens/MainScreen.png" height =350 width = 290 alt="."/>
+* <img src="./assets/imgs/Screens/MainScreen.png" height =320 width = 290 alt="."/>
 
 > Drawer
-* <img src="./assets/imgs/Screens/drawer.png" height =350 width = 290 alt="."/>
+* <img src="./assets/imgs/Screens/drawer.png" height =320 width = 300 alt="."/>
 
 > Azkar Page
 
-* <img src="./assets/imgs/Screens/AzkarPage.png" height =350 width = 290 alt="."/>
+* <img src="./assets/imgs/Screens/AzkarPage.png" height =320 width = 300 alt="."/>
 > Ad3eya page
-* <img src="./assets/imgs/Screens/Ad3ya.png" height =350 width = 290 alt="."/>
+* <img src="./assets/imgs/Screens/Ad3ya.png" height =320 width = 300 alt="."/>
 > Zekr Container 
-* <img src="./assets/imgs/Screens/ZekrContainer.png" height =350 width = 290 alt="."/>
+* <img src="./assets/imgs/Screens/ZekrContainer.png" height =320 width = 300 alt="."/>
 > Feeling screen
-* <img src="./assets/imgs/Screens/feeling.png" height =350 width = 290 alt="."/>
+* <img src="./assets/imgs/Screens/feeling.png" height =320 width = 300 alt="."/>
 > Settings 
-* <img src="./assets/imgs/Screens/Settings.png" height =350 width = 290 alt="."/>
+* <img src="./assets/imgs/Screens/Settings.png" height =320 width = 300 alt="."/>
 
 ### Landscape Screens
 
