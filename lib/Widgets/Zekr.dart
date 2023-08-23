@@ -21,22 +21,23 @@ class Zekr extends StatelessWidget {
   Widget build(BuildContext context) {
     final double fontFactor = MediaQuery.of(context).textScaleFactor;
     final Orientation devOrientation = MediaQuery.of(context).orientation;
+    final theme = Theme.of(context); 
     return Directionality(
       textDirection: HomePage.languageChoice == false
           ? TextDirection.rtl
           : TextDirection.ltr,
       child: Container(
-          color: Theme.of(context).hintColor,
+          color: theme.hintColor,
           child: Card(
-            color: Theme.of(context).primaryColor,
+            color: theme.primaryColor,
             elevation: 10,
-            shadowColor: Theme.of(context).accentColor,
+            shadowColor: theme.backgroundColor,
             child: Container(
               /// Main Container
               decoration: BoxDecoration(
-                  color: Theme.of(context).errorColor,
+                  color: theme.errorColor,
                   border: Border.all(
-                      width: 2.5, color: Theme.of(context).accentColor),
+                      width: 2.5, color: theme.backgroundColor),
                   borderRadius: BorderRadius.circular(50)),
               child: Column(
                 children: [
@@ -44,22 +45,22 @@ class Zekr extends StatelessWidget {
                     /// Title widget
                     padding: const EdgeInsets.all(8.0),
                     child: Text(title,
-                        style: Theme.of(context).textTheme.titleSmall),
+                        style: theme.textTheme.titleSmall),
                   ),
                   Container(
                     /// El Zekr Container
                     decoration: BoxDecoration(
-                        color: Theme.of(context).focusColor,
+                        color: theme.focusColor,
                         border: Border.all(
-                            width: 1.0, color: Theme.of(context).accentColor)),
-                    margin: EdgeInsets.symmetric(horizontal: 30),
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                            width: 1.0, color: theme.backgroundColor)),
+                    margin: const EdgeInsets.symmetric(horizontal: 30),
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                     child: Text(
                       "$zekr",
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: theme.textTheme.bodySmall,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     //// Space Box
                     ///
                     height: 10,
@@ -68,13 +69,13 @@ class Zekr extends StatelessWidget {
                     /// El Fayda Container
                     ///
                     // height: constrains.maxHeight * 0.06,
-                    margin: EdgeInsets.only(top: 5, right: 30, left: 10),
+                    margin: const EdgeInsets.only(top: 5, right: 30, left: 10),
                     alignment: Alignment.bottomRight,
                     child: Text(
                       fayda,
                       style: TextStyle(
                           decoration: TextDecoration.underline,
-                          color: Theme.of(context).splashColor,
+                          color: theme.splashColor,
                           fontSize: 16 * fontFactor,
                           fontWeight: FontWeight.bold),
                     ),
@@ -89,20 +90,20 @@ class Zekr extends StatelessWidget {
                       height: devOrientation == Orientation.landscape
                           ? MediaQuery.of(context).size.height * 0.27
                           : MediaQuery.of(context).size.height * 0.15,
-                      padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+                      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                       margin:
-                          EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                          const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                       child: ElevatedButton(
                         style: ButtonStyle(
                           backgroundColor: MaterialStatePropertyAll(counter == 0
-                              ? Theme.of(context).hoverColor
-                              : Theme.of(context).splashColor),
+                              ? theme.hoverColor
+                              : theme.splashColor),
                         ),
                         onPressed: decrementCounter,
                         child: Text(
                           /// Counter container
                           counter.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontFamily: 'DS-Digital',
                               height: 1,
                               fontSize: 50,
@@ -118,11 +119,11 @@ class Zekr extends StatelessWidget {
                     Padding(
                       /// Icon Container
                       padding:
-                          EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+                          const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
                       child: IconButton(
                         icon: Icon(
                           Icons.restart_alt,
-                          color: Theme.of(context).accentColor,
+                          color: theme.backgroundColor,
                         ),
                         onPressed: resetCounter,
                       ),
