@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
                 ? const Color.fromARGB(255, 17, 133, 66)
                 : const Color.fromARGB(255, 52, 83, 132),
             dividerColor:
-                dkWidget == false ? themeOF.accentColor : themeOF.accentColor,
+                dkWidget == false ? themeOF.backgroundColor : themeOF.backgroundColor,
             hoverColor: dkWidget == false
                 ? const Color.fromARGB(255, 118, 164, 120)
                 : const Color.fromARGB(255, 104, 151, 192),
@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
             hintColor: dkWidget == false
                 ? Colors.green[500]
                 : const Color.fromARGB(255, 106, 142, 179),
-            accentColor: const Color.fromARGB(255, 220, 171, 27),
+            backgroundColor: const Color.fromARGB(255, 220, 171, 27),
             errorColor: dkWidget == false
                 ? Colors.white
                 : const Color.fromARGB(255, 251, 217, 167),
