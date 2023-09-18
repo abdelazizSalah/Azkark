@@ -24,58 +24,47 @@ import 'package:flutter/material.dart';
 num currentContextNumberInChoicePage = -1;
 void chooseOptioninHomePage(
     BuildContext c, num choice, num where, setMode, setLang) {
-
-
-  if(currentContextNumberInChoicePage==3){
+  if (currentContextNumberInChoicePage == 3) {
     currentContextNumberInChoicePage = choice;
 
-    if(choice==0) {
-          Navigator.pushAndRemoveUntil(c,
-              MaterialPageRoute(
-                  builder: (c) => ChoicePage(
+    if (choice == 0) {
+      Navigator.pushAndRemoveUntil(
+          c,
+          MaterialPageRoute(
+              builder: (c) => ChoicePage(
                     setLang: setLang,
                     setDarkMode: setMode,
-                  ))
-              ,   ModalRoute.withName('/')
-
-        );
-      }
-      else if(choice==1){
-          Navigator.pushAndRemoveUntil(c,
-              MaterialPageRoute(
-                  builder: (c) => Doa2ChoicePage(
+                  )),
+          ModalRoute.withName('/'));
+    } else if (choice == 1) {
+      Navigator.pushAndRemoveUntil(
+          c,
+          MaterialPageRoute(
+              builder: (c) => Doa2ChoicePage(
                     langSetter: setLang,
                     modeSetter: setMode,
-                  ))
-              ,   ModalRoute.withName('/')
-
-          );
-        }
-      else if(choice==2){
-          Navigator.pushAndRemoveUntil(c,
-              MaterialPageRoute(
-                  builder: (c) => tasabeeh(
+                  )),
+          ModalRoute.withName('/'));
+    } else if (choice == 2) {
+      Navigator.pushAndRemoveUntil(
+          c,
+          MaterialPageRoute(
+              builder: (c) => tasabeeh(
                     langSetter: setLang,
                     darkModeSetter: setMode,
-                  ))
-              ,   ModalRoute.withName('/')
-
-          );
-
-        }
-      else if(choice==3){
-          Navigator.pushAndRemoveUntil(c,
-              MaterialPageRoute(
-                  builder: (c) => Settings(
+                  )),
+          ModalRoute.withName('/'));
+    } else if (choice == 3) {
+      Navigator.pushAndRemoveUntil(
+          c,
+          MaterialPageRoute(
+              builder: (c) => Settings(
                     langSetter: setLang,
                     darkModeSetter: setMode,
-                  ))
-              ,   ModalRoute.withName('/')
-
-          );
-
-        }
-      return ;
+                  )),
+          ModalRoute.withName('/'));
+    }
+    return;
   }
   if ((choice == currentContextNumberInChoicePage && where == 1)) return;
   currentContextNumberInChoicePage = choice;
@@ -148,14 +137,18 @@ void chooseOptioninHomePage(
   }
 }
 
-void chooseOptionInAzkar(BuildContext c, num choice,int where, setMode, setLang,
-   ) {
+void chooseOptionInAzkar(
+  BuildContext c,
+  num choice,
+  int where,
+  setMode,
+  setLang,
+) {
   // TODO : Fixahaa ya lotfyyy
-
 
   // if (choice == currentContextNumberInChoicePage && where == 1) return;
   // currentContextNumberInChoicePage = choice;
-  currentContextNumberInChoicePage=3;
+  currentContextNumberInChoicePage = 3;
   if (!HomePage.languageChoice) {
     switch (choice) {
       case 1:
@@ -349,7 +342,7 @@ Future openDialog(
                 height:
                     MediaQuery.of(context).orientation == Orientation.portrait
                         ? MediaQuery.of(context).size.height * 0.3
-                        : MediaQuery.of(context).size.height * 0.5,
+                        : MediaQuery.of(context).size.height,
                 width:
                     MediaQuery.of(context).orientation == Orientation.portrait
                         ? MediaQuery.of(context).size.width
@@ -369,67 +362,73 @@ Future openDialog(
                               Orientation.portrait
                           ? MediaQuery.of(context).size.width * 0.35
                           : MediaQuery.of(context).size.width * 0.2,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 8.0),
-                            child: Image.asset(
-                              "assets/imgs/gratitude.png",
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 8.0),
+                              child: Image.asset(
+                                "assets/imgs/gratitude.png",
+                                height: MediaQuery.of(context).orientation ==
+                                        Orientation.portrait
+                                    ? MediaQuery.of(context).size.height * 0.2
+                                    : MediaQuery.of(context).size.height * 0.3,
+                              ),
+                            ),
+                            Container(
+                              /// satisfied container
                               height: MediaQuery.of(context).orientation ==
                                       Orientation.portrait
-                                  ? MediaQuery.of(context).size.height * 0.2
-                                  : MediaQuery.of(context).size.height * 0.3,
-                            ),
-                          ),
-                          Container(
-                            /// satisfied container
-                            height: MediaQuery.of(context).orientation ==
-                                    Orientation.portrait
-                                ? MediaQuery.of(context).size.height * 0.3 * 0.2
-                                : MediaQuery.of(context).size.height *
-                                    0.5 *
-                                    0.2,
-                            width: MediaQuery.of(context).orientation ==
-                                    Orientation.portrait
-                                ? MediaQuery.of(context).size.width * 0.4
-                                : MediaQuery.of(context).size.width * 0.4,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40),
-                            ),
-                            child: ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll(
-                                        Theme.of(context).splashColor)),
-                                onPressed: () {
-                                  Navigator.pop(context);
+                                  ? MediaQuery.of(context).size.height *
+                                      0.3 *
+                                      0.2
+                                  : MediaQuery.of(context).size.height *
+                                      0.5 *
+                                      0.2,
+                              width: MediaQuery.of(context).orientation ==
+                                      Orientation.portrait
+                                  ? MediaQuery.of(context).size.width * 0.4
+                                  : MediaQuery.of(context).size.width * 0.4,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(40),
+                              ),
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll(
+                                          Theme.of(context).splashColor)),
+                                  onPressed: () {
+                                    Navigator.pop(context);
 
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (c) => tasabeeh(
-                                                langSetter: setLang,
-                                                darkModeSetter: darkModeSetter,
-                                              )));
-                                },
-                                child: Text(
-                                  HomePage.languageChoice == false
-                                      ? "سبح الله"
-                                      : "Praise Allah",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: HomePage.languageChoice == true
-                                          ? 14 *
-                                              MediaQuery.textScaleFactorOf(
-                                                  context)
-                                          : 22 *
-                                              MediaQuery.textScaleFactorOf(
-                                                  context),
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'DG-DIGI'),
-                                )),
-                          )
-                        ],
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (c) => tasabeeh(
+                                                  langSetter: setLang,
+                                                  darkModeSetter:
+                                                      darkModeSetter,
+                                                )));
+                                  },
+                                  child: Text(
+                                    HomePage.languageChoice == false
+                                        ? "سبح الله"
+                                        : "Praise Allah",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: HomePage.languageChoice ==
+                                                true
+                                            ? 14 *
+                                                MediaQuery.textScaleFactorOf(
+                                                    context)
+                                            : 22 *
+                                                MediaQuery.textScaleFactorOf(
+                                                    context),
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'DG-DIGI'),
+                                  )),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     Container(
@@ -442,72 +441,78 @@ Future openDialog(
                               Orientation.portrait
                           ? MediaQuery.of(context).size.width * 0.4
                           : MediaQuery.of(context).size.width * 0.2,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 8.0),
-                            child: Image.asset(
-                              "assets/imgs/Sadness.png",
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 8.0),
+                              child: Image.asset(
+                                "assets/imgs/Sadness.png",
+                                height: MediaQuery.of(context).orientation ==
+                                        Orientation.portrait
+                                    ? MediaQuery.of(context).size.height * 0.2
+                                    : MediaQuery.of(context).size.height * 0.3,
+                              ),
+                            ),
+                            Container(
+                              /// anixeity button
                               height: MediaQuery.of(context).orientation ==
                                       Orientation.portrait
-                                  ? MediaQuery.of(context).size.height * 0.2
-                                  : MediaQuery.of(context).size.height * 0.3,
-                            ),
-                          ),
-                          Container(
-                            /// anixeity button
-                            height: MediaQuery.of(context).orientation ==
-                                    Orientation.portrait
-                                ? MediaQuery.of(context).size.height * 0.3 * 0.2
-                                : MediaQuery.of(context).size.height *
-                                    0.5 *
-                                    0.2,
-                            width: MediaQuery.of(context).orientation ==
-                                    Orientation.portrait
-                                ? MediaQuery.of(context).size.width * 0.4
-                                : MediaQuery.of(context).size.width * 0.4,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40),
-                            ),
-                            child: ElevatedButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll(
-                                        Theme.of(context).splashColor)),
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (c) => ad3ya(
-                                              darkMode: darkMode,
-                                              setLang: setLang,
-                                              darkModeSetter: darkModeSetter,
-                                              choice: HomePage.languageChoice ==
-                                                      false
-                                                  ? 10
-                                                  : 19,
-                                              languageSelected:
-                                                  HomePage.languageChoice)));
-                                },
-                                child: Text(
-                                  HomePage.languageChoice == false
-                                      ? "دعاء الحزن"
-                                      : "Anxiety\nSupplication",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: HomePage.languageChoice == true
-                                          ? 12 *
-                                              MediaQuery.textScaleFactorOf(
-                                                  context)
-                                          : 22 *
-                                              MediaQuery.textScaleFactorOf(
-                                                  context),
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'DG-DIGI'),
-                                )),
-                          )
-                        ],
+                                  ? MediaQuery.of(context).size.height *
+                                      0.3 *
+                                      0.2
+                                  : MediaQuery.of(context).size.height *
+                                      0.5 *
+                                      0.2,
+                              width: MediaQuery.of(context).orientation ==
+                                      Orientation.portrait
+                                  ? MediaQuery.of(context).size.width * 0.4
+                                  : MediaQuery.of(context).size.width * 0.4,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(40),
+                              ),
+                              child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll(
+                                          Theme.of(context).splashColor)),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (c) => ad3ya(
+                                                darkMode: darkMode,
+                                                setLang: setLang,
+                                                darkModeSetter: darkModeSetter,
+                                                choice:
+                                                    HomePage.languageChoice ==
+                                                            false
+                                                        ? 10
+                                                        : 19,
+                                                languageSelected:
+                                                    HomePage.languageChoice)));
+                                  },
+                                  child: Text(
+                                    HomePage.languageChoice == false
+                                        ? "دعاء الحزن"
+                                        : "Anxiety\nSupplication",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: HomePage.languageChoice ==
+                                                true
+                                            ? 12 *
+                                                MediaQuery.textScaleFactorOf(
+                                                    context)
+                                            : 22 *
+                                                MediaQuery.textScaleFactorOf(
+                                                    context),
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'DG-DIGI'),
+                                  )),
+                            )
+                          ],
+                        ),
                       ),
                     )
                   ],
