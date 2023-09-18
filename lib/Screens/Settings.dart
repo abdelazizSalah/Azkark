@@ -1,3 +1,4 @@
+import 'package:azkark/Screens/privacy_and_policy.dart';
 import 'package:azkark/Widgets/CustomAppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -72,7 +73,6 @@ class _SettingsState extends State<Settings> {
     return Scaffold(
       appBar: appBarVal,
       body: Container(
-        /// Main Container
         padding: EdgeInsets.all(10),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height -
@@ -84,83 +84,94 @@ class _SettingsState extends State<Settings> {
           /// Column Parent Container
           height: MediaQuery.of(context).size.height,
           child: LayoutBuilder(builder: (context, constrains) {
-            return Column(children: [
-              Container(
-                /// Night Mode Container
-                height: (devOrientation == Orientation.landscape)
-                    ? constrains.maxHeight * 0.25
-                    : constrains.maxHeight * 0.2,
-                child: Card(
-                    shadowColor: Theme.of(context).splashColor,
-                    elevation: 10,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: HomePage.languageChoice == true
-                          ? NightModeWidgets.toList()
-                          : NightModeWidgets.reversed.toList(),
-                    )),
-              ),
-              Container(
-                /// Notifications Container
-                height: (devOrientation == Orientation.landscape)
-                    ? constrains.maxHeight * 0.5
-                    : constrains.maxHeight * 0.3,
-                child: Card(
-                    shadowColor: Theme.of(context).splashColor,
-                    elevation: 10,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text(
-                          HomePage.languageChoice == false
-                              ? "تكرار  التنبيهات"
-                              : "Notification Frequency:",
-                          style: Theme.of(context).textTheme.displayLarge,
-                        ),
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              ElevatedButton(
-                                onPressed: () {
-                                  HomePage.freq = 1;
-                                  final snackBar = SnackBar(
-                                    content:  Directionality(
-                                        textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
+            return SingleChildScrollView(
+              child: Column(children: [
+                SizedBox(
+                  /// Night Mode const Container
+                  height: (devOrientation == Orientation.landscape)
+                      ? constrains.maxHeight * 0.25
+                      : constrains.maxHeight * 0.2,
+                  child: Card(
+                      shadowColor: Theme.of(context).splashColor,
+                      elevation: 10,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: HomePage.languageChoice == true
+                            ? NightModeWidgets.toList()
+                            : NightModeWidgets.reversed.toList(),
+                      )),
+                ),
+                SizedBox(
+                  /// Notifications const Container
+                  height: (devOrientation == Orientation.landscape)
+                      ? constrains.maxHeight * 0.5
+                      : constrains.maxHeight * 0.3,
+                  child: Card(
+                      shadowColor: Theme.of(context).splashColor,
+                      elevation: 10,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(
+                            HomePage.languageChoice == false
+                                ? "تكرار  التنبيهات"
+                                : "Notification Frequency:",
+                            style: Theme.of(context).textTheme.displayLarge,
+                          ),
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                ElevatedButton(
+                                  onPressed: () {
+                                    HomePage.freq = 1;
+                                    final snackBar = SnackBar(
+                                      content: Directionality(
+                                          textDirection:
+                                              HomePage.languageChoice == false
+                                                  ? TextDirection.rtl
+                                                  : TextDirection.ltr,
+                                          child: Text(HomePage.languageChoice ==
+                                                  false
+                                              ? "اصبحت باستمرار"
+                                              : "Notification frequency is high now")),
+                                    );
 
-                                        child: Text(HomePage.languageChoice==false?"اصبحت باستمرار":"Notification frequency is high now")),
-
-                                  );
-
-
-                                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
-
-                                },
-                                child: Text(
-                                  HomePage.languageChoice == false
-                                      ? "باستمرار"
-                                      : "High",
-                                  style:
-                                      Theme.of(context).textTheme.displayMedium,
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(snackBar);
+                                  },
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll(
+                                          Theme.of(context).splashColor)),
+                                  child: Text(
+                                    HomePage.languageChoice == false
+                                        ? "باستمرار"
+                                        : "High",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displayMedium,
+                                  ),
                                 ),
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll(
-                                        Theme.of(context).splashColor)),
-                              ),
-                              ElevatedButton(
+                                ElevatedButton(
                                   onPressed: () {
                                     HomePage.freq = 3;
                                     final snackBar = SnackBar(
-                                      content:  Directionality(
-                                          textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
-
-                                          child: Text(HomePage.languageChoice==false?"اصبحت متوسطة":"Notification frequency is medium now")),
-
+                                      content: Directionality(
+                                          textDirection:
+                                              HomePage.languageChoice == false
+                                                  ? TextDirection.rtl
+                                                  : TextDirection.ltr,
+                                          child: Text(HomePage.languageChoice ==
+                                                  false
+                                              ? "اصبحت متوسطة"
+                                              : "Notification frequency is medium now")),
                                     );
 
-
-                                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(snackBar);
                                   },
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll(
+                                          Theme.of(context).splashColor)),
                                   child: Text(
                                     HomePage.languageChoice == false
                                         ? "متوسطة"
@@ -169,23 +180,28 @@ class _SettingsState extends State<Settings> {
                                         .textTheme
                                         .displayMedium,
                                   ),
-                                  style: ButtonStyle(
-                                      backgroundColor: MaterialStatePropertyAll(
-                                          Theme.of(context).splashColor))),
-                              ElevatedButton(
+                                ),
+                                ElevatedButton(
                                   onPressed: () {
                                     HomePage.freq = 5;
                                     final snackBar = SnackBar(
-                                      content:  Directionality(
-                                          textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
-                                          child: Text(HomePage.languageChoice==false?"اصبحت قليلة":"Notification frequency is low now")),
-
+                                      content: Directionality(
+                                          textDirection:
+                                              HomePage.languageChoice == false
+                                                  ? TextDirection.rtl
+                                                  : TextDirection.ltr,
+                                          child: Text(HomePage.languageChoice ==
+                                                  false
+                                              ? "اصبحت قليلة"
+                                              : "Notification frequency is low now")),
                                     );
 
-
-                                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(snackBar);
                                   },
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll(
+                                          Theme.of(context).splashColor)),
                                   child: Text(
                                     HomePage.languageChoice == false
                                         ? "قليلة"
@@ -194,34 +210,53 @@ class _SettingsState extends State<Settings> {
                                         .textTheme
                                         .displayMedium,
                                   ),
-                                  style: ButtonStyle(
-                                      backgroundColor: MaterialStatePropertyAll(
-                                          Theme.of(context).splashColor))),
-                            ]),
-                      ],
-                    )),
-              ),
-              Container(
-                /// Lang Container
-                height: (devOrientation == Orientation.landscape)
-                    ? constrains.maxHeight * 0.25
-                    : constrains.maxHeight * 0.2,
-                child: Card(
-                  shadowColor: Theme.of(context).splashColor,
-                  elevation: 10,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: HomePage.languageChoice == true
-                        ? LangWidgets.toList()
-                        : LangWidgets.reversed.toList(),
+                                ),
+                              ]),
+                        ],
+                      )),
+                ),
+                SizedBox(
+                  /// Lang const Container
+                  height: (devOrientation == Orientation.landscape)
+                      ? constrains.maxHeight * 0.25
+                      : constrains.maxHeight * 0.2,
+                  child: Card(
+                    shadowColor: Theme.of(context).splashColor,
+                    elevation: 10,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: HomePage.languageChoice == true
+                          ? LangWidgets.toList()
+                          : LangWidgets.reversed.toList(),
+                    ),
                   ),
                 ),
-              ),
-            ]);
+                // Privacy const Container
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: Card(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                            // push the privcay screen
+                            MaterialPageRoute(
+                                builder: (context) => const PrivacyScreen()));
+                      },
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll(
+                              Theme.of(context).splashColor)),
+                      child: const Text(
+                        'Privacy & Policies',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    ),
+                  ),
+                )
+              ]),
+            );
           }),
         ),
       ),
-
     );
   }
 }
