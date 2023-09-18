@@ -9,14 +9,17 @@ class PrivacyScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(),
       body: SingleChildScrollView(
-          child: Card(
+          child: Container(
         color: Theme.of(context).canvasColor,
-        child: const Text(
-          '''Privacy & Policy for Azkarak
-
+        padding: const EdgeInsets.all(20),
+        child: const Card(
+          child: Padding(
+            padding: EdgeInsets.all(20),
+            child: Text(
+              '''Privacy & Policy for Azkarak
+            
 One of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Azkarak and how we use it.
 If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
-Log Files
 
 Azkarak does not collect any user data or informations, it is a simple static application.
 
@@ -31,11 +34,13 @@ Another part of our priority is adding protection for children while using the i
 Azkarak does not knowingly collect any Personal Identifiable Information from any person.
 
 By using our application, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.''',
-          style: TextStyle(
-            color: Colors.black,
-            // shadows: [],
+              style: TextStyle(
+                color: Colors.black,
+                // shadows: [],
+              ),
+              textAlign: TextAlign.center,
+            ),
           ),
-          textAlign: TextAlign.center,
         ),
       )),
     );
