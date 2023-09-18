@@ -1,5 +1,5 @@
 import './Screens/HomePage.dart';
-import './controllers/scheduler.dart';
+// import './controllers/scheduler.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -7,8 +7,8 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   /// calling the activators
-  fridayZekrActivate();
-  DailyZekrActivate();
+  // fridayZekrActivate();
+  // DailyZekrActivate();
   runApp(myApp());
 }
 
