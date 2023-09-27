@@ -315,6 +315,15 @@ void chooseOptioninDoa2Page(
               languageSelected: HomePage.languageChoice)));
 }
 
+Future na3yDialog(
+  BuildContext context,
+) =>
+    showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+              title: FittedBox(child: Image.asset('assets/imgs/3amy.jpg')),
+            ));
+
 Future openDialog(
         BuildContext context, bool darkMode, darkModeSetter, setLang) =>
     showDialog(
@@ -334,9 +343,9 @@ Future openDialog(
                             : 38,
                         color: Theme.of(context).splashColor)),
               )),
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0))),
-              insetPadding: EdgeInsets.symmetric(horizontal: 8),
+              insetPadding: const EdgeInsets.symmetric(horizontal: 8),
               content: Container(
                 /// the main
                 height:
@@ -347,13 +356,13 @@ Future openDialog(
                     MediaQuery.of(context).orientation == Orientation.portrait
                         ? MediaQuery.of(context).size.width
                         : MediaQuery.of(context).size.width * 0.5,
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
                       /// smile Face container
-                      padding: EdgeInsets.symmetric(horizontal: 8),
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
                       height: MediaQuery.of(context).orientation ==
                               Orientation.portrait
                           ? MediaQuery.of(context).size.height * 0.3

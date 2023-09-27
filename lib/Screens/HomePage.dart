@@ -43,8 +43,9 @@ class _HomePageState extends State<HomePage> {
             splashColor: dkWidget == false
                 ? const Color.fromARGB(255, 17, 133, 66)
                 : const Color.fromARGB(255, 52, 83, 132),
-            dividerColor:
-                dkWidget == false ? themeOF.backgroundColor : themeOF.backgroundColor,
+            dividerColor: dkWidget == false
+                ? themeOF.backgroundColor
+                : themeOF.backgroundColor,
             hoverColor: dkWidget == false
                 ? const Color.fromARGB(255, 118, 164, 120)
                 : const Color.fromARGB(255, 104, 151, 192),
@@ -137,6 +138,7 @@ class MainPage extends StatelessWidget {
     final mediaQuery = MediaQuery.of(context);
     final themeOF = Theme.of(context);
     final Orientation devOrientation = mediaQuery.orientation;
+
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: Container(
