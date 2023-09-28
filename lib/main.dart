@@ -141,33 +141,36 @@ class Na3yWidget extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
                     flex: 1,
-                    child: Text(
-                      'يا ايتها النفس المطمئنة ارجعي الى ربك راضية مرضية فادخلي في عبادي وادخلي جنتي',
-                      style: TextStyle(
-                        fontSize: textScaleFactor * 28,
-                        fontFamily: 'Amiri',
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        'يا ايتها النفس المطمئنة ارجعي الى ربك راضية مرضية فادخلي في عبادي وادخلي جنتي',
+                        style: TextStyle(
+                          fontSize: textScaleFactor * 21,
+                          fontFamily: 'Amiri',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
                     ),
                   ),
                   Expanded(
                       flex: 3,
                       child: Image.asset(
                         './assets/imgs/abdallah.jpg',
-                        fit: BoxFit.fill,
+                        fit: BoxFit.fitHeight,
                       )),
                   Expanded(
                     flex: 1,
                     child: Text(
                       'الرجاء الدعاء للحاج عبدالله و لزوجته بالرحمة و المغفرة و قراءة الفاتحه علي روحهما',
                       style: TextStyle(
-                        fontSize: textScaleFactor * 26,
+                        fontSize: textScaleFactor * 21,
                         fontFamily: 'Amiri',
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
