@@ -128,8 +128,6 @@ class Na3yWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
-    final themeOF = Theme.of(context);
-    final Orientation devOrientation = mediaQuery.orientation;
     final textScaleFactor = MediaQuery.textScaleFactorOf(context);
     return Scaffold(
       appBar: CustomAppBar(),
