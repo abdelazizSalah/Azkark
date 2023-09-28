@@ -35,6 +35,10 @@ class _Na3yScreenState extends State<Na3yScreen> {
     /// used to scale the fonts depending on the user settings
     final contentScaleFactor = MediaQuery.textScaleFactorOf(context);
     return MaterialApp(
+      routes: {
+        '/home': (context) => HomePage(),
+      },
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           canvasColor: dkWidget == true
               ? const Color.fromARGB(255, 127, 167, 200)
@@ -126,13 +130,80 @@ class Na3yWidget extends StatelessWidget {
     final mediaQuery = MediaQuery.of(context);
     final themeOF = Theme.of(context);
     final Orientation devOrientation = mediaQuery.orientation;
-
+    final textScaleFactor = MediaQuery.textScaleFactorOf(context);
     return Scaffold(
       appBar: CustomAppBar(),
       body: Center(
         child: SingleChildScrollView(
-          child: Column(
-            children: [Image.asset('./assets/imgs/abdallah.jpg')],
+          child: SizedBox(
+            height: mediaQuery.size.height * 0.8,
+            child: Padding(
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Text(
+                      'يا ايتها النفس المطمئنة ارجعي الى ربك راضية مرضية فادخلي في عبادي وادخلي جنتي',
+                      style: TextStyle(
+                        fontSize: textScaleFactor * 28,
+                        fontFamily: 'Amiri',
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Expanded(
+                      flex: 3,
+                      child: Image.asset(
+                        './assets/imgs/abdallah.jpg',
+                        fit: BoxFit.fill,
+                      )),
+                  Expanded(
+                    flex: 1,
+                    child: Text(
+                      'الرجاء الدعاء للحاج عبدالله و لزوجته بالرحمة و المغفرة و قراءة الفاتحه علي روحهما',
+                      style: TextStyle(
+                        fontSize: textScaleFactor * 26,
+                        fontFamily: 'Amiri',
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  ElevatedButton(
+                    // color the button as green
+                    style: ElevatedButton.styleFrom(
+                      primary: Color.fromARGB(255, 0, 110, 6),
+                      onPrimary: Colors.white,
+                      shadowColor: const Color.fromARGB(255, 2, 202, 105),
+                      elevation: 5,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 20),
+                      shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(30))),
+                    ),
+
+                    child: Text(
+                      'انتقل الي الاذكار',
+                      style: TextStyle(
+                        fontSize: 22 * textScaleFactor,
+                        fontFamily: 'Amiri',
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('/home');
+                    },
+                  )
+                ],
+              ),
+            ),
           ),
         ),
       ),
