@@ -100,7 +100,7 @@ class _SettingsState extends State<Settings> {
                           : NightModeWidgets.reversed.toList(),
                     )),
               ),
-              Container(
+              SizedBox(
                 /// Notifications Container
                 height: (devOrientation == Orientation.landscape)
                     ? constrains.maxHeight * 0.5
@@ -120,47 +120,64 @@ class _SettingsState extends State<Settings> {
                         Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              ElevatedButton(
-                                onPressed: () {
-                                  HomePage.freq = 1;
-                                  final snackBar = SnackBar(
-                                    content:  Directionality(
-                                        textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
+                              Expanded(
+                                flex: HomePage.languageChoice ==
+                                                  false ? 3 : 2,
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    HomePage.freq = 1;
+                                    final snackBar = SnackBar(
+                                      content: Directionality(
+                                          textDirection:
+                                              HomePage.languageChoice == false
+                                                  ? TextDirection.rtl
+                                                  : TextDirection.ltr,
+                                          child: Text(HomePage.languageChoice ==
+                                                  false
+                                              ? "اصبحت باستمرار"
+                                              : "Notification frequency is high now")),
+                                    );
 
-                                        child: Text(HomePage.languageChoice==false?"اصبحت باستمرار":"Notification frequency is high now")),
-
-                                  );
-
-
-                                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
-
-                                },
-                                child: Text(
-                                  HomePage.languageChoice == false
-                                      ? "باستمرار"
-                                      : "High",
-                                  style:
-                                      Theme.of(context).textTheme.displayMedium,
-                                ),
-                                style: ButtonStyle(
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(snackBar);
+                                  },
+                                  style: ButtonStyle(
                                     backgroundColor: MaterialStatePropertyAll(
-                                        Theme.of(context).splashColor)),
+                                        Theme.of(context).splashColor),
+                                  ),
+                                  child: Text(
+                                    HomePage.languageChoice == false
+                                        ? "باستمرار"
+                                        : "High",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displayMedium,
+                                  ),
+                                ),
                               ),
-                              ElevatedButton(
+                              Expanded(
+                                flex: 3,
+                                child: ElevatedButton(
                                   onPressed: () {
                                     HomePage.freq = 3;
                                     final snackBar = SnackBar(
-                                      content:  Directionality(
-                                          textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
-
-                                          child: Text(HomePage.languageChoice==false?"اصبحت متوسطة":"Notification frequency is medium now")),
-
+                                      content: Directionality(
+                                          textDirection:
+                                              HomePage.languageChoice == false
+                                                  ? TextDirection.rtl
+                                                  : TextDirection.ltr,
+                                          child: Text(HomePage.languageChoice ==
+                                                  false
+                                              ? "اصبحت متوسطة"
+                                              : "Notification frequency is medium now")),
                                     );
 
-
-                                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(snackBar);
                                   },
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll(
+                                          Theme.of(context).splashColor)),
                                   child: Text(
                                     HomePage.languageChoice == false
                                         ? "متوسطة"
@@ -169,23 +186,31 @@ class _SettingsState extends State<Settings> {
                                         .textTheme
                                         .displayMedium,
                                   ),
-                                  style: ButtonStyle(
-                                      backgroundColor: MaterialStatePropertyAll(
-                                          Theme.of(context).splashColor))),
-                              ElevatedButton(
+                                ),
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: ElevatedButton(
                                   onPressed: () {
                                     HomePage.freq = 5;
                                     final snackBar = SnackBar(
-                                      content:  Directionality(
-                                          textDirection: HomePage.languageChoice==false?TextDirection.rtl:TextDirection.ltr,
-                                          child: Text(HomePage.languageChoice==false?"اصبحت قليلة":"Notification frequency is low now")),
-
+                                      content: Directionality(
+                                          textDirection:
+                                              HomePage.languageChoice == false
+                                                  ? TextDirection.rtl
+                                                  : TextDirection.ltr,
+                                          child: Text(HomePage.languageChoice ==
+                                                  false
+                                              ? "اصبحت قليلة"
+                                              : "Notification frequency is low now")),
                                     );
 
-
-                                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(snackBar);
                                   },
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll(
+                                          Theme.of(context).splashColor)),
                                   child: Text(
                                     HomePage.languageChoice == false
                                         ? "قليلة"
@@ -194,14 +219,13 @@ class _SettingsState extends State<Settings> {
                                         .textTheme
                                         .displayMedium,
                                   ),
-                                  style: ButtonStyle(
-                                      backgroundColor: MaterialStatePropertyAll(
-                                          Theme.of(context).splashColor))),
+                                ),
+                              ),
                             ]),
                       ],
                     )),
               ),
-              Container(
+              SizedBox(
                 /// Lang Container
                 height: (devOrientation == Orientation.landscape)
                     ? constrains.maxHeight * 0.25
@@ -221,7 +245,6 @@ class _SettingsState extends State<Settings> {
           }),
         ),
       ),
-
     );
   }
 }

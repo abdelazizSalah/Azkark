@@ -30,14 +30,15 @@ class Zekr extends StatelessWidget {
           color: theme.hintColor,
           child: Card(
             color: theme.primaryColor,
+            // color: Colors.amber,
             elevation: 10,
-            shadowColor: theme.backgroundColor,
+            shadowColor: theme.highlightColor,
             child: Container(
               /// Main Container
               decoration: BoxDecoration(
-                  color: theme.errorColor,
+                  color: theme.disabledColor,
                   border: Border.all(
-                      width: 2.5, color: theme.backgroundColor),
+                      width: 2.5, color: theme.highlightColor),
                   borderRadius: BorderRadius.circular(50)),
               child: Column(
                 children: [
@@ -52,7 +53,7 @@ class Zekr extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: theme.focusColor,
                         border: Border.all(
-                            width: 1.0, color: theme.backgroundColor)),
+                            width: 1.0, color: theme.highlightColor)),
                     margin: const EdgeInsets.symmetric(horizontal: 30),
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                     child: Text(
@@ -104,6 +105,7 @@ class Zekr extends StatelessWidget {
                           /// Counter container
                           counter.toString(),
                           style: const TextStyle(
+                            color: Colors.white,
                               fontFamily: 'DS-Digital',
                               height: 1,
                               fontSize: 50,
@@ -123,7 +125,7 @@ class Zekr extends StatelessWidget {
                       child: IconButton(
                         icon: Icon(
                           Icons.restart_alt,
-                          color: theme.backgroundColor,
+                          color: theme.highlightColor,
                         ),
                         onPressed: resetCounter,
                       ),

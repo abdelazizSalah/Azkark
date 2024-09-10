@@ -5,6 +5,7 @@ import 'package:azkark/controllers/service.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  static const routeName = '/homePage'; 
   static bool darkMode = false;
   static int freq = 1;
 
@@ -43,8 +44,7 @@ class _HomePageState extends State<HomePage> {
             splashColor: dkWidget == false
                 ? const Color.fromARGB(255, 17, 133, 66)
                 : const Color.fromARGB(255, 52, 83, 132),
-            dividerColor:
-                dkWidget == false ? themeOF.backgroundColor : themeOF.backgroundColor,
+            dividerColor: themeOF.highlightColor,
             hoverColor: dkWidget == false
                 ? const Color.fromARGB(255, 118, 164, 120)
                 : const Color.fromARGB(255, 104, 151, 192),
@@ -56,10 +56,14 @@ class _HomePageState extends State<HomePage> {
             hintColor: dkWidget == false
                 ? Colors.green[500]
                 : const Color.fromARGB(255, 106, 142, 179),
-            backgroundColor: const Color.fromARGB(255, 220, 171, 27),
-            errorColor: dkWidget == false
+            // backgroundColor: 
+            highlightColor: const Color.fromARGB(255, 220, 171, 27),
+            disabledColor: dkWidget == false
                 ? Colors.white
                 : const Color.fromARGB(255, 251, 217, 167),
+            // errorColor: dkWidget == false
+            //     ? Colors.white
+            //     : const Color.fromARGB(255, 251, 217, 167),
             buttonTheme:
                 ButtonThemeData(buttonColor: Color.fromARGB(255, 220, 171, 27)),
             fontFamily: 'Gulzar',
@@ -84,34 +88,39 @@ class _HomePageState extends State<HomePage> {
                     fontSize: HomePage.languageChoice
                         ? 23 * contentScaleFactor
                         : 27 * contentScaleFactor,
-                    shadows: [
-                      Shadow(
-                          blurRadius: dkWidget == true ? 50 : 30,
-                          offset: const Offset(5, 5),
-                          color: Colors.black)
-                    ]),
+                    // shadows: [
+                    //   Shadow(
+                    //       blurRadius: dkWidget == true ? 20 : 30,
+                    //       offset: const Offset(5, 5),
+                    //       color: Colors.black)
+                    // ]
+                    ),
                 displayMedium: TextStyle(
                     color: Colors.white,
-                    fontSize: 22 * contentScaleFactor,
+                    fontSize: 16 * contentScaleFactor,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Amiri'),
                 bodySmall: TextStyle(
-                    fontSize: 28 * contentScaleFactor,
+                    fontSize: 21 * contentScaleFactor,
                     color: Colors.black,
-                    fontFamily: 'DS-DIGI'),
+                    // wordSpacing: 2,
+                    height: 2,
+                    // fontFamily: 'DS-DIGI'
+                    fontFamily: 'Amiri'
+                    ),
                 displayLarge: TextStyle(
                     fontFamily: 'Amiri',
                     fontSize: 25 * contentScaleFactor,
                     fontWeight: FontWeight.bold),
                 bodyMedium: TextStyle(
-                    fontSize: 30 * contentScaleFactor,
+                    fontSize: 24 * contentScaleFactor,
                     color: Colors.white,
                     fontFamily: 'Amiri',
-                    shadows: [
-                      const Shadow(
+                    shadows: const  [
+                       Shadow(
                           blurRadius: 40,
                           color: Colors.amberAccent,
-                          offset: const Offset(20, 6))
+                          offset:  Offset(20, 6))
                     ]))),
         debugShowCheckedModeBanner: false,
         home: MainPage(

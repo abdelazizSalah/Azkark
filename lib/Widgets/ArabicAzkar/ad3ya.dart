@@ -60,7 +60,8 @@ class ad3ya extends StatelessWidget {
     UponenteringthemosqueEn,
     UponleavingtheMosqueEn,
     WhenprostratingduetorecitationoftheQuranEn,
-    ForanxietyandsorrowEn
+    ForanxietyandsorrowEn,
+    TravelingDuaaAr,
   ];
   void duaaDecider(int choice) {
     addAd3yas(ad3yaList[choice]);

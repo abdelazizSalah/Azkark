@@ -94,8 +94,9 @@ class ChoicePage extends StatelessWidget {
                 children: HomePage.languageChoice == false
                     ? (arabicChoices.map((myMap) {
                         return Container(
+                          height: 60,
                           margin:
-                              EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                              const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                           child: ElevatedButton(
                             style: ButtonStyle(
                                 elevation: MaterialStateProperty.all(10),
@@ -115,7 +116,7 @@ class ChoicePage extends StatelessWidget {
                     : (englishChoices.map((myMap) {
                         return Container(
                           margin:
-                              EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                             const  EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                           child: ElevatedButton(
                             style: ButtonStyle(
                                 elevation: MaterialStateProperty.all(10),

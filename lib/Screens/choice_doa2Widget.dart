@@ -35,17 +35,19 @@ class choice_doa2Widget extends StatelessWidget {
                   context, choice, darkMode, darkModeSetter, langSetter);
             },
             child: Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               alignment: Alignment.center,
-              child: Text(
-                word,
-                style: TextStyle(fontSize: 28, color: Colors.white),
-              ),
+             
               decoration: BoxDecoration(
                   color: HomePage.languageChoice == false
                       ? Colors.black.withOpacity(0.4)
                       : Colors.black.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(15)),
+                   child:  Text(
+                word,
+                style:const TextStyle(fontSize: 28, color: Colors.white),
+              ),
             ),
           )
         ],

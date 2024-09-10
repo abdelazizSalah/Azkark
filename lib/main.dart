@@ -7,8 +7,8 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   /// calling the activators
-  fridayZekrActivate();
-  DailyZekrActivate();
+  // fridayZekrActivate();
+  // DailyZekrActivate();
   runApp(myApp());
 }
 

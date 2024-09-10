@@ -21,6 +21,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
           ? TextDirection.rtl
           : TextDirection.ltr,
       child: Drawer(
+        backgroundColor: Theme.of(context).hintColor.withAlpha(125),
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -41,6 +42,20 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       style: Theme.of(context).textTheme.titleLarge),
                 ),
               ),
+            ),
+            
+            ListTile(
+              title: Text(
+                  HomePage.languageChoice == false ?"الصفحة الرئيسية" : "Home page",
+                  style: Theme.of(context).textTheme.labelMedium),
+              onTap: () {
+                // Update the state of the app
+                setState(() {
+                  chooseOptioninHomePage(
+                      context, 4, 1, widget.setMode, widget.setLang);
+                });
+                // Then close the drawer
+              },
             ),
             ListTile(
               title: Text(

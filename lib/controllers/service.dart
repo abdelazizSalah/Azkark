@@ -24,63 +24,59 @@ import 'package:flutter/material.dart';
 num currentContextNumberInChoicePage = -1;
 void chooseOptioninHomePage(
     BuildContext c, num choice, num where, setMode, setLang) {
-
-
-  if(currentContextNumberInChoicePage==3){
+  if (currentContextNumberInChoicePage == 3) {
     currentContextNumberInChoicePage = choice;
 
-    if(choice==0) {
-          Navigator.pushAndRemoveUntil(c,
-              MaterialPageRoute(
-                  builder: (c) => ChoicePage(
+    if (choice == 0) {
+      Navigator.pushAndRemoveUntil(
+          c,
+          MaterialPageRoute(
+              builder: (c) => ChoicePage(
                     setLang: setLang,
                     setDarkMode: setMode,
-                  ))
-              ,   ModalRoute.withName('/')
-
-        );
-      }
-      else if(choice==1){
-          Navigator.pushAndRemoveUntil(c,
-              MaterialPageRoute(
-                  builder: (c) => Doa2ChoicePage(
+                  )),
+          ModalRoute.withName('/'));
+    } else if (choice == 1) {
+      Navigator.pushAndRemoveUntil(
+          c,
+          MaterialPageRoute(
+              builder: (c) => Doa2ChoicePage(
                     langSetter: setLang,
                     modeSetter: setMode,
-                  ))
-              ,   ModalRoute.withName('/')
-
-          );
-        }
-      else if(choice==2){
-          Navigator.pushAndRemoveUntil(c,
-              MaterialPageRoute(
-                  builder: (c) => tasabeeh(
+                  )),
+          ModalRoute.withName('/'));
+    } else if (choice == 2) {
+      Navigator.pushAndRemoveUntil(
+          c,
+          MaterialPageRoute(
+              builder: (c) => tasabeeh(
                     langSetter: setLang,
                     darkModeSetter: setMode,
-                  ))
-              ,   ModalRoute.withName('/')
-
-          );
-
-        }
-      else if(choice==3){
-          Navigator.pushAndRemoveUntil(c,
-              MaterialPageRoute(
-                  builder: (c) => Settings(
+                  )),
+          ModalRoute.withName('/'));
+    } else if (choice == 3) {
+      Navigator.pushAndRemoveUntil(
+          c,
+          MaterialPageRoute(
+              builder: (c) => Settings(
                     langSetter: setLang,
                     darkModeSetter: setMode,
-                  ))
-              ,   ModalRoute.withName('/')
-
-          );
-
-        }
-      return ;
+                  )),
+          ModalRoute.withName('/'));
+    } else { 
+      Navigator.pushAndRemoveUntil(
+          c,
+          MaterialPageRoute(
+              builder: (c) => HomePage(
+                  )),
+          ModalRoute.withName('/'));
+    }
+    return;
   }
   if ((choice == currentContextNumberInChoicePage && where == 1)) return;
   currentContextNumberInChoicePage = choice;
   if (choice == 0) {
-    if (where == 0)
+    if (where == 0) {
       Navigator.push(
           c,
           MaterialPageRoute(
@@ -88,7 +84,7 @@ void chooseOptioninHomePage(
                     setLang: setLang,
                     setDarkMode: setMode,
                   )));
-    else
+    } else {
       Navigator.pushReplacement(
           c,
           MaterialPageRoute(
@@ -96,8 +92,10 @@ void chooseOptioninHomePage(
                     setLang: setLang,
                     setDarkMode: setMode,
                   )));
+    }
+    
   } else if (choice == 1) {
-    if (where == 0)
+    if (where == 0) {
       Navigator.push(
           c,
           MaterialPageRoute(
@@ -105,7 +103,7 @@ void chooseOptioninHomePage(
                     langSetter: setLang,
                     modeSetter: setMode,
                   )));
-    else
+    } else {
       Navigator.pushReplacement(
           c,
           MaterialPageRoute(
@@ -113,8 +111,9 @@ void chooseOptioninHomePage(
                     langSetter: setLang,
                     modeSetter: setMode,
                   )));
+    }
   } else if (choice == 2) {
-    if (where == 0)
+    if (where == 0) {
       Navigator.push(
           c,
           MaterialPageRoute(
@@ -122,7 +121,7 @@ void chooseOptioninHomePage(
                     langSetter: setLang,
                     darkModeSetter: setMode,
                   )));
-    else
+    } else {
       Navigator.pushReplacement(
           c,
           MaterialPageRoute(
@@ -130,8 +129,9 @@ void chooseOptioninHomePage(
                     langSetter: setLang,
                     darkModeSetter: setMode,
                   )));
+    }
   } else if (choice == 3) {
-    if (where == 0)
+    if (where == 0) {
       Navigator.push(
           c,
           MaterialPageRoute(
@@ -139,23 +139,35 @@ void chooseOptioninHomePage(
                     langSetter: setLang,
                     darkModeSetter: setMode,
                   )));
-    else
+    } else {
       Navigator.pushReplacement(
           c,
           MaterialPageRoute(
               builder: (c) =>
                   Settings(langSetter: setLang, darkModeSetter: setMode)));
-  }
+    }
+  } else { 
+      Navigator.pushAndRemoveUntil(
+          c,
+          MaterialPageRoute(
+              builder: (c) => HomePage(
+                  )),
+          ModalRoute.withName('/'));
+    }
 }
 
-void chooseOptionInAzkar(BuildContext c, num choice,int where, setMode, setLang,
-   ) {
+void chooseOptionInAzkar(
+  BuildContext c,
+  num choice,
+  int where,
+  setMode,
+  setLang,
+) {
   // TODO : Fixahaa ya lotfyyy
-
 
   // if (choice == currentContextNumberInChoicePage && where == 1) return;
   // currentContextNumberInChoicePage = choice;
-  currentContextNumberInChoicePage=3;
+  currentContextNumberInChoicePage = 3;
   if (!HomePage.languageChoice) {
     switch (choice) {
       case 1:

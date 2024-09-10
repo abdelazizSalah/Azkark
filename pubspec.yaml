@@ -33,7 +33,7 @@ dependencies:
   google_fonts: ^2.1.0
   cron: ^0.5.0
   flutter_emoji: ">= 2.0.0"
-  awesome_notifications: ^0.6.21
+  # awesome_notifications: ^0.6.21
   flutter:
     sdk: flutter
 
@@ -77,32 +77,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/imgs/azkarimg.jpeg
-    - assets/imgs/ad3ya.jpg
-    - assets/imgs/ad3ya5tmQuran.jpg
-    - assets/imgs/ad3yaGom3Eldoaa.jpg
-    - assets/imgs/ad3yayoumarfa.jpg
-    - assets/imgs/doa2nabwy.jpg
-    - assets/imgs/setting.png
-    - assets/imgs/tasbeehchoice.jpg
-    - assets/imgs/backad3ya.jpg
-    - assets/imgs/1.jpg
-    - assets/imgs/2.jpeg
-    - assets/imgs/3.jpg
-    - assets/imgs/4.png
-    - assets/imgs/4.jpg
-    - assets/imgs/6.jpg
-    - assets/imgs/7.jpg
-    - assets/imgs/8.jpg
-    - assets/imgs/9.jpg
-    - assets/imgs/10.jpg
-    - assets/imgs/11.jpg
-    - assets/imgs/Sadness.png
-    - assets/imgs/gratitude.png
-
-
-
-
+  
+    - assets/imgs/
 
 
     # - assets/imgs/a_dot_ham.jpeg
