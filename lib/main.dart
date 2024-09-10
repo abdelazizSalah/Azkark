@@ -47,8 +47,8 @@ class _Na3yScreenState extends State<Na3yScreen> {
               ? const Color.fromARGB(255, 17, 133, 66)
               : const Color.fromARGB(255, 52, 83, 132),
           dividerColor: dkWidget == false
-              ? themeOF.backgroundColor
-              : themeOF.backgroundColor,
+              ? themeOF.highlightColor
+              : themeOF.highlightColor,
           hoverColor: dkWidget == false
               ? const Color.fromARGB(255, 118, 164, 120)
               : const Color.fromARGB(255, 104, 151, 192),
@@ -60,8 +60,8 @@ class _Na3yScreenState extends State<Na3yScreen> {
           hintColor: dkWidget == false
               ? Colors.green[500]
               : const Color.fromARGB(255, 106, 142, 179),
-          backgroundColor: const Color.fromARGB(255, 220, 171, 27),
-          errorColor: dkWidget == false
+          highlightColor: const Color.fromARGB(255, 220, 171, 27),
+          cardColor: dkWidget == false
               ? Colors.white
               : const Color.fromARGB(255, 251, 217, 167),
           buttonTheme:
@@ -179,8 +179,8 @@ class Na3yWidget extends StatelessWidget {
                   ElevatedButton(
                     // color the button as green
                     style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 0, 110, 6),
-                      onPrimary: Colors.white,
+                      // primary: Color.fromARGB(255, 0, 110, 6),
+                      // onPrimary: Colors.white,
                       shadowColor: const Color.fromARGB(255, 2, 202, 105),
                       elevation: 5,
                       padding: const EdgeInsets.symmetric(
