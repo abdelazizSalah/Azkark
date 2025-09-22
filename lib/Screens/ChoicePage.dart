@@ -44,7 +44,7 @@ class ChoicePage extends StatelessWidget {
       'number': 9,
     },
     {
-      'zekr': 'أذكار متفرقه',
+      'zekr': 'أدعية متفرقة',
       'number': 10,
     },
 

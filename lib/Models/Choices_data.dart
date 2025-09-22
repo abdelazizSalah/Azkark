@@ -80,6 +80,10 @@ Choice_item(
       "assets/imgs/9.jpg",
       "دعاء الحزن",
       10),
+  Choice_item(
+      "assets/imgs/do3a2_el_safar.png",
+      "دعاء السفر",
+    20),
 
 
 ];

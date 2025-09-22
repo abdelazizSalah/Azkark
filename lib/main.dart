@@ -17,7 +17,7 @@ void main() {
 class myApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Na3yScreen();
+    return HomePage();
   }
 }
 
