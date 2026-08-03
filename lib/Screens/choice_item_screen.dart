@@ -1,3 +1,4 @@
+import 'package:azkark/Widgets/ChoiceImageTile.dart';
 import 'package:azkark/controllers/service.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,7 @@ class choiceItemScreen extends StatelessWidget {
   final num choice;
   final toggleMode;
   final toggleLang;
+
   choiceItemScreen({
     required this.image,
     required this.toggleMode,
@@ -14,36 +16,15 @@ class choiceItemScreen extends StatelessWidget {
     required this.word,
     required this.choice,
   });
+
   @override
   Widget build(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
-    return Stack(
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(15),
-          child: Image.asset(
-            image,
-            height: mediaQuery.size.height,
-            fit: BoxFit.cover,
-          ),
-        ),
-        GestureDetector(
-          onTap: () {
-            chooseOptioninHomePage(context, choice, 0, toggleMode, toggleLang);
-          },
-          child: Container(
-            padding: const EdgeInsets.all(10),
-            alignment: Alignment.center,
-            child: Text(
-              word,
-              style: const TextStyle(fontSize: 27, color: Colors.white),
-            ),
-            decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.4),
-                borderRadius: BorderRadius.circular(15)),
-          ),
-        )
-      ],
+    return ChoiceImageTile(
+      image: image,
+      title: word,
+      onTap: () {
+        chooseOptioninHomePage(context, choice, 0, toggleMode, toggleLang);
+      },
     );
   }
 }

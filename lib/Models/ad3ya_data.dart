@@ -1,7 +1,9 @@
+List<String> do3a2ElKarbAr = [
+  'لا إله إلا الله العظيم الحليم، لا إله إلا الله رب العرش العظيم، لا إله إلا الله رب السماوات ورب الأرض ورب العرش الكريم.\n\nاللهم رحمتك أرجو فلا تكلني إلى نفسي طرفة عين، وأصلح لي شأني كله، لا إله إلا أنت.\n\nلا إله إلا أنت سبحانك إني كنت من الظالمين.\n\nالله الله ربي لا أشرك به شيئا.',
+];
+
 List<String> do3a2ElSafar = [
-'بسم الله ، الحمد لله ، سبحان الذي سخر لنا هذا وماكنا له مقرنين وإنا إلى ربنا لمنقلبون، اللَّهُمَّ إِنَّا نَسْأَلُكَ فِي سَفَرِنَا هَذَا البِرَّ وَالتَّقْوَى، وَمِنَ العَمَلِ مَا تَرْضَى. اللَّهُمَّ هَوِّنْ عَلَيْنَا سَفَرَنَا هَذَا، وَاطْوِ عَنَّا بُعْدَهُ. اللَّهُمَّ أَنْتَ الصَّاحِبُ فِي السَّفَرِ، وَالخَلِيفَةُ فِي الأَهْلِ. اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ وَعْثَاءِ السَّفَرِ، وَكَآبَةِ المَنْظَرِ، وَسُوءِ المُنْقَلَبِ فِي المَالِ وَالأَهْلِ وَالوَلَدِ. '
-
-
+  'بسم الله ، الحمد لله ، سبحان الذي سخر لنا هذا وماكنا له مقرنين وإنا إلى ربنا لمنقلبون، اللَّهُمَّ إِنَّا نَسْأَلُكَ فِي سَفَرِنَا هَذَا البِرَّ وَالتَّقْوَى، وَمِنَ العَمَلِ مَا تَرْضَى. اللَّهُمَّ هَوِّنْ عَلَيْنَا سَفَرَنَا هَذَا، وَاطْوِ عَنَّا بُعْدَهُ. اللَّهُمَّ أَنْتَ الصَّاحِبُ فِي السَّفَرِ، وَالخَلِيفَةُ فِي الأَهْلِ. اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ وَعْثَاءِ السَّفَرِ، وَكَآبَةِ المَنْظَرِ، وَسُوءِ المُنْقَلَبِ فِي المَالِ وَالأَهْلِ وَالوَلَدِ. '
 ];
 
 List<String> ad3yaNabawya = [
@@ -257,7 +259,7 @@ List<String> ad3yaGowm3ElDoa2 = [
   " اللَّهُمَّ أَبْرِمْ لِهَذِهِ الأُمَّةِ أَمْرَ رُشْدٍ ، يُعَزُّ فِيْهِ أَهْلُ طَاعَتِكَ ، وَيُذَلُّ فِيْهِ أَهْلُ مَعْصِيَتِكَ ، وَيُؤمَرُ فِيْهِ بِالمَعْرُوفِ ، وَيُنْهَى فِيْهِ عَنِ المُنْكَرِ.",
   " اللَّهُمَّ اللهمَّ صلِّ وسلِّمْ وبارِكْ علَى عَبْدِكَ ورَسُوْلِكَ محمَّد وعلى آله وصحبه أجمعين."
 ];
-List<String>WhengoingtothemosqueAr=[
+List<String> WhengoingtothemosqueAr = [
   ''' اللّهُـمَّ اجْعَـلْ فِي قَلْبـي نُوراً ،
  وَفي لِسَـانِي نُوراً،
  وَفِي سَمْعِي نُوراً,
@@ -287,62 +289,55 @@ List<String>WhengoingtothemosqueAr=[
  (وَهَبْ لِي نُوراً عَلَى نُوراً )'''
 ];
 
-List<String>BeforeenteringthebathroomEN=[
-  '''O Allah, I seek protection in You from evil and the evil ones.'''  ,
+List<String> BeforeenteringthebathroomEN = [
+  '''O Allah, I seek protection in You from evil and the evil ones.''',
 ];
 
-List<String>BeforeenteringthebathroomAr=[
-  '''اللّهُـمَّ إِنِّـي أَعـوذُ بِـكَ مِـنَ الْخُـبْثِ وَالْخَبائِث.'''  ,
-
+List<String> BeforeenteringthebathroomAr = [
+  '''اللّهُـمَّ إِنِّـي أَعـوذُ بِـكَ مِـنَ الْخُـبْثِ وَالْخَبائِث.''',
 ];
 
-List<String>AfterleavingthebathroomEn=[
-  '''I seek Your forgiveness'''  ,
-
+List<String> AfterleavingthebathroomEn = [
+  '''I seek Your forgiveness''',
 ];
 
-List<String>AfterleavingthebathroomAr=[
-  ''' غُفْـرانَك'''  ,
-
+List<String> AfterleavingthebathroomAr = [
+  ''' غُفْـرانَك''',
 ];
 
-List<String>BeforeablutionEN=[
-  '''In the Name of Allah'''  ,
-
+List<String> BeforeablutionEN = [
+  '''In the Name of Allah''',
 ];
 
-List<String>BeforeablutionAr=[
-  ''' بِسْمِ الله'''  ,
-
+List<String> BeforeablutionAr = [
+  ''' بِسْمِ الله''',
 ];
 
-List<String>UponcompletingtheablutionEn=[
+List<String> UponcompletingtheablutionEn = [
   '''I bear witness that none has the right to be worshipped but Allah alone, 
 Who has no partner; 
-and I bear witness that Muhammad is His slave and His Messenger.'''  ,
+and I bear witness that Muhammad is His slave and His Messenger.''',
   '''O Allah, make me among those who turn to You in repentance, 
-and make me among those who are purified.'''  ,
+and make me among those who are purified.''',
   '''Glory is to You, O Allah, and praise; 
 I bear witness that there is none 
 worthy of worship but You. 
 I seek Your forgiveness and turn to You in 
-repentance.'''  ,
+repentance.''',
 ];
 
-
-List<String>UponcompletingtheablutionAr=[
+List<String> UponcompletingtheablutionAr = [
   ''' أَشْهَدُ أَنْ لا إِلَـهَ إِلاّ اللهُ 
 وَحْدَهُ لا شَريـكَ لَـهُ 
-وَأَشْهَدُأَنَّ مُحَمّـداً عَبْـدُهُ وَرَسـولُـه.'''  ,
+وَأَشْهَدُأَنَّ مُحَمّـداً عَبْـدُهُ وَرَسـولُـه.''',
   ''' اللّهُـمَّ اجْعَلنـي مِنَ التَّـوّابينَ
-وَاجْعَـلْني مِنَ المتَطَهّـرين.'''  ,
+وَاجْعَـلْني مِنَ المتَطَهّـرين.''',
   ''' سُبْحـانَكَ اللّهُـمَّ وَبِحَمدِك
 أَشْهَـدُ أَنْ لا إِلهَ إِلاّ أَنْتَ 
-أَسْتَغْفِرُكَ وَأَتوبُ إِلَـيْك.'''  ,
+أَسْتَغْفِرُكَ وَأَتوبُ إِلَـيْك.''',
 ];
 
-
-List<String>WhengoingtothemosqueEn=[
+List<String> WhengoingtothemosqueEn = [
   '''O Allah, place light in my heart, 
 and on my tongue light, 
 and in my ears light 
@@ -363,62 +358,54 @@ and place light in my nerves,
 and in my body light 
 and in my blood light 
 and in my hair light 
-and in my skin light.'''  ,
-
+and in my skin light.''',
 ];
 
-List<String>UponenteringthemosqueEn=[
+List<String> UponenteringthemosqueEn = [
   '''I seek refuge in Almighty Allah, 
 By His Noble Face, 
 By His primordial power, 
 From Satan the outcast.
 [In the Name of Allah, and blessings  and peace be upon the Messenger of Allah.
-O Allah, open before me the doors of Your mercy.'''  ,
-
+O Allah, open before me the doors of Your mercy.''',
 ];
 
-List<String>UponenteringthemosqueAr=[
-  '''أَعوذُ باللهِ العَظيـم وَبِوَجْهِـهِ الكَرِيـم وَسُلْطـانِه القَديـم مِنَ الشّيْـطانِ الرَّجـيم، [ بِسْـمِ الله، وَالصَّلاةُ وَالسَّلامُ عَلى رَسولِ الله]، اللّهُـمَّ افْتَـحْ لي أَبْوابَ رَحْمَتـِك'''  ,
-
+List<String> UponenteringthemosqueAr = [
+  '''أَعوذُ باللهِ العَظيـم وَبِوَجْهِـهِ الكَرِيـم وَسُلْطـانِه القَديـم مِنَ الشّيْـطانِ الرَّجـيم، [ بِسْـمِ الله، وَالصَّلاةُ وَالسَّلامُ عَلى رَسولِ الله]، اللّهُـمَّ افْتَـحْ لي أَبْوابَ رَحْمَتـِك''',
 ];
 
-List<String>UponleavingtheMosqueEn=[
+List<String> UponleavingtheMosqueEn = [
   '''In the Name of Allah, and peace and blessings be upon the Messenger of Allah.
 O Allah, I ask for Your favor,
-O Allah, protect me from Satan the outcast.'''  ,
-
+O Allah, protect me from Satan the outcast.''',
 ];
 
-
-List<String>UponleavingtheMosqueAr=[
+List<String> UponleavingtheMosqueAr = [
   ''' بِسمِ الله وَالصّلاةُ وَالسّلامُ عَلى رَسولِ الله،
 اللّهُـمَّ إِنّـي أَسْأَلُكَ مِـنْ فَضْـلِك،
-اللّهُـمَّ اعصِمْنـي مِنَ الشَّيْـطانِ الرَّجـيم.'''  ,
-
+اللّهُـمَّ اعصِمْنـي مِنَ الشَّيْـطانِ الرَّجـيم.''',
 ];
-List<String>WhenprostratingduetorecitationoftheQuranEn=[
+List<String> WhenprostratingduetorecitationoftheQuranEn = [
   '''I have prostrated my face to the One Who created it, 
 and gave it hearing and sight by His might and His power. 
-Glory is to Allah, the Best of creators.'''  ,
+Glory is to Allah, the Best of creators.''',
   '''O Allah, write it as a reward for me, 
 and release me from a burden for it, 
 and make it a treasure for me with You.
 Accept it from me as You accepted it from your servant Dawud'''
-
 ];
 
-List<String>WhenprostratingduetorecitationoftheQuranAr=[
+List<String> WhenprostratingduetorecitationoftheQuranAr = [
   ''' سَجَـدَ وَجْهـي للَّـذي خَلَقَـهُ
 وَشَقَّ سَمْـعَـهُ وَبَصَـرَهُ بِحَـوْلِـهِ وَقُـوَّتِهِ
-﴿فتَبـارَكَ اللهُ أَحْسَـنُ الخـالِقيـن﴾..'''  ,
+﴿فتَبـارَكَ اللهُ أَحْسَـنُ الخـالِقيـن﴾..''',
   ''' اللّهُـمَّ اكْتُـبْ لي بِهـا عِنْـدَكَ أَجْـراً ، 
 وَضَـعْ عَنِّـي بِهـا وِزْراً ، 
 وَاجْعَـلها لي عِنْـدَكَ ذُخْـراً ، 
 وَتَقَبَّـلها مِنِّي كَمَا تَقَبَّلْتَهَا مِنْ عَبْدِكَ دَاوُدَ'''
-
 ];
 
-List<String>ForanxietyandsorrowEn=[
+List<String> ForanxietyandsorrowEn = [
   '''O Allah, I am Your slave,
 and the son of Your male slave,
 and the son of your female slave. 
@@ -434,7 +421,7 @@ and the light of my chest,
 the banisher of my sadness,
 and the reliever of my distress.'''
 ];
-List<String>ForanxietyandsorrowAr=[
+List<String> ForanxietyandsorrowAr = [
   ''' اللّهُـمَّ إِنِّي عَبْـدُكَ
 ابْنُ عَبْـدِكَ
 ابْنُ أَمَتِـكَ

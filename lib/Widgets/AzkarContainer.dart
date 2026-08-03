@@ -14,37 +14,47 @@ class _AzkarContainerState extends State<AzkarContainer> {
   @override
   Widget build(BuildContext context) {
     final azkary = widget.azkary;
+    final theme = Theme.of(context);
 
     return Directionality(
       textDirection: HomePage.languageChoice == false
           ? TextDirection.rtl
           : TextDirection.ltr,
       child: Container(
-          color: Theme.of(context).primaryColor,
-          child: Card(
-              child: ListView.builder(
-            itemBuilder: (context, index) {
-              return Zekr(
-                counter: azkary[index]['counter'],
-                zekr: azkary[index]['zekr'],
-                title: azkary[index]['title'],
-                fayda: azkary[index]['fadl'],
-                decrementCounter: () {
-                  setState(() {
-                    if (azkary[index]['counter'] != 0)
-                      azkary[index]['counter'] =
-                          (azkary[index]['counter'] as int) - 1;
-                  });
-                },
-                resetCounter: () {
-                  setState(() {
-                    azkary[index]['counter'] = azkary[index]['initial'] as int;
-                  });
-                },
-              );
-            },
-            itemCount: azkary.length,
-          ))),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [theme.canvasColor, theme.colorScheme.surface],
+          ),
+        ),
+        child: ListView.separated(
+          padding: const EdgeInsets.all(14),
+          itemBuilder: (context, index) {
+            return Zekr(
+              counter: azkary[index]['counter'],
+              zekr: azkary[index]['zekr'],
+              title: azkary[index]['title'],
+              fayda: azkary[index]['fadl'],
+              decrementCounter: () {
+                setState(() {
+                  if (azkary[index]['counter'] != 0) {
+                    azkary[index]['counter'] =
+                        (azkary[index]['counter'] as int) - 1;
+                  }
+                });
+              },
+              resetCounter: () {
+                setState(() {
+                  azkary[index]['counter'] = azkary[index]['initial'] as int;
+                });
+              },
+            );
+          },
+          separatorBuilder: (_, __) => const SizedBox(height: 14),
+          itemCount: azkary.length,
+        ),
+      ),
     );
   }
 }

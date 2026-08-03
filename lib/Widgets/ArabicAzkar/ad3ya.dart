@@ -32,12 +32,9 @@ class ad3ya extends StatelessWidget {
     }
   }
 
-
-
   void clearAd3yas() {
     ad3yas.clear();
   }
-
 
   /// TODO: Sort these lists and delete all the above functions
   List<List<String>> ad3yaList = [
@@ -62,6 +59,7 @@ class ad3ya extends StatelessWidget {
     WhenprostratingduetorecitationoftheQuranEn,
     ForanxietyandsorrowEn,
     do3a2ElSafar,
+    do3a2ElKarbAr,
   ];
   void duaaDecider(int choice) {
     addAd3yas(ad3yaList[choice]);
@@ -74,8 +72,8 @@ class ad3ya extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(),
       drawer: CustomDrawer(
-        setLang: darkModeSetter,
-        setMode: setLang,
+        setLang: setLang,
+        setMode: darkModeSetter,
       ),
       body: AzkarContainer(
         azkary: ad3yas,

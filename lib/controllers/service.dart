@@ -328,14 +328,19 @@ Future openDialog(
         BuildContext context, bool darkMode, darkModeSetter, setLang) =>
     showDialog(
         context: context,
-        builder: (context) => AlertDialog(
+        builder: (context) => Directionality(
+            textDirection:
+                HomePage.isArabic ? TextDirection.rtl : TextDirection.ltr,
+            child: AlertDialog(
               title: Center(
                   child: Padding(
                 padding: const EdgeInsets.only(top: 15.0),
                 child: Text(
                     HomePage.languageChoice == false
-                        ? "بما تشعر؟"
-                        : "How do you feel?",
+                        ? "بماذا تشعر"
+                        : HomePage.isGerman
+                            ? "Wie fuehlst du dich?"
+                            : "How do you feel?",
                     style: TextStyle(
                         fontSize: MediaQuery.of(context).orientation ==
                                 Orientation.landscape
@@ -358,6 +363,7 @@ Future openDialog(
                         : MediaQuery.of(context).size.width * 0.5,
                 padding: const EdgeInsets.all(10),
                 child: Row(
+                  textDirection: TextDirection.ltr,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
@@ -387,14 +393,7 @@ Future openDialog(
                             ),
                             Container(
                               /// satisfied container
-                              height: MediaQuery.of(context).orientation ==
-                                      Orientation.portrait
-                                  ? MediaQuery.of(context).size.height *
-                                      0.3 *
-                                      0.2
-                                  : MediaQuery.of(context).size.height *
-                                      0.5 *
-                                      0.2,
+                              height: 56,
                               width: MediaQuery.of(context).orientation ==
                                       Orientation.portrait
                                   ? MediaQuery.of(context).size.width * 0.4
@@ -404,6 +403,10 @@ Future openDialog(
                               ),
                               child: ElevatedButton(
                                   style: ButtonStyle(
+                                      padding: const WidgetStatePropertyAll(
+                                          EdgeInsets.symmetric(horizontal: 10)),
+                                      minimumSize: const WidgetStatePropertyAll(
+                                          Size.fromHeight(56)),
                                       backgroundColor: MaterialStatePropertyAll(
                                           Theme.of(context).splashColor)),
                                   onPressed: () {
@@ -420,8 +423,13 @@ Future openDialog(
                                   },
                                   child: Text(
                                     HomePage.languageChoice == false
-                                        ? "سبح الله"
-                                        : "Praise Allah",
+                                        ? "تسبيح"
+                                        : HomePage.isGerman
+                                            ? "Allah preisen"
+                                            : "Praise Allah",
+                                    maxLines: 1,
+                                    overflow: TextOverflow.visible,
+                                    textAlign: TextAlign.center,
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: HomePage.languageChoice ==
@@ -433,7 +441,10 @@ Future openDialog(
                                                 MediaQuery.textScaleFactorOf(
                                                     context),
                                         fontWeight: FontWeight.bold,
-                                        fontFamily: 'DG-DIGI'),
+                                        height: 1.2,
+                                        fontFamily: HomePage.isArabic
+                                            ? 'Amiri'
+                                            : 'DG-DIGI'),
                                   )),
                             )
                           ],
@@ -466,14 +477,7 @@ Future openDialog(
                             ),
                             Container(
                               /// anixeity button
-                              height: MediaQuery.of(context).orientation ==
-                                      Orientation.portrait
-                                  ? MediaQuery.of(context).size.height *
-                                      0.3 *
-                                      0.2
-                                  : MediaQuery.of(context).size.height *
-                                      0.5 *
-                                      0.2,
+                              height: 56,
                               width: MediaQuery.of(context).orientation ==
                                       Orientation.portrait
                                   ? MediaQuery.of(context).size.width * 0.4
@@ -483,6 +487,10 @@ Future openDialog(
                               ),
                               child: ElevatedButton(
                                   style: ButtonStyle(
+                                      padding: const WidgetStatePropertyAll(
+                                          EdgeInsets.symmetric(horizontal: 10)),
+                                      minimumSize: const WidgetStatePropertyAll(
+                                          Size.fromHeight(56)),
                                       backgroundColor: MaterialStatePropertyAll(
                                           Theme.of(context).splashColor)),
                                   onPressed: () {
@@ -497,15 +505,20 @@ Future openDialog(
                                                 choice:
                                                     HomePage.languageChoice ==
                                                             false
-                                                        ? 10
+                                                        ? 21
                                                         : 19,
                                                 languageSelected:
                                                     HomePage.languageChoice)));
                                   },
                                   child: Text(
                                     HomePage.languageChoice == false
-                                        ? "دعاء الحزن"
-                                        : "Anxiety\nSupplication",
+                                        ? "دعاء الكرب"
+                                        : HomePage.isGerman
+                                            ? "Bittgebet\nbei Sorge"
+                                            : "Anxiety\nSupplication",
+                                    maxLines: HomePage.isArabic ? 1 : 2,
+                                    overflow: TextOverflow.visible,
+                                    textAlign: TextAlign.center,
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: HomePage.languageChoice ==
@@ -513,11 +526,14 @@ Future openDialog(
                                             ? 12 *
                                                 MediaQuery.textScaleFactorOf(
                                                     context)
-                                            : 22 *
+                                            : 20 *
                                                 MediaQuery.textScaleFactorOf(
                                                     context),
                                         fontWeight: FontWeight.bold,
-                                        fontFamily: 'DG-DIGI'),
+                                        height: 1.2,
+                                        fontFamily: HomePage.isArabic
+                                            ? 'Amiri'
+                                            : 'DG-DIGI'),
                                   )),
                             )
                           ],
@@ -527,4 +543,4 @@ Future openDialog(
                   ],
                 ),
               ),
-            ));
+            )));
